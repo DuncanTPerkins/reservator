@@ -66,13 +66,18 @@ $year = $today[year];
 $month = $today[mon];
 $day = ($today[mday] - $today[wday]) + 1;
 $day1 = $day;
-
+$lunches = array();
+$dinners = array();
+$ll = 0;
+$dl = 0;
 echo "<table style='width:100%'>";
 echo "<tr>"; 
 for($j=$day; $j<($day+5); $j++) { 
     echo "<th>" . $month . "-" . $j . "</th>";
     
 }
+
+
 echo "</tr>";
 
 echo "<tr>";
@@ -80,13 +85,30 @@ while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day; 
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) { 
-        echo "<td>" . $row['description'] . "</td>";
-        echo "<br>";
+        if($row['meal_type'] == 0) { 
+            array_push($lunches, $row['description']); 
+            $ll++;
+        }
+        if($row['meal_type'] == 1) { 
+            array_push($dinners, $row['description']); 
+            $dl++;
+        }
+    }
+    
+
+$day++;
+}
+    echo "<tr>";
+    for($k = 0; $k < $ll; $k++) { 
+     echo "<td>" . $lunches[$k] . "</td>";         
     }
     echo "</tr>";
-$day++;
-
-}
+    
+        echo "<tr>";
+    for($l = 0; $l < $dl; $l++) { 
+     echo "<td>" . $dinners[$l] . "</td>";         
+    }
+    echo "</tr>";
 
 echo "</table>";
     ?>
