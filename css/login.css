@@ -67,6 +67,7 @@ html {
     height: auto;
     margin: auto;
 }
+
 #login {
     color: white;
     background-image: linear-gradient(to bottom, #F7B2AA, #ed9e95);
@@ -75,6 +76,7 @@ html {
 .custom-panel {
     /*    max-height: 600px;*/
     min-height: 425px;
+    border-radius: 5px;
 }
 
 #welcome {
@@ -85,6 +87,9 @@ html {
 .checkbox {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     text-align: center;
+}
+#button-container {
+    padding: 5px;
 }
 .btn-success:hover,
 .btn-success:focus {
