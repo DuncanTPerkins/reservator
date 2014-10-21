@@ -22,6 +22,9 @@ html {
     /* IE6-9 fallback on horizontal gradient */
     width: 100%;
     height: 100%;
+    top: 0;
+    bottom: 0;
+    background-attachment: fixed;
 }
 .main-panel {
 /*    opacity: .5;*/
