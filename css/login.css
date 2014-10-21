@@ -26,9 +26,16 @@ html {
     bottom: 0;
     background-attachment: fixed;
 }
+.calendar-panel {
+    min-height: 200px;
+}
+.week-of-heading {
+    text-align: center;
+}
 .main-panel {
 /*    opacity: .5;*/
 }
+
 .title {
     color: white;
     font-size: 35px;
@@ -136,4 +143,38 @@ input[type="color"]:focus,
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95;
+}
+.panel-default>.calendar-heading {
+    background-image: linear-gradient(to bottom, #f7b2aa, #ed9e95);
+    color: white;
+    background: #ed9e95;
+    background-color: #ed9e95;
+    border-color: white;
+        
+
+}
+.calendar-panel-body {
+    background-image: none;
+    padding: 5px;
+/*    background: #F7B2AA;*/
+/*    background-color: #ffd5d1;*/
+}
+.calendar-body {
+    font-size: 12px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.calendar-panel {
+/*    padding: -5px;*/
+    border: 2px solid #ed9e95;
+}
+.sidebar-body {
+    min-height: 500px;
+}
+.calendar-footer {
+    bottom: 30px;
+    right: 25px;
+    position: absolute;
+}
+.calendar-padding {
+    padding: 4px;
 }
