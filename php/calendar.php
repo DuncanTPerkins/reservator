@@ -72,6 +72,12 @@ $ll = 0;
 $dl = 0;
 echo "<table style='width:100%'>";
 echo "<tr>"; 
+
+$startingDay = new DateTime($year . "-" . $month . "-" . $day); 
+$endingDay = $startingDay->add(new DateInterval('P5D'));
+$startingDay->sub(new DateInterval('P5D'));
+print_r($startingDay);
+print_r($endingDay);
 for($j=$day; $j<($day+5); $j++) { 
     echo "<th>" . $month . "-" . $j . "</th>";
     
