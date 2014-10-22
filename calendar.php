@@ -1,11 +1,3 @@
-<?php
-session_start();
-if(!session_is_registered(username)){
-header("location:index.html");
-}
-
-echo $_SESSION["username"] . "<br>";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- google drive-->
@@ -28,6 +20,14 @@ echo $_SESSION["username"] . "<br>";
 </head>
 
 <body  heightfull>
+    <?php
+session_start();
+if(!session_is_registered(username)){
+header("location:index.html");
+}
+
+echo $_SESSION["username"] . "<br>";
+?>
     <div class="container-fluid heightfull">
         <div class="row vertical-offset-50">          
                         
