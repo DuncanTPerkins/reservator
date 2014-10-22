@@ -21,6 +21,8 @@ html {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f7b2aa', endColorstr='#ed9e95', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
     width: 100%;
+    margin: 0;
+    padding: 0;
     height: 100%;
     top: 0;
     bottom: 0;
@@ -36,6 +38,7 @@ html {
 }
 .main-panel {
 /*    opacity: .5;*/
+    height: 100%;
 }
 
 .title {
@@ -104,6 +107,7 @@ html {
 #main-login-panel {
     -webkit-box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
     box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
+    height: 100%;
 }
 #welcome {
     font-size: 20px;
@@ -127,14 +131,17 @@ html {
     background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid transparent;
     border-radius: 4px;
+    height: 100%;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-default>.panel-heading {
     background-image: linear-gradient(to bottom, #fff, #fff);
+    height: 100%;
 }
 body {
     padding-top: 50px;
+    height: 100%;
 }
 .starter-template {
     padding: 40px 15px;
@@ -171,7 +178,10 @@ input[type="color"]:focus,
     border-color: white;
     font-weight: 700;
     text-align: center;
-
+    height: 100%;
+}
+.heightfull {
+    height: 100%;;
 }
 .calendar-panel-body {
     background-image: none;
@@ -180,21 +190,27 @@ input[type="color"]:focus,
 /*    box-shadow: 0px 5px 5px #e2cac7;*/
 /*    background: #F7B2AA;*/
 /*    background-color: #ffd5d1;*/
+    height: 100%;
 }
 .calendar-body {
     font-size: 12px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-/*    height: 100%;*/
+    min-height: 300px;
 }
 .calendar-panel {
 /*    padding: -5px;*/
     border: 2px solid #ed9e95;
     min-height: 300px;
+    max-height: 400px;
+    height: 100%;
 }
 .sidepanel-body {
+    
+    font-size: 16px;
 }
 .main-calendar-panel {
     box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
+    height: 100%;
 }
 .sidepanel-heading {
     background-color: #ed9e95;
@@ -212,20 +228,46 @@ input[type="color"]:focus,
 }
 .calendar-padding {
     padding: 4px;
+    height: 100%;
 }
 .lunch {
     height: 50%;
     
 }
-.dinner {
+.meal {
+    margin-left: px;
+    margin-right: 3px;
+    padding: 5px;
+    border: solid #ed9e95 2px;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    min-height: 110px;
+}
+.dinner, .lunch {
+    height: 50%;
 /*
     top: 10px;
     position: relative;
 */
+    font-size: 14px;
 }
 .lrow, .drow {
 /*    height: 100%;*/
+    min-height: 135px;
 }
 .label-primary {
     background-color: #ed9e95;
+    font-size: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.glyphicon-ok {
+    position: absolute;
+/*    bottom: 0px;*/
+    top: 100px;
+    right: 30px;
+    color: green;
+    font-size: 18px;
+    float: right;
 }
