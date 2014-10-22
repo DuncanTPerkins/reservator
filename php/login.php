@@ -1,5 +1,5 @@
 <?php
-session_start();
+ob_start();
 $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ; 
 
 //connect 
@@ -15,19 +15,16 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 //security concerns
-$username = stripslashes($username);
-$password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$username = mysqli_real_escape_string($conn, $username);
+$password = mysqli_real_escape_string($conn, $password);
 
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
-$result=mysql_query($sql);
+$result=mysqli_query($conn, $sql);
 
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+$count=mysqli_num_rows($result);
 
 // If result matched $username and $password, table row must be 1 row
-
 if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
@@ -38,6 +35,6 @@ header("location:login_success.php");
 else {
 echo "Wrong Username or Password";
 }
-
+ob_end_flush();
 
 ?>
