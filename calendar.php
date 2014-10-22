@@ -3,6 +3,8 @@ session_start();
 if(!session_is_registered(username)){
 header("location:index.html");
 }
+
+echo $_SESSION["username"] . "<br>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,21 +25,6 @@ header("location:index.html");
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $(".meal").hover(function(){ //hover in
-            $(this).css("border-color", "#fcbbb3");
-            $(this).prev().prev().css("background-color", "#fcbbb3");
-        
-        },              function() { //hover out
-            $(this).css("border-color", "#ed9e95");
-            $(this).prev().prev().css("background-color", "#ed9e95");
-        });
-    });
-    
-    </script>
 </head>
 
 <body  heightfull>
@@ -202,7 +189,8 @@ header("location:index.html");
         </div>
     </div>
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
 
