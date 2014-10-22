@@ -241,6 +241,9 @@ input[type="color"]:focus,
      background-color: white;
      position: relative;
 }
+.friday-lunch {
+    min-height: 245px;
+}
 .dinner,
 .lunch {
      height: 50%;
@@ -266,6 +269,9 @@ input[type="color"]:focus,
      /*    float: right;*/
      max-height: 20px;
      /*    padding: 5px;*/
+}
+.glyph-friday {
+    top: 215px;
 }
 #navbar-brand {
      /*    top: 0px; */
