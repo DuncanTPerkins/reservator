@@ -73,16 +73,14 @@ $dl = 0;
 echo "<table style='width:100%'>";
 echo "<tr>"; 
 $startingDay = new DateTime($year . "-" . $month . "-" . $day); 
-$startingDay->modify('+5 days');
+$startingDay->modify('+4 days');
 $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day); 
+$loopDay = $startingDay; 
 
-print_r($startingDay);
-print_r($endingDay);
-
-for($j=$day; $j<($day+5); $j++) { 
-    echo "<th>" . $month . "-" . $j . "</th>";
-    
+for($j=0; $j<5; $j++) { 
+    echo "<th>" . $loopDay->format('m-d') . "</th>";
+    $loopDay->modify('+1 day');
 }
 
 
