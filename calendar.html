@@ -17,6 +17,21 @@
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".meal").hover(function(){ //hover in
+            $(this).css("border-color", "#c3867f");
+            $(this).prev().prev().css("background-color", "#c3867f");
+        
+        },              function() { //hover out
+            $(this).css("border-color", "#ed9e95");
+            $(this).prev().prev().css("background-color", "#ed9e95");
+        });
+    });
+    
+    </script>
 </head>
 
 <body  heightfull>
@@ -181,8 +196,7 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
 
 </body>
 

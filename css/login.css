@@ -269,6 +269,7 @@ input[type="color"]:focus,
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+
 .glyphicon-ok {
     position: absolute;
 /*    bottom: 0px;*/
