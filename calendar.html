@@ -1,10 +1,5 @@
-<?php
-session_start();
-if(!session_is_registered(username)){
-header("location:index.html");
-}
-?>
 <!DOCTYPE html>
+<?php session_start(); if(!session_is_registered(username)){ header( "location:index.html"); } ?>
 <html lang="en">
 <!-- google drive-->
 
@@ -13,11 +8,11 @@ header("location:index.html");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Reservations</title>
+    <title>UTK Delta Zeta Meal Reservations</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
-    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet" type="text/css">
 
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -26,184 +21,275 @@ header("location:index.html");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $(".meal").hover(function(){ //hover in
-            $(this).css("border-color", "#fcbbb3");
-            $(this).prev().prev().css("background-color", "#fcbbb3");
-        
-        },              function() { //hover out
-            $(this).css("border-color", "#ed9e95");
-            $(this).prev().prev().css("background-color", "#ed9e95");
+        $(document).ready(function () {
+            $(".meal").hover(function () { //hover in
+                $(this).css("border-color", "#fcbbb3");
+                $(this).prev().prev().css("background-color", "#fcbbb3");
+                $(this).css("cursor", "pointer");
+
+            }, function () { //hover out
+                $(this).css("border-color", "#ed9e95");
+                $(this).prev().prev().css("background-color", "#ed9e95");
+            });
+
+            $(".label-primary").hover(function () { //hover in
+                $(this).css("background-color", "#fcbbb3");
+                $(this).next().next().css("border-color", "#fcbbb3");
+                $(this).css("cursor", "pointer");
+
+            }, function () { //hover out
+                $(this).css("background-color", "#ed9e95");
+                $(this).prev().prev().css("border-color", "#ed9e95");
+            });
         });
-    });
-    
     </script>
 </head>
 
-<body  heightfull>
+<body heightfull>
+
     <div class="container-fluid heightfull">
-        <div class="row vertical-offset-50">          
-                        
-                        <div class="col-md-10 col-md-offset-1 vertical-offset-50 heightfull">
-                            <div class="panel panel-default main-calendar-panel  heightfull">
-                                <div class="panel-heading week-of-heading">
-                                    Week of October 20-24, 2014
-                                </div>
-                                <div class="panel-body main-panel calendar-panel-body">
-                                    <div class="col-md-2 calendar-padding">
+        <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">UTK Delta Zeta Meal Reservation</a>
+                </div>
 
-                                        <div class="panel panel-default calendar-panel sidepanel">
-                                            <div class="panel-heading sidepanel-heading">
-                                            Welcome
-                                            </div>
-                                            <div class="panel-body calendar-body sidepanel-body">
-                                                Just select the meal you want to reserve. Please reserve no later than 12 hours in advance. <br><br>-Thanks
-                                                
-                                                
-                                                    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 calendar-padding">
-
-                                        <div class="panel panel-default calendar-panel">
-                                            <div class="panel-heading calendar-heading">
-                                                
-                                                Monday, October 20th
-                                            </div>
-                                            <div class="panel-body calendar-body">
-                                                <div class="row lrow">
-                                                    <div class="col-md-12 lunch">
-                                                <span class="label label-primary">LUNCH:</span><br>
-                                                        <div class="meal">
-                                                        Pimento cheese and chicken salad sandwiches w/ chicken noodle soup
-                                                            <span class="glyphicon glyphicon-ok"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row drow">
-                                                    <div class="col-md-12 dinner">
-                                                <span class="label label-primary">DINNER:</span><br>
-                                                        <div class="meal">
-                                                        Spaghetti with meatballs, green beans and rolls
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 calendar-padding">
-
-                                        <div class="panel panel-default calendar-panel">
-                                            <div class="panel-heading calendar-heading">
-                                                Tuesday, October 21st
-                                            </div>
-                                            <div class="panel-body calendar-body">
-                                                <div class="row lrow">
-                                                    <div class="col-md-12 lunch">
-                                                <span class="label label-primary">LUNCH:</span><br>
-                                                        <div class="meal">
-                                                            Taco bar and white chicken chili
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row drow">
-                                                    <div class="col-md-12 dinner">
-                                                <span class="label label-primary">DINNER:</span><br>
-                                                        <div class="meal">Liz’s Orange chicken with broccoli and chocolate bar cake
-                                                            <span class="glyphicon glyphicon-ok"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 calendar-padding">
-
-                                        <div class="panel panel-default calendar-panel">
-                                            <div class="panel-heading calendar-heading">
-                                                Wednesday, October 22nd
-                                            </div>
-                                            <div class="panel-body calendar-body">
-                                                <div class="row lrow">
-                                                    <div class="col-md-12 lunch">
-                                                <span class="label label-primary">LUNCH:</span><br>
-                                                        <div class="meal">Ham roll ups with pumpkin soup, tofu and pasta salad
-                                                            <span class="glyphicon glyphicon-ok"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row drow">
-                                                    <div class="col-md-12 dinner">
-                                                <span class="label label-primary">DINNER:</span><br>
-                                                        <div class="meal">Blackened Salmon with creamy cajun pasta and corn mague choux
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 calendar-padding">
-
-                                        <div class="panel panel-default calendar-panel">
-                                            <div class="panel-heading calendar-heading">
-                                                Thursday, October 23rd
-                                            </div>
-                                            <div class="panel-body calendar-body">
-                                                <div class="row lrow">
-                                                    <div class="col-md-12 lunch">
-                                                <span class="label label-primary">LUNCH:</span><br>
-                                                        <div class="meal">Southwest chicken wrap and broccoli cheddar soup
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row drow">
-                                                    <div class="col-md-12 dinner">
-                                                <span class="label label-primary">DINNER:</span><br>
-                                                        <div class="meal">Meatloaf with garlic mashed potatoes, candied carrots and banana pudding
-                                                            <span class="glyphicon glyphicon-ok"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 calendar-padding">
-
-                                        <div class="panel panel-default calendar-panel">
-                                            <div class="panel-heading calendar-heading">
-                                                Friday, October 24th
-                                            </div>
-                                            <div class="panel-body calendar-body">
-                                                <div class="row lrow">
-                                                    <div class="col-md-12 lunch">
-                                                <span class="label label-primary">LUNCH:</span><br>
-                                                        <div class="meal">Fried Friday: pickles, sweet potato fries and eggrolls
-                                                            <span class="glyphicon glyphicon-ok"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row drow">
-                                                    <div class="col-md-12 dinner">
-                                                <span class="label label-primary">DINNER:</span><br>
-                                                        <div class="meal">Fried Friday: pickles, sweet potato fries and eggrolls
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                             
-                            
-                    
-                    </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link</a>
+                        </li>
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- Navbar -->
+        <div class="row vertical-offset-100">
+
+            <div class="col-md-10 col-md-offset-1 vertical-offset-50 heightfull">
+                <div class="panel panel-default main-calendar-panel  heightfull">
+                    <div class="panel-heading week-of-heading">
+                        Week of October 20-24, 2014
+                    </div>
+                    <div class="panel-body main-panel calendar-panel-body">
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel sidepanel">
+                                <div class="panel-heading sidepanel-heading">
+                                    Welcome
+                                </div>
+                                <div class="panel-body calendar-body sidepanel-body">
+                                    Just select the meal you want to reserve. Please reserve no later than 12 hours in advance.
+                                    <br>
+                                    <br>-Thanks
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Welcome -->
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel">
+                                <div class="panel-heading calendar-heading">
+
+                                    Monday, October 20th
+                                </div>
+                                <div class="panel-body calendar-body">
+                                    <div class="row lrow">
+                                        <div class="col-md-12 lunch">
+                                            <span class="label label-primary">LUNCH:</span>
+                                            <br>
+                                            <div class="meal">
+                                                Pimento cheese and chicken salad sandwiches w/ chicken noodle soup
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row drow">
+                                        <div class="col-md-12 dinner">
+                                            <span class="label label-primary">DINNER:</span>
+                                            <br>
+                                            <div class="meal">
+                                                Spaghetti with meatballs, green beans and rolls
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Monday -->
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel">
+                                <div class="panel-heading calendar-heading">
+                                    Tuesday, October 21st
+                                </div>
+                                <div class="panel-body calendar-body">
+                                    <div class="row lrow">
+                                        <div class="col-md-12 lunch">
+                                            <span class="label label-primary">LUNCH:</span>
+                                            <br>
+                                            <div class="meal">
+                                                Taco bar and white chicken chili
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row drow">
+                                        <div class="col-md-12 dinner">
+                                            <span class="label label-primary">DINNER:</span>
+                                            <br>
+                                            <div class="meal">Liz’s Orange chicken with broccoli and chocolate bar cake
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tuesday -->
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel">
+                                <div class="panel-heading calendar-heading">
+                                    Wednesday, October 22nd
+                                </div>
+                                <div class="panel-body calendar-body">
+                                    <div class="row lrow">
+                                        <div class="col-md-12 lunch">
+                                            <span class="label label-primary">LUNCH:</span>
+                                            <br>
+                                            <div class="meal">Ham roll ups with pumpkin soup, tofu and pasta salad
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row drow">
+                                        <div class="col-md-12 dinner">
+                                            <span class="label label-primary">DINNER:</span>
+                                            <br>
+                                            <div class="meal">Blackened Salmon with creamy cajun pasta and corn mague choux
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Wednesday -->
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel">
+                                <div class="panel-heading calendar-heading">
+                                    Thursday, October 23rd
+                                </div>
+                                <div class="panel-body calendar-body">
+                                    <div class="row lrow">
+                                        <div class="col-md-12 lunch">
+                                            <span class="label label-primary">LUNCH:</span>
+                                            <br>
+                                            <div class="meal">Southwest chicken wrap and broccoli cheddar soup
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row drow">
+                                        <div class="col-md-12 dinner">
+                                            <span class="label label-primary">DINNER:</span>
+                                            <br>
+                                            <div class="meal">Meatloaf with garlic mashed potatoes, candied carrots and banana pudding
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thursday -->
+                        <div class="col-md-2 calendar-padding">
+
+                            <div class="panel panel-default calendar-panel">
+                                <div class="panel-heading calendar-heading">
+                                    Friday, October 24th
+                                </div>
+                                <div class="panel-body calendar-body">
+                                    <div class="row lrow">
+                                        <div class="col-md-12 lunch">
+                                            <span class="label label-primary">LUNCH:</span>
+                                            <br>
+                                            <div class="meal">Fried Friday: pickles, sweet potato fries and eggrolls
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row drow">
+                                        <div class="col-md-12 dinner">
+                                            <span class="label label-primary">DINNER:</span>
+                                            <br>
+                                            <div class="meal">Fried Friday: pickles, sweet potato fries and eggrolls
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Friday -->
+
+
+
+                    </div>
+                </div>
+            </div>//Calendar
         </div>
+
+
     </div>
-
-    
-
 </body>
 
 </html>
