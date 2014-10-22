@@ -199,14 +199,16 @@ input[type="color"]:focus,
 }
 .calendar-panel {
 /*    padding: -5px;*/
-    border: 2px solid #ed9e95;
+    border: 2px solid rgba(237, 158, 149, 0.27);
     min-height: 300px;
     max-height: 400px;
     height: 100%;
 }
 .sidepanel-body {
-    
+    background-color: #ed9e95;
     font-size: 16px;
+   border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .main-calendar-panel {
     box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
@@ -218,8 +220,10 @@ input[type="color"]:focus,
     text-align: center;
 }
 .sidepanel {
-    background-color: #ed9e95;
+/*    background-color: #ed9e95;*/
     color: white;
+/*    border: 2px solid rgba(237, 158, 149, 0.27);*/
+    
 }
 .calendar-footer {
     bottom: 30px;
@@ -243,6 +247,7 @@ input[type="color"]:focus,
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     min-height: 110px;
+    background-color: white;
 }
 .dinner, .lunch {
     height: 50%;
