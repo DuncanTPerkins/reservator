@@ -42,7 +42,8 @@ html {
     text-align: center;
 }
 .form-signin input[type="text"] {
-    margin-bottom: 4px;
+/*    margin-bottom: 4px;*/
+    padding-bottom: 4px;
 }
 .form-signin input[type="password"] {
     margin-bottom: 10px;
@@ -52,6 +53,15 @@ html {
     font-size: 16px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.input-group-addon {
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: 20px;
     padding: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -162,13 +172,20 @@ input[type="color"]:focus,
 .calendar-body {
     font-size: 12px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 .calendar-panel {
 /*    padding: -5px;*/
     border: 2px solid #ed9e95;
 }
-.sidebar-body {
-    min-height: 500px;
+.sidepanel-body {
+}
+.sidepanel-heading {
+    background-color: #ed9e95;
+}
+.sidepanel {
+    background-color: #ed9e95;
+    color: white;
 }
 .calendar-footer {
     bottom: 30px;
@@ -177,4 +194,20 @@ input[type="color"]:focus,
 }
 .calendar-padding {
     padding: 4px;
+}
+.lunch {
+    height: 50%;
+    
+}
+.dinner {
+/*
+    top: 10px;
+    position: relative;
+*/
+}
+.lrow, .drow {
+/*    height: 100%;*/
+}
+.label-primary {
+    background-color: #ed9e95;
 }
