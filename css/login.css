@@ -88,7 +88,7 @@ html {
      height: auto;
      margin: auto;
 }
-#login {
+#login, #register {
      color: white;
      background-image: linear-gradient(to bottom, #F7B2AA, #ed9e95);
      border-color: #ed9e95;
