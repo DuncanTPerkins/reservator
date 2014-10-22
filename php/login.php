@@ -7,14 +7,37 @@ $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
 // Check connection
 if (mysqli_connect_errno()) {
-    echo "Database connection failed: " . mysqli_connect_error();
+    echo "Database connection failed: " . mysqli_connect_error();  
 }
 
-$dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
-$dbname = "database"; // the name of the database that you are going to use for this project
-$dbuser = "username"; // the username that you created, or were given, to access your database
-$dbpass = "password"; // the password that you created, or were given, to access your database
- 
-mysql_connect($dbhost, $dbuser, $dbpass) or die("MySQL Error: " . mysql_error());
-mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
+//user and pass from index.html
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+//security concerns
+$username = stripslashes($username);
+$password = stripslashes($password);
+$username = mysql_real_escape_string($username);
+$password = mysql_real_escape_string($password);
+
+$sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
+$result=mysql_query($sql);
+
+// Mysql_num_row is counting table row
+$count=mysql_num_rows($result);
+
+// If result matched $username and $password, table row must be 1 row
+
+if($count==1){
+
+// Register $myusername, $mypassword and redirect to file "login_success.php"
+session_register("username");
+session_register("password");
+header("location:login_success.php");
+}
+else {
+echo "Wrong Username or Password";
+}
+
+
 ?>
