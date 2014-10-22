@@ -27,10 +27,10 @@ $count=mysqli_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
 
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-session_register("username");
-session_register("password");
-header("location:../calendar.php");
+    // Register $myusername, $mypassword and redirect to file "login_success.php"
+    session_register("username");
+    session_register("password");
+    header("location:../calendar.php");
 }
 else {
 echo "Wrong Username or Password";
