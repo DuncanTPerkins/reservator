@@ -267,10 +267,28 @@ input[type="color"]:focus,
      max-height: 20px;
      /*    padding: 5px;*/
 }
-.navbar-brand {
+#navbar-brand {
      /*    top: 0px; */
      left: 50px;
-     margin-left: 50px;
+/*     margin-left: 150px;*/
      padding-left: 20px;
      /*    position: absolute;*/
+     display: inline;
+}
+#navbar-brand-padding {
+     width: 150px;
+     height: 20px;
+     float: left;
+     position: relative;
+     display: inline;
+}
+#navbar-right-padding {
+     float: right;
+     display: inline;
+     position: relative;
+     width: 160px;
+     height: 20px;
+}
+#logout {
+/*     display: inline;*/
 }
