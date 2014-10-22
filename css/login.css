@@ -3,7 +3,7 @@
 body,
 html {
     /*    background-color: #F7B2AA;*/
-    font-family: 'Chelsea Market', cursive;
+/*    font-family: 'Chelsea Market', cursive;*/
     background: #f7b2aa;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
@@ -30,7 +30,9 @@ html {
     min-height: 200px;
 }
 .week-of-heading {
+    font-size: 20px;
     text-align: center;
+    box-shadow: 0px 5px 5px #e2cac7;
 }
 .main-panel {
 /*    opacity: .5;*/
@@ -99,7 +101,10 @@ html {
     min-height: 425px;
     border-radius: 5px;
 }
-
+#main-login-panel {
+    -webkit-box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
+    box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
+}
 #welcome {
     font-size: 20px;
     text-align: center;
@@ -164,28 +169,37 @@ input[type="color"]:focus,
     background: #ed9e95;
     background-color: #ed9e95;
     border-color: white;
-        
+    font-weight: 700;
+    text-align: center;
 
 }
 .calendar-panel-body {
     background-image: none;
-    padding: 5px;
+    padding: 4px;
+    margin-bottom: -20px;
+/*    box-shadow: 0px 5px 5px #e2cac7;*/
 /*    background: #F7B2AA;*/
 /*    background-color: #ffd5d1;*/
 }
 .calendar-body {
     font-size: 12px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    height: 100%;
+/*    height: 100%;*/
 }
 .calendar-panel {
 /*    padding: -5px;*/
     border: 2px solid #ed9e95;
+    min-height: 300px;
 }
 .sidepanel-body {
 }
+.main-calendar-panel {
+    box-shadow: 0px 5px 5px rgba(181, 141, 136, 0.46);
+}
 .sidepanel-heading {
     background-color: #ed9e95;
+    font-weight: 700;
+    text-align: center;
 }
 .sidepanel {
     background-color: #ed9e95;
