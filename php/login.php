@@ -33,7 +33,7 @@ if($count==1){
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
     $name = $row[fname] . " " . $row[lname];
     session_register("name");
-    //header("location:../calendar2.php");
+    header("location:../calendar2.php");
 }
 else {
 echo "Wrong Username or Password";
