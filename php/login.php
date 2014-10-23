@@ -1,13 +1,13 @@
 <?php
 ob_start();
-$DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ; 
+$DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
-//connect 
-$conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName); 
+//connect
+$conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
 // Check connection
 if (mysqli_connect_errno()) {
-    echo "Database connection failed: " . mysqli_connect_error();  
+    echo "Database connection failed: " . mysqli_connect_error();
 }
 
 //user and pass from index.html
@@ -30,6 +30,7 @@ if($count==1){
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
     session_register("password");
+    session_register("fname");
     header("location:../calendar.php");
 }
 else {
