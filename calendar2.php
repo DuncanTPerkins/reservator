@@ -69,7 +69,7 @@
                               <li>
                                   <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
                               </li>
-                              <li><a id="logout" action="php/logout.php" href="#">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
+                              <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
                               </li>
 
                          </ul>
