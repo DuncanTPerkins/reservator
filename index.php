@@ -104,13 +104,13 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Logged Out</h4>
+        <h4 class="modal-title" id="myModalLabel"></h4>
       </div>
       <div class="modal-body">
         You Have Been Logged Out.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Ok.</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
       </div>
     </div>
   </div>
