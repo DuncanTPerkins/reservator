@@ -13,6 +13,7 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -21,7 +22,7 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
         <?php if($_SESSION['loggedout'] == 1) {
     session_destroy();
     ?>
-    <script>
+    <script type="text/javascript">
 
          $(document).ready(function() {
         $("#myModal").modal('show');
@@ -116,7 +117,6 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
 </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 
