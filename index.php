@@ -85,7 +85,8 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -93,25 +94,23 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
         <h4 class="modal-title" id="myModalLabel">Logged Out</h4>
       </div>
       <div class="modal-body">
-        You Have been Logged Out.
+        You Have Been Logged Out.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Ok</button>
+        <button type="button" class="btn btn-primary">Ok.</button>
       </div>
     </div>
   </div>
 </div>
 
-            <?php
-    if($_SESSION['loggedout'] == 1) {
-        ?>
-        <script>
- $("#myModal").modal("show");
- </script>
+    <?php if($_SESSION['loggedout'] == 1) {
+    ?>
+    <script>$("#myModal").modal('show');
+</script>
 
-            <?php
-    }
+    <?php }
 ?>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
