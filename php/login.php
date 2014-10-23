@@ -1,4 +1,5 @@
 <?php
+if(session_is_registered(username)){ header( "location:calendar2.php");
 ob_start();
 $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
