@@ -1,4 +1,4 @@
-<?php if(session_is_registered(username)){ header( "location:index.html");} ?>
+<?php if(session_is_registered(username)){ header( "location:index.php");} ?>
 
 <!DOCTYPE html>
 <html lang="en">
