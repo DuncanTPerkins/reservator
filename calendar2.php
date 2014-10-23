@@ -67,7 +67,7 @@
 
                          <ul class="nav navbar-nav navbar-right">
                               <li>
-                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['fname'] . "</a>"; ?>
+                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
                               </li>
                               <li><a id="logout" href="#">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
                               </li>

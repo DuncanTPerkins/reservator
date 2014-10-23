@@ -31,7 +31,8 @@ if($count==1){
     session_register("username");
     session_register("password");
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
-    print_r($row);
+    $name = $row[fname] . " " . $row[lname];
+    session_register("name");
     //header("location:../calendar2.php");
 }
 else {
