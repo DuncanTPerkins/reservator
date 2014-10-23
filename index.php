@@ -106,7 +106,11 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
     <?php if($_SESSION['loggedout'] == 1) {
     session_destroy();
     ?>
-    <script>$("#myModal").modal('show');
+    <script>
+
+         $(document).ready(function() {
+        $("#myModal").modal('show');
+         });
 </script>
 
     <?php }
