@@ -18,6 +18,18 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+        <?php if($_SESSION['loggedout'] == 1) {
+    session_destroy();
+    ?>
+    <script>
+
+         $(document).ready(function() {
+        $("#myModal").modal('show');
+         });
+</script>
+
+    <?php }
+?>
 </head>
         <body>
             <div class="container">
@@ -103,18 +115,6 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
   </div>
 </div>
 
-    <?php if($_SESSION['loggedout'] == 1) {
-    session_destroy();
-    ?>
-    <script>
-
-         $(document).ready(function() {
-        $("#myModal").modal('show');
-         });
-</script>
-
-    <?php }
-?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
