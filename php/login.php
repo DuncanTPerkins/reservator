@@ -30,7 +30,8 @@ if($count==1){
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
     session_register("password");
-    print_r($result);
+    $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+    print_r($row);
     //header("location:../calendar2.php");
 }
 else {
