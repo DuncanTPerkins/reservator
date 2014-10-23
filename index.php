@@ -1,4 +1,4 @@
-<?php if(session_is_registered(username)){ header( "location:calendar2.php");} ?>
+<?php if(session_is_registered(username)){ header( "location:calendar2.php");} echo " <h1> HI </h1>";?>
 
 <!DOCTYPE html>
 <html lang="en">
