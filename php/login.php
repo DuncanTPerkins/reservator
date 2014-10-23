@@ -31,7 +31,7 @@ if($count==1){
     session_register("username");
     session_register("password");
     session_register("fname");
-    header("location:../calendar.php");
+    header("location:../calendar2.php");
 }
 else {
 echo "Wrong Username or Password";
