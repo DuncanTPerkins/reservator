@@ -110,7 +110,7 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
         You Have Been Logged Out.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
