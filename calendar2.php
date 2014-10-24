@@ -65,7 +65,7 @@ $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."
 
 $day++;
 }
-    }
+    
 
 ?>
 <!DOCTYPE html>
