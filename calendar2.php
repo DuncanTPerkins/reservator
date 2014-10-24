@@ -149,7 +149,7 @@ $day++;
                     <div class="panel panel-default main-calendar-panel  heightfull">
 
                          <div class="panel-heading week-of-heading">
-                              Week of <?php echo $month . " " . $day . "-" . $day+4 . ", " . $year ?>
+                              Week of <?php echo $dates[0] . "-" . $dates[4]; ?>
                          </div>
                          <div class="panel-body main-panel calendar-panel-body">
                              <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
