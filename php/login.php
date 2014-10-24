@@ -37,8 +37,8 @@ if($count==1){
 }
 else {
 session_destroy();
-session_register('loggedout');
-$_SESSION['loggedout'] = 1;
+session_register('logfail');
+$_SESSION['logfail'] = 1;
 header("location:../index.php");
 }
 ob_end_flush();
