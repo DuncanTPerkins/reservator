@@ -76,10 +76,10 @@ $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
 $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
-$loopDay = $startingDay; 
+$loopDay = $startingDay;
 
 for($j=0; $j<5; $j++) {
-    echo "<th>" . $loopDay->format('m ([ .\t-])* dd [,.stndrh\t ]') . "</th>";
+    echo "<th>" . $loopDay->format('m ([,.stndrh\t ]') . "</th>";
     $loopDay->modify('+1 day');
 }
 
