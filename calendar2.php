@@ -32,7 +32,6 @@ $k = 0;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
-    print_r($result);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         $count=count($row);
         print_r($row);
