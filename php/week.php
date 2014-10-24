@@ -1,8 +1,11 @@
 <?php
 class week {
-
-    public function_construct() {
-        $today = getdate();
+private $today;
+private $DBServer;
+private $year, $month, $day, $day1, $startingDay, $endingDay, $loopDay, $conn, $dayfield, $result, $row, $count, $k;
+public $dates, $meals;
+public function_construct() {
+$today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
 $month = $today[mon];
@@ -13,14 +16,14 @@ $startingDay->modify('+4 days');
 $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay;
-public $dates = array();
+$dates = array();
 
 for($j=0; $j<5; $j++) {
 $dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
 }
 
-public $meals = array();
+$meals = array();
 
 
 //connect
