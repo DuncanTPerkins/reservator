@@ -27,12 +27,11 @@ $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
-else {
-    echo "yeah";
-}
+
 $k = 0;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
+    print_r($dayfield);
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         $count=count($row);
