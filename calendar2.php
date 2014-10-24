@@ -2,7 +2,7 @@
 }
 require_once('php/week.php');
 $weekData = new week;
-print_r(weekData->dates);
+print_r($weekData->dates);
 ?>
 <!DOCTYPE html>
 <html lang="en">
