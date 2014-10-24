@@ -4,7 +4,7 @@ private $today;
 private $DBServer;
 private $year, $month, $day, $day1, $startingDay, $endingDay, $loopDay, $conn, $dayfield, $result, $row, $count, $k;
 public $dates, $meals;
-public function_construct() {
+public function __construct() {
 $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
