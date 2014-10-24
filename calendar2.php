@@ -194,7 +194,7 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-                                                            <?php echo $meals[1; ?>
+                                                            <?php echo $meals[1]; ?>
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
