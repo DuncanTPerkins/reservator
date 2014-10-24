@@ -1,5 +1,9 @@
 <?php session_start(); if(!session_is_registered(username)){ header( "location:index.php");
-} ?>
+}
+require_once('php/week.php');
+weekData = new week;
+print_r(weekData->dates);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
