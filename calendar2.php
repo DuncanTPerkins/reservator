@@ -55,8 +55,8 @@ $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."
         }
 
         if($count == 0) {
-            $meals[$k] = "";
-            $meals[$k+1] = "";
+            $meals[$k] = "kjk";
+            $meals[$k+1] = "kjkj";
         }
         $k = $k + 2;
         echo "HI" . $meals[k];
