@@ -79,7 +79,7 @@ $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay;
 
 for($j=0; $j<5; $j++) {
-    echo "<th>" . $loopDay->format('M d') . "</th>";
+    echo "<th>" . $loopDay->format('l, F d') . "</th>";
     $loopDay->modify('+1 day');
 }
 

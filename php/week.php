@@ -15,7 +15,7 @@ $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay;
 public $dates = array();
 for($j=0; $j<5; $j++) {
-$dates[$j] = $loopDay->format('m-d');
+$dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
 }
   private $mon = "";
