@@ -1,7 +1,7 @@
 <?php
 class week {
 
-    function_construct() {
+    public function_construct() {
         $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
