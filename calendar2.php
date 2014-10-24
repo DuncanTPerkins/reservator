@@ -58,7 +58,7 @@ $count=mysqli_num_rows($result);
             $meals[$k] = "";
             $meals[$k+1] = "";
         }
-        $k = $k + 2;
+        $k++;
     }
 $day++;
 }
