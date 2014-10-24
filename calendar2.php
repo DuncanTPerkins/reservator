@@ -61,7 +61,6 @@ $count=count($result);
         }
         $k = $k + 2;
     }
-print_r($meals[$k]);
 
 $day++;
 }
@@ -178,7 +177,7 @@ $day++;
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
 
-                                             <?php echo $weekData->dates[0]; ?>Monday, October 20th
+                                             <?php echo $dates[0]; ?>
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
