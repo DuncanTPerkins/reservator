@@ -1,9 +1,7 @@
 <?php
-session_start();
 class week {
 private $today = getdate();
-$DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
-$today = getdate();
+$DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
 $month = $today[mon];
 $day = ($today[mday] - $today[wday]) + 1;
