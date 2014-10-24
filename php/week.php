@@ -1,6 +1,8 @@
 <?php
 class week {
-$today = getdate();
+
+    function_construct() {
+        $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
 $month = $today[mon];
@@ -64,6 +66,8 @@ $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."
 
 $day++;
 }
+    }
+
 function getWeeks() {
  return $dates;
 }
