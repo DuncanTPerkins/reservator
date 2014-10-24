@@ -114,7 +114,7 @@ echo $weekData->dates;
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
 
-                                             Monday, October 20th
+                                             <?php echo $weekData->dates[0]; ?>Monday, October 20th
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
