@@ -18,7 +18,6 @@ $dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
 }
 
-$meals = array();
 
 
 //connect
@@ -55,8 +54,8 @@ $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."
         }
 
         if($count == 0) {
-            $meals[$k] = "kjk";
-            $meals[$k+1] = "kjkj";
+            $meals[$k] = "";
+            $meals[$k+1] = "";
         }
         $k = $k + 2;
         echo "HI" . $meals[k];
