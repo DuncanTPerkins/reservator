@@ -27,6 +27,9 @@ $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
+else {
+    echo "yeah";
+}
 $k = 0;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
