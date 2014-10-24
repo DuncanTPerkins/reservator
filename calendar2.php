@@ -64,7 +64,7 @@ $count=count($result);
 $day++;
 }
 
-
+print_r($meals);
 ?>
 <!DOCTYPE html>
 <html lang="en">
