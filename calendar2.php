@@ -63,7 +63,6 @@ $count=mysqli_num_rows($result);
 $k = $k + 2;
 $day++;
 }
-print_r($meals);
 
 ?>
 <!DOCTYPE html>
