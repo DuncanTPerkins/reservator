@@ -276,7 +276,8 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="meal">                                                            <?php echo $meals[6]; ?>
+                                                       <div class="meal">
+                                                           <?php echo $meals[6]; ?>
 
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
@@ -286,7 +287,8 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="meal">                                                            <?php echo $meals[7]; ?>
+                                                       <div class="meal">
+                                                           <?php echo $meals[7]; ?>
 
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
@@ -307,13 +309,24 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                      <div class="meal friday-lunch">    <?php echo $meals[8]; ?>
+                                                       <div class="meal">
+                                                           <?php echo $meals[8]; ?>
 
-                                                            <span class="glyphicon glyphicon-ok glyph-friday"></span>
+                                                           <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
                                              </div>
+                                             <div class="row drow">
+                                                  <div class="col-md-12 dinner">
+                                                       <span class="label label-primary">DINNER:</span>
+                                                       <br>
+                                                       <div class="meal">
+                                                           <?php echo $meals[9]; ?>
 
+                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                       </div>
+                                                  </div>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
