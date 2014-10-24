@@ -184,7 +184,7 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-                                                            Pimento cheese and chicken salad sandwiches w/ chicken noodle soup
+                                                            <?php echo $meals[0]; ?>
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -194,7 +194,7 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-                                                            Spaghetti with meatballs, green beans and rolls
+                                                            <?php echo $meals[1; ?>
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -208,7 +208,7 @@ $day++;
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-                                             Tuesday, October 21st
+                                             <?php echo $dates[1]; ?>
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -216,7 +216,7 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-                                                            Taco bar and white chicken chili
+                                                            <?php echo $meals[2]; ?>
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -225,7 +225,8 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="meal">Liz’s Orange chicken with broccoli and chocolate bar cake
+                                                       <div class="meal">                                                            <?php echo $meals[3]; ?>
+
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -238,14 +239,15 @@ $day++;
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-                                             Wednesday, October 22nd
+                                            <?php echo $dates[2]; ?>
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="meal">Ham roll ups with pumpkin soup, tofu and pasta salad
+                                                       <div class="meal">                                                            <?php echo $meals[4]; ?>
+
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -254,7 +256,8 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="meal">Blackened Salmon with creamy cajun pasta and corn mague choux
+                                                       <div class="meal">                                                            <?php echo $meals[5]; ?>
+
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -267,14 +270,15 @@ $day++;
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-                                             Thursday, October 23rd
+                                             <?php echo $dates[3]; ?>
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="meal">Southwest chicken wrap and broccoli cheddar soup
+                                                       <div class="meal">                                                            <?php echo $meals[6]; ?>
+
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -283,7 +287,8 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="meal">Meatloaf with garlic mashed potatoes, candied carrots and banana pudding
+                                                       <div class="meal">                                                            <?php echo $meals[7]; ?>
+
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
                                                   </div>
@@ -296,14 +301,15 @@ $day++;
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-                                             Friday, October 24th
+                                             <?php echo $dates[4]; ?>
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                      <div class="meal friday-lunch">Fried Friday: pickles, sweet potato fries and eggrolls
+                                                      <div class="meal friday-lunch">    <?php echo $meals[8]; ?>
+
                                                             <span class="glyphicon glyphicon-ok glyph-friday"></span>
                                                        </div>
                                                   </div>
