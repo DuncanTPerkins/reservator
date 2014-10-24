@@ -36,7 +36,10 @@ if($count==1){
     header("location:../calendar2.php");
 }
 else {
-echo "Wrong Username or Password";
+session_destroy();
+session_register('loggedout');
+$_SESSION['loggedout'] = 1;
+header("location:../index.php");
 }
 ob_end_flush();
 

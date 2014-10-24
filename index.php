@@ -25,7 +25,20 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
     <script type="text/javascript">
 
          $(document).ready(function() {
-        $("#myModal").modal('show');
+        $("#loggedout").modal('show');
+         });
+</script>
+
+    <?php }
+?>
+
+        <?php if($_SESSION['logfail'] == 1) {
+    session_destroy();
+    ?>
+    <script type="text/javascript">
+
+         $(document).ready(function() {
+        $("#logfail").modal('show');
          });
 </script>
 
@@ -99,7 +112,7 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
                 </div>
             </div>
      <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="loggedout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -108,6 +121,23 @@ if(session_is_registered(username)){ header( "location:calendar2.php");}?>
       </div>
       <div class="modal-body">
         You Have Been Logged Out.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="logfail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        Invalid Username or Password. Please try again.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
