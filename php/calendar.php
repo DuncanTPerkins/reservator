@@ -50,10 +50,10 @@
             <!--.nav-collapse -->
         </div>
     </nav>
-    <?php $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ; 
+    <?php $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
-//connect 
-$conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName); 
+//connect
+$conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -62,7 +62,7 @@ if (mysqli_connect_errno()) {
 
 
 $today = getdate();
-$year = $today[year]; 
+$year = $today[year];
 $month = $today[mon];
 $day = ($today[mday] - $today[wday]) + 1;
 $day1 = $day;
@@ -71,15 +71,15 @@ $dinners = array();
 $ll = 0;
 $dl = 0;
 echo "<table style='width:100%'>";
-echo "<tr>"; 
-$startingDay = new DateTime($year . "-" . $month . "-" . $day); 
+echo "<tr>";
+$startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
 $endingDay = $startingDay;
-$startingDay = new DateTime($year . "-" . $month . "-" . $day); 
+$startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay; 
 
-for($j=0; $j<5; $j++) { 
-    echo "<th>" . $loopDay->format('m-d') . "</th>";
+for($j=0; $j<5; $j++) {
+    echo "<th>" . $loopDay->format('m ([ .\t-])* dd [,.stndrh\t ]') . "</th>";
     $loopDay->modify('+1 day');
 }
 
@@ -88,31 +88,31 @@ echo "</tr>";
 
 echo "<tr>";
 while($day < $day1+5) {
-$dayfield = $year . "-" . $month . "-" . $day; 
+$dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
-    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) { 
-        if($row['meal_type'] == 0) { 
-            array_push($lunches, $row['description']); 
+    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+        if($row['meal_type'] == 0) {
+            array_push($lunches, $row['description']);
             $ll++;
         }
-        if($row['meal_type'] == 1) { 
-            array_push($dinners, $row['description']); 
+        if($row['meal_type'] == 1) {
+            array_push($dinners, $row['description']);
             $dl++;
         }
     }
-    
+
 
 $day++;
 }
     echo "<tr>";
-    for($k = 0; $k < $ll; $k++) { 
-     echo "<td>" . $lunches[$k] . "</td>";         
+    for($k = 0; $k < $ll; $k++) {
+     echo "<td>" . $lunches[$k] . "</td>";
     }
     echo "</tr>";
-    
+
         echo "<tr>";
-    for($l = 0; $l < $dl; $l++) { 
-     echo "<td>" . $dinners[$l] . "</td>";         
+    for($l = 0; $l < $dl; $l++) {
+     echo "<td>" . $dinners[$l] . "</td>";
     }
     echo "</tr>";
 
