@@ -1,5 +1,5 @@
 <?php session_start();
-if(session_is_registered(username)){ header( "location:calendar2.php");}?>
+if(session_is_registered(username)){ header( "location:calendar.php");}?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- google drive-->
