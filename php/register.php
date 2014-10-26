@@ -14,18 +14,23 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
-
-
-$sql = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fname, lname)
+$sql1 = mysqli_query("SELECT * FROM STUDENTS WHERE '$email' = email");
+$rows = mysqli_num_rows($sql1);
+if($rows>0) {
+    session_start();
+    $_SESSION['nouse'] = 1;
+    header("location:../register.php");
+}
+$sql2 = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fname, lname)
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql2)) {
     session_start();
     $_SESSION['username'] = $email;
     $_SESSION['name'] = $fname . " " . $lname;
     header("location:../calendar.php");
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
