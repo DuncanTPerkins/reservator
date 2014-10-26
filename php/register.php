@@ -27,6 +27,7 @@ $sql2 = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, f
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
 if (mysqli_query($conn, $sql2)) {
+    session_destroy();
     session_start();
     $_SESSION['username'] = $email;
     $_SESSION['name'] = $fname . " " . $lname;

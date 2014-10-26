@@ -22,7 +22,7 @@
     <script type="text/javascript">
     </script>
 <?php
-if($_SESSION['nouse'] = 1) {
+if($_SESSION['nouse'] == 1) {
 ?>
     <script>
  $(document).ready(function () {
