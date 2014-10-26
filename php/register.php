@@ -17,7 +17,6 @@ $lname = $_POST['lname'];
 $sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' = email");
 $rows = mysqli_num_rows($sql1);
 if($rows!=0) {
-    session_destroy();
     session_start();
     $_SESSION['nouse'] = 1;
     header("location:../register.php");
