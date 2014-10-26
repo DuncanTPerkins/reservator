@@ -16,8 +16,8 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 
 
-$sql = "INSERT INTO STUDENTS (DEFAULT, username, password, email, phone, fname, lname)
-VALUES (NULL, 'unused', '$password', '$email', '$phone', '$fname', '$lname')";
+$sql = "INSERT INTO STUDENTS(DEFAULT, username, password, email, phone, fname, lname)
+VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
