@@ -14,8 +14,9 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
-$sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' = email");
+$sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' == email");
 $rows = mysqli_num_rows($sql1);
+print_r($rows);
 if($rows>0) {
     session_start();
     $_SESSION['nouse'] = 1;
