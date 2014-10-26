@@ -26,7 +26,7 @@ session_start();
     <script type="text/javascript">
     </script>
 <?php
-if($_SESSION['nouse'] == 1) {
+if($_SESSION['nouse'] == "go") {
 ?>
     <script>
  $(document).ready(function () {
