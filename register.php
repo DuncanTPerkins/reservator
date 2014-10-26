@@ -24,11 +24,13 @@
 <?php
 if($_SESSION['nouse'] = 1) {
 ?>
+    <script>
  $(document).ready(function () {
                $(".meal").click(function(){
                     $("#myModal").modal('show');
                });
           });
+        </script>
     <?php
 }
 ?>
