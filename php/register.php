@@ -20,7 +20,10 @@ $sql = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fn
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    session_start();
+    $_SESSION['username'] = $email;
+    $_SESSION['name'] = $fname . " " . $lname;
+    header("location:../calendar.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
