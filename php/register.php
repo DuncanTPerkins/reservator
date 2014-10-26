@@ -9,12 +9,11 @@ if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
 
-$username = $_POST['username'];
 $password = $_POST['password'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $fname = $_POST['fname'];
-$phone = $_POST['lname'];
+$lname = $_POST['lname'];
 
 
 $sql = "INSERT INTO STUDENTS (DEFAULT, username, password, email, phone, fname, lname)
