@@ -87,7 +87,7 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                                     </div>
                                                     <div class="col-md-6 col-s-6 button-container">
                                                     <input class="btn btn-lg btn-success btn-block" type="submit"
-                                                           id="register" value="Register »">
+                                                           id="register" value="Register »" onclick="/register.html">
                                                     </div>
                                                 </fieldset>
                                             </form>
