@@ -2,7 +2,7 @@
 $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
 //connect
-$conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
+$conn=new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -16,7 +16,7 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 
 
-$sql = "INSERT INTO STUDENTS(DEFAULT, username, password, email, phone, fname, lname)
+$sql = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fname, lname)
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
 if (mysqli_query($conn, $sql)) {
