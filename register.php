@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- google drive-->
@@ -22,7 +23,6 @@
     <script type="text/javascript">
     </script>
 <?php
-session_start();
 if($_SESSION['nouse'] == 1) {
 ?>
     <script>
