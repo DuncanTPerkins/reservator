@@ -16,6 +16,10 @@ $phone = $_POST['phone'];
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' == email");
+if (!$sql1) {
+    printf("Error: %s\n", mysqli_error($con));
+    exit();
+}
 $rows = mysqli_num_rows($sql1);
 $sql2 = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fname, lname)
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
