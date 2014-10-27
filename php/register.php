@@ -17,15 +17,11 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' == email");
 $rows = mysqli_num_rows($sql1);
-if($rows!=0) {
-    $_SESSION['nouse'] = "go";
-    header("location:../register.php");
-}
-
-else {
 $sql2 = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, fname, lname)
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
+
+if($rows==0) {
 if (mysqli_query($conn, $sql2)) {
     $_SESSION['username'] = $email;
     $_SESSION['name'] = $fname . " " . $lname;
@@ -34,6 +30,12 @@ if (mysqli_query($conn, $sql2)) {
     echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
     }
 }
+else {
+    $_SESSION['nouse'] = "go";
+    header("location:../register.php");
+}
+
+
 
 mysqli_close($conn);
 ?>
