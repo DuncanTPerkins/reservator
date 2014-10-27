@@ -17,7 +17,7 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $sql1 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' == email");
 if (!$sql1) {
-    printf("Error: %s\n", mysqli_error($con));
+    printf("Error: %s\n", mysqli_error($conn));
     exit();
 }
 $rows = mysqli_num_rows($sql1);
