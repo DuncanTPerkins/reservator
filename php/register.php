@@ -21,7 +21,7 @@ $sql2 = "INSERT INTO STUDENTS(pk_student_id, username, password, email, phone, f
 VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 
 
-if($rows==0) {
+if(!$sql1||$rows==0) {
 if (mysqli_query($conn, $sql2)) {
     $_SESSION['username'] = $email;
     $_SESSION['name'] = $fname . " " . $lname;
