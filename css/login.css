@@ -249,6 +249,7 @@ input[type="color"]:focus,
      color: white;
      cursor: pointer;
 }
+
 textarea {
      border-style: none;
      border-color: Transparent;
@@ -349,4 +350,20 @@ textarea {
 }
 #logout {
      /*     display: inline;*/
+}
+.label-edit {
+     bottom: 7px;
+     left: 5px;
+     position: absolute;
+     font-size: 13px;
+     border-bottom-right-radius: 2px;
+     border-bottom-left-radius: 2px;
+}
+.label-list {
+     bottom: 7px;
+     left: 55px;
+     position: absolute;
+     font-size: 13px;
+     border-bottom-right-radius: 2px;
+     border-bottom-left-radius: 2px;
 }
