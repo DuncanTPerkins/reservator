@@ -127,12 +127,12 @@ $day++;
                else {
                     $("#navbar-brand").css("font-size", "18px");
                }
-               if (window.innerWidth < 300) {
-                    $('.calendar-heading').css("font-size", "12px");
-               }
-               else {
-                    $(".calendar-heading").css("font-size", "14px");
-               }
+//               if (window.innerWidth < 300) {
+//                    $('.calendar-heading').css("font-size", "12px");
+//               }
+//               else {
+//                    $(".calendar-heading").css("font-size", "14px");
+//               }
           }
      </script>
 </head>

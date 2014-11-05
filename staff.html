@@ -69,6 +69,7 @@ $day++;
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,70 +98,98 @@ $day++;
 
                $(".label-edit").hover(function () { //hover in
                     $(this).css("background-color", "#fcbbb3");
-//                    $(this).next().next().css("border-color", "#fcbbb3");
+                    //                    $(this).next().next().css("border-color", "#fcbbb3");
                     $(this).css("cursor", "pointer");
 
                }, function () { //hover out
                     $(this).css("background-color", "#ed9e95");
-//                    $(this).prev().prev().css("border-color", "#ed9e95");
+                    //                    $(this).prev().prev().css("border-color", "#ed9e95");
                });
 
                $(".label-list").hover(function () { //hover in
                     $(this).css("background-color", "#fcbbb3");
-//                    $(this).next().next().css("border-color", "#fcbbb3");
+                    //                    $(this).next().next().css("border-color", "#fcbbb3");
                     $(this).css("cursor", "pointer");
 
                }, function () { //hover out
                     $(this).css("background-color", "#ed9e95");
-//                    $(this).prev().prev().css("border-color", "#ed9e95");
+                    //                    $(this).prev().prev().css("border-color", "#ed9e95");
                });
 
-               $(".meal, .label-primary").click(function(){
-//                    $("#myModal").modal('show');
+               $(".meal, .label-primary").click(function () {
+                    //                    $("#myModal").modal('show');
                });
 
-               $("#right-arrow, #right-arrow-label").click(function(){
-//                    $("#current-week-row").toggle('slide', 'left', 500);
+               $("#right-arrow, #right-arrow-label").click(function () {
+                    //                    $("#current-week-row").toggle('slide', 'left', 500);
                     $("#current-week-row").hide();
                     $("#next-week-row").show();
                });
 
-               $("#left-arrow, #left-arrow-label").click(function(){
-//                    $("#next-week-row").toggle('slide', 'right', 500);
+               $("#left-arrow, #left-arrow-label").click(function () {
+                    //                    $("#next-week-row").toggle('slide', 'right', 500);
                     $("#next-week-row").hide();
                     $("#current-week-row").show();
                });
 
                $("#next-week-row").hide();
 
-               $(window).resize(function(){
+               $(window).resize(function () {
                     changeLayout();
+               });
+
+               $(document).keydown(function (e) {
+                    switch (e.which) {
+                    case 37: // left
+                         $("#next-week-row").hide();
+                         $("#current-week-row").show();
+                         break;
+
+                    case 39: // right
+                         $("#current-week-row").hide();
+                         $("#next-week-row").show();
+                         break;
+
+                    default:
+                         return; // exit this handler for other keys
+                    }
+                    e.preventDefault(); // prevent the default action (scroll / move caret)
                });
 
           });
 
-          function changeLayout(){
+          function changeLayout() {
 
                if (window.innerWidth < 768) {
                     $("#right-arrow-label").hide();
                     $("#left-arrow-label").hide();
-               }
-               else {
+               } else {
                     $("#right-arrow-label").show();
                     $("#left-arrow-label").show();
                }
                if (window.innerWidth < 326) {
                     $('#navbar-brand').css("font-size", "15px");
-               }
-               else {
+               } else {
                     $("#navbar-brand").css("font-size", "18px");
                }
+
+
                if (window.innerWidth < 300) {
                     $('.calendar-heading').css("font-size", "12px");
-               }
-               else {
+               } else {
                     $(".calendar-heading").css("font-size", "14px");
                }
+
+//               if (window.innerWidth < 385) {
+//                    $('.week-of-heading').css("font-size", "8px");
+//               } else if (window.innerWidth < 620) {
+//                    $('.week-of-heading').css("font-size", "10px");
+//               } else if (window.innerWidth < 1210) {
+//                    $('.week-of-heading').css("font-size", "14px",
+//                         "padding-top", "15px");
+//               } else {
+//                    $(".week-of-heading").css("font-size", "20px");
+//               }
           }
      </script>
 </head>
@@ -183,7 +212,7 @@ $day++;
 
                          <ul class="nav navbar-nav navbar-right">
                               <li>
-<!--                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>-->
+                                   <!--                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>-->
                               </li>
                               <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
                               </li>
@@ -195,19 +224,20 @@ $day++;
                <!-- /.container-fluid -->
           </nav>
           <!-- Navbar -->
-          <div class="row vertical-offset-100" id="current-week-row"> <!-- row container with 100px vertical offset -->
-              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
+          <div class="row vertical-offset-100" id="current-week-row">
+               <!-- row container with 100px vertical offset -->
+               <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
                     <div class="panel panel-default main-calendar-panel  heightfull">
 
                          <div class="panel-heading week-of-heading">
-<!--
+                              <!--
                               Week of <?php
                             echo $dates[0] . " - " . $dates[4] . ", " . $year; ?>
--->Placeholder
+-->Week of September 03 - September 07, 2014
                               <div id="right-arrow-label">Next Week</div><span class="glyphicon glyphicon-arrow-right right" id="right-arrow"></span>
                          </div>
                          <div class="panel-body main-panel calendar-panel-body">
-                             <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
 
                                    <div class="panel panel-default calendar-panel sidepanel">
                                         <div class="panel-heading sidepanel-heading">
@@ -225,12 +255,12 @@ $day++;
                                    </div>
                               </div>
                               <!-- Welcome -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
 
-<!--                                             <?php echo $dates[0]; ?>-->Wednesday, September 27th
+                                             <!--                                             <?php echo $dates[0]; ?>-->Wednesday, September 27th
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -238,10 +268,10 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[0]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[0]; ?>-->Placeholder
                                                             <span class="label label-primary label-edit">EDIT</span>
                                                             <span class="label label-primary label-list">LIST</span>
-<!--                                                            <span class="glyphicon glyphicon-ok"></span>-->
+                                                            <!--                                                            <span class="glyphicon glyphicon-ok"></span>-->
                                                        </div>
                                                   </div>
                                              </div>
@@ -250,10 +280,10 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[1]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[1]; ?>-->Placeholder
                                                             <span class="label label-primary label-edit">EDIT</span>
                                                             <span class="label label-primary label-list">LIST</span>
-<!--                                                           <span class="glyphicon glyphicon-ok"></span>-->
+                                                            <!--                                                           <span class="glyphicon glyphicon-ok"></span>-->
                                                        </div>
                                                   </div>
                                              </div>
@@ -262,11 +292,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Monday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                             <?php echo $dates[1]; ?>-->Placeholder
+                                             <!--                                             <?php echo $dates[1]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -274,8 +304,8 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[2]; ?>-->Placeholder
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <!--                                                            <?php echo $meals[2]; ?>-->Placeholder
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -284,9 +314,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[3]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[3]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -294,11 +324,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Tuesday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                            <?php echo $dates[2]; ?>-->Placeholder
+                                             <!--                                            <?php echo $dates[2]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -306,9 +336,9 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[4]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[4]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -317,9 +347,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[5]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[5]; ?>-->Placeholder
 
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -327,7 +357,7 @@ $day++;
                                    </div>
                               </div>
                               <!-- Wednesday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
@@ -339,9 +369,9 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-                                                           <?php echo $meals[6]; ?>Placeholder
+                                                            <?php echo $meals[6]; ?>Placeholder
 
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -350,9 +380,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                           <?php echo $meals[7]; ?>-->Placeholder
+                                                            <!--                                                           <?php echo $meals[7]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -360,11 +390,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Thursday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                             <?php echo $dates[4]; ?>-->Placeholder
+                                             <!--                                             <?php echo $dates[4]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -372,9 +402,9 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal friday-lunch">
-<!--                                                           <?php echo $meals[8]; ?>-->Placeholder
+                                                            <!--                                                           <?php echo $meals[8]; ?>-->Placeholder
 
-                                                           <span class="label label-primary label-edit">EDIT</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>
                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
@@ -392,20 +422,22 @@ $day++;
                </div>
                <!--- Calendar -->
           </div>
-<div class="row" id="next-week-row"> <!-- row container with 100px vertical offset -->
-              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-100 heightfull">
+          <div class="row" id="next-week-row">
+               <!-- row container with 100px vertical offset -->
+               <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-100 heightfull">
                     <div class="panel panel-default main-calendar-panel  heightfull">
 
                          <div class="panel-heading week-of-heading">
-<!--
+                              <!--
                               Week of <?php
                             echo $dates[0] . " - " . $dates[4] . ", " . $year; ?>
 -->
-                              <span class="glyphicon glyphicon-arrow-left left" id="left-arrow"></span><div id="left-arrow-label">Current Week</div>
+                              <span class="glyphicon glyphicon-arrow-left left" id="left-arrow"></span>
+                              <div id="left-arrow-label">Current Week</div>
                               Placeholder
                          </div>
                          <div class="panel-body main-panel calendar-panel-body">
-                             <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
 
                                    <div class="panel panel-default calendar-panel sidepanel">
                                         <div class="panel-heading sidepanel-heading">
@@ -423,12 +455,12 @@ $day++;
                                    </div>
                               </div>
                               <!-- Welcome -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
 
-<!--                                             <?php echo $dates[0]; ?>-->Placeholder
+                                             <!--                                             <?php echo $dates[0]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -436,8 +468,8 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[0]; ?>-->Placeholder
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <!--                                                            <?php echo $meals[0]; ?>-->Placeholder
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -446,8 +478,8 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[1]; ?>-->Placeholder
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <!--                                                            <?php echo $meals[1]; ?>-->Placeholder
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -456,11 +488,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Monday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                             <?php echo $dates[1]; ?>-->Placeholder
+                                             <!--                                             <?php echo $dates[1]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -468,8 +500,8 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[2]; ?>-->Placeholder
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <!--                                                            <?php echo $meals[2]; ?>-->Placeholder
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -478,9 +510,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[3]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[3]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -488,11 +520,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Tuesday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                            <?php echo $dates[2]; ?>-->Placeholder
+                                             <!--                                            <?php echo $dates[2]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -500,9 +532,9 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[4]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[4]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -511,9 +543,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                            <?php echo $meals[5]; ?>-->Placeholder
+                                                            <!--                                                            <?php echo $meals[5]; ?>-->Placeholder
 
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -521,7 +553,7 @@ $day++;
                                    </div>
                               </div>
                               <!-- Wednesday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
@@ -533,9 +565,9 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal">
-                                                           <?php echo $meals[6]; ?>Placeholder
+                                                            <?php echo $meals[6]; ?>Placeholder
 
-                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -544,9 +576,9 @@ $day++;
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
                                                        <div class="meal">
-<!--                                                           <?php echo $meals[7]; ?>-->Placeholder
+                                                            <!--                                                           <?php echo $meals[7]; ?>-->Placeholder
 
-                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
+                                                            <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -554,11 +586,11 @@ $day++;
                                    </div>
                               </div>
                               <!-- Thursday -->
-                             <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
+                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
-<!--                                             <?php echo $dates[4]; ?>-->Placeholder
+                                             <!--                                             <?php echo $dates[4]; ?>-->Placeholder
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
@@ -566,8 +598,8 @@ $day++;
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
                                                        <div class="meal friday-lunch">
-<!--                                                           <?php echo $meals[8]; ?>-->Placeholder
-<span class="label label-primary label-edit">EDIT</span>
+                                                            <!--                                                           <?php echo $meals[8]; ?>-->Placeholder
+                                                            <span class="label label-primary label-edit">EDIT</span>
                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
@@ -589,23 +621,24 @@ $day++;
      </div>
 
      <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Confirm Reservation</h4>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to reserve this meal?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-</div>
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                         </button>
+                         <h4 class="modal-title" id="myModalLabel">Confirm Reservation</h4>
+                    </div>
+                    <div class="modal-body">
+                         Are you sure you want to reserve this meal?
+                    </div>
+                    <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                         <button type="button" class="btn btn-primary">Yes</button>
+                    </div>
+               </div>
+          </div>
+     </div>
 </body>
 
 </html>

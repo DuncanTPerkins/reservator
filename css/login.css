@@ -36,9 +36,11 @@ html {
      min-height: 200px;
 }
 .week-of-heading {
+/*     padding-top: 15px;*/
      font-size: 20px;
      text-align: center;
      box-shadow: 0px 5px 5px #e2cac7;
+     min-height: 50px;
 }
 .main-panel {
      /*    opacity: .5;*/
@@ -248,6 +250,7 @@ input[type="color"]:focus,
      border-radius: 90px;
      color: white;
      cursor: pointer;
+/*     margin-left: 50px;*/
 }
 
 textarea {
