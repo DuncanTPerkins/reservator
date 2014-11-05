@@ -237,6 +237,46 @@ input[type="color"]:focus,
 .lunch {
      height: 50%;
 }
+.right {
+     right: 25px;
+     top: 5px;
+     font-size: 30px;
+     position: absolute;
+     border: 5px solid #f7b2aa;
+     background-color: #f7b2aa;
+     border-radius: 90px;
+     color: white;
+     cursor: pointer;
+}
+#right-arrow-label {
+     position: absolute;
+     right: 75px;
+     top: 11px;
+     cursor: pointer;
+}
+#left-arrow-label {
+     position: absolute;
+     left: 75px;
+     top: 61px;
+     cursor: pointer;
+}
+.left {
+     left: 25px;
+     top: 55px;
+     font-size: 30px;
+     position: absolute;
+     border: 5px solid #f7b2aa;
+     background-color: #f7b2aa;
+     border-radius: 90px;
+     color: white;
+     cursor: pointer;
+}
+#current-week-row {
+/*     display: inline;*/
+}
+#next-week-row {
+
+}
 .meal {
      margin-left: px;
      margin-right: 3px;

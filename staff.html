@@ -85,10 +85,14 @@ $day++;
     <![endif]-->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <script src="js/jquery-ui.min.js"></script>
      <script>
           $calendaritem = $(".meal,.label-primary");
 
           $(document).ready(function () {
+
+               hideLabels();
+
                $(".meal").hover(function () { //hover in
                     $(this).css("border-color", "#fcbbb3");
                     $(this).prev().prev().css("background-color", "#fcbbb3");
@@ -112,7 +116,38 @@ $day++;
                $(".meal").click(function(){
                     $("#myModal").modal('show');
                });
+
+               $("#right-arrow, #right-arrow-label").click(function(){
+//                    $("#current-week-row").toggle('slide', 'left', 500);
+                    $("#current-week-row").hide();
+                    $("#next-week-row").show();
+               });
+
+               $("#left-arrow, #left-arrow-label").click(function(){
+//                    $("#next-week-row").toggle('slide', 'right', 500);
+                    $("#next-week-row").hide();
+                    $("#current-week-row").show();
+               });
+
+               $("#next-week-row").hide();
+
+               $(window).resize(function(){
+                    hideLabels();
+               });
           });
+
+          function hideLabels(){
+               var screen = $(window);
+
+               if (window.innerWidth < 768) {
+                    $("#right-arrow-label").hide();
+                    $("#left-arrow-label").hide();
+               }
+               else {
+                    $("#right-arrow-label").show();
+                    $("#left-arrow-label").show();
+               }
+          }
      </script>
 </head>
 
@@ -146,7 +181,7 @@ $day++;
                <!-- /.container-fluid -->
           </nav>
           <!-- Navbar -->
-          <div class="row vertical-offset-100"> <!-- row container with 100px vertical offset -->
+          <div class="row vertical-offset-100" id="current-week-row"> <!-- row container with 100px vertical offset -->
               <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
                     <div class="panel panel-default main-calendar-panel  heightfull">
 
@@ -155,6 +190,7 @@ $day++;
                               Week of <?php
                             echo $dates[0] . " - " . $dates[4] . ", " . $year; ?>
 -->Placeholder
+                              <div id="right-arrow-label">Next Week</div><span class="glyphicon glyphicon-arrow-right right" id="right-arrow"></span>
                          </div>
                          <div class="panel-body main-panel calendar-panel-body">
                              <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
@@ -337,15 +373,17 @@ $day++;
                </div>
                <!--- Calendar -->
           </div>
-<div class="row"> <!-- row container with 100px vertical offset -->
-              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
+<div class="row" id="next-week-row"> <!-- row container with 100px vertical offset -->
+              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-100 heightfull">
                     <div class="panel panel-default main-calendar-panel  heightfull">
 
                          <div class="panel-heading week-of-heading">
 <!--
                               Week of <?php
                             echo $dates[0] . " - " . $dates[4] . ", " . $year; ?>
--->Placeholder
+-->
+                              <span class="glyphicon glyphicon-arrow-left left" id="left-arrow"></span><div id="left-arrow-label">Current Week</div>
+                              Placeholder
                          </div>
                          <div class="panel-body main-panel calendar-panel-body">
                              <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
