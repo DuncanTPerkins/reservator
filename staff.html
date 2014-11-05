@@ -91,6 +91,8 @@ $day++;
 
           $(document).ready(function () {
 
+//               alert(window.innerWidth);
+
                hideLabels();
 
                $(".label-edit").hover(function () { //hover in
@@ -135,16 +137,9 @@ $day++;
                     hideLabels();
                });
 
-               $("textarea").keypress(function(){
-                    if($(this).keyCode == 13)
-                    {
-                         alert("ENTER PRESSED");
-                    }
-               });
           });
 
           function hideLabels(){
-               var screen = $(window);
 
                if (window.innerWidth < 768) {
                     $("#right-arrow-label").hide();
@@ -153,6 +148,12 @@ $day++;
                else {
                     $("#right-arrow-label").show();
                     $("#left-arrow-label").show();
+               }
+               if (window.innerWidth < 326) {
+                    $('#navbar-brand').css("font-size", "15px");
+               }
+               else {
+                    $("#navbar-brand").css("font-size", "18px");
                }
           }
      </script>

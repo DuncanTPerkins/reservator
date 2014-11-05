@@ -329,6 +329,8 @@ textarea {
 #navbar-brand {
      /*    top: 0px; */
      left: 50px;
+     font-size: 15px;
+/*     15*/
      /*     margin-left: 150px;*/
      padding-left: 20px;
      /*    position: absolute;*/
