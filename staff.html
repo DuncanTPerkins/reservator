@@ -93,28 +93,28 @@ $day++;
 
                hideLabels();
 
-               $(".meal").hover(function () { //hover in
-                    $(this).css("border-color", "#fcbbb3");
-                    $(this).prev().prev().css("background-color", "#fcbbb3");
-                    $(this).css("cursor", "pointer");
-
-               }, function () { //hover out
-                    $(this).css("border-color", "#ed9e95");
-                    $(this).prev().prev().css("background-color", "#ed9e95");
-               });
-
-               $(".label-primary").hover(function () { //hover in
+               $(".label-edit").hover(function () { //hover in
                     $(this).css("background-color", "#fcbbb3");
-                    $(this).next().next().css("border-color", "#fcbbb3");
+//                    $(this).next().next().css("border-color", "#fcbbb3");
                     $(this).css("cursor", "pointer");
 
                }, function () { //hover out
                     $(this).css("background-color", "#ed9e95");
-                    $(this).prev().prev().css("border-color", "#ed9e95");
+//                    $(this).prev().prev().css("border-color", "#ed9e95");
                });
 
-               $(".meal").click(function(){
-                    $("#myModal").modal('show');
+               $(".label-list").hover(function () { //hover in
+                    $(this).css("background-color", "#fcbbb3");
+//                    $(this).next().next().css("border-color", "#fcbbb3");
+                    $(this).css("cursor", "pointer");
+
+               }, function () { //hover out
+                    $(this).css("background-color", "#ed9e95");
+//                    $(this).prev().prev().css("border-color", "#ed9e95");
+               });
+
+               $(".meal, .label-primary").click(function(){
+//                    $("#myModal").modal('show');
                });
 
                $("#right-arrow, #right-arrow-label").click(function(){
@@ -133,6 +133,13 @@ $day++;
 
                $(window).resize(function(){
                     hideLabels();
+               });
+
+               $("textarea").keypress(function(){
+                    if($(this).keyCode == 13)
+                    {
+                         alert("ENTER PRESSED");
+                    }
                });
           });
 
@@ -225,7 +232,9 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[0]; ?>-->Placeholder
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>
+                                                            <span class="label label-primary label-list">LIST</span>
+<!--                                                            <span class="glyphicon glyphicon-ok"></span>-->
                                                        </div>
                                                   </div>
                                              </div>
@@ -235,7 +244,9 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[1]; ?>-->Placeholder
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>
+                                                            <span class="label label-primary label-list">LIST</span>
+<!--                                                           <span class="glyphicon glyphicon-ok"></span>-->
                                                        </div>
                                                   </div>
                                              </div>
@@ -257,7 +268,7 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[2]; ?>-->Placeholder
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -268,7 +279,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[3]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -290,7 +301,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[4]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -301,7 +312,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[5]; ?>-->Placeholder
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -323,7 +334,7 @@ $day++;
                                                        <div class="meal">
                                                            <?php echo $meals[6]; ?>Placeholder
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -334,7 +345,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                           <?php echo $meals[7]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -356,7 +367,8 @@ $day++;
                                                        <div class="meal friday-lunch">
 <!--                                                           <?php echo $meals[8]; ?>-->Placeholder
 
-                                                           <span class="glyphicon glyphicon-ok glyph-friday"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>
+                                                            <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -418,7 +430,7 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[0]; ?>-->Placeholder
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -428,7 +440,7 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[1]; ?>-->Placeholder
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -450,7 +462,7 @@ $day++;
                                                        <br>
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[2]; ?>-->Placeholder
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -461,7 +473,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[3]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -483,7 +495,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[4]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -494,7 +506,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                            <?php echo $meals[5]; ?>-->Placeholder
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -516,7 +528,7 @@ $day++;
                                                        <div class="meal">
                                                            <?php echo $meals[6]; ?>Placeholder
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                           <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -527,7 +539,7 @@ $day++;
                                                        <div class="meal">
 <!--                                                           <?php echo $meals[7]; ?>-->Placeholder
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <span class="label label-primary label-edit">EDIT</span>                                                             <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>
@@ -548,8 +560,8 @@ $day++;
                                                        <br>
                                                        <div class="meal friday-lunch">
 <!--                                                           <?php echo $meals[8]; ?>-->Placeholder
-
-                                                           <span class="glyphicon glyphicon-ok glyph-friday"></span>
+<span class="label label-primary label-edit">EDIT</span>
+                                                            <span class="label label-primary label-list">LIST</span>
                                                        </div>
                                                   </div>
                                              </div>

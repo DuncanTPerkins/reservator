@@ -25,12 +25,12 @@ html {
      background-attachment: fixed;
 }
 .noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
 }
 .calendar-panel {
      min-height: 200px;
@@ -96,7 +96,8 @@ html {
      height: auto;
      margin: auto;
 }
-#login, #register {
+#login,
+#register {
      color: white;
      background-image: linear-gradient(to bottom, #F7B2AA, #ed9e95);
      border-color: #ed9e95;
@@ -248,6 +249,12 @@ input[type="color"]:focus,
      color: white;
      cursor: pointer;
 }
+textarea {
+     border-style: none;
+     border-color: Transparent;
+     overflow: auto;
+     outline: none;
+}
 #right-arrow-label {
      position: absolute;
      right: 75px;
@@ -272,12 +279,9 @@ input[type="color"]:focus,
      cursor: pointer;
 }
 #current-week-row {
-/*     display: inline;*/
+     /*     display: inline;*/
 }
-#next-week-row {
-
-}
-.meal {
+#next-week-row {} .meal {
      margin-left: px;
      margin-right: 3px;
      padding: 5px;
@@ -290,7 +294,7 @@ input[type="color"]:focus,
      position: relative;
 }
 .friday-lunch {
-    min-height: 245px;
+     min-height: 245px;
 }
 .dinner,
 .lunch {
@@ -319,12 +323,12 @@ input[type="color"]:focus,
      /*    padding: 5px;*/
 }
 .glyph-friday {
-    top: 215px;
+     top: 215px;
 }
 #navbar-brand {
      /*    top: 0px; */
      left: 50px;
-/*     margin-left: 150px;*/
+     /*     margin-left: 150px;*/
      padding-left: 20px;
      /*    position: absolute;*/
      display: inline;
@@ -344,5 +348,5 @@ input[type="color"]:focus,
      height: 20px;
 }
 #logout {
-/*     display: inline;*/
+     /*     display: inline;*/
 }
