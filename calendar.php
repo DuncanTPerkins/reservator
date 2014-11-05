@@ -87,6 +87,9 @@ $day++;
           $calendaritem = $(".meal,.label-primary");
 
           $(document).ready(function () {
+
+               changeLayout();
+
                $(".meal").hover(function () { //hover in
                     $(this).css("border-color", "#fcbbb3");
                     $(this).prev().prev().css("background-color", "#fcbbb3");
@@ -110,7 +113,27 @@ $day++;
                $(".meal").click(function(){
                     $("#myModal").modal('show');
                });
+
+               $(window).resize(function(){
+                    changeLayout();
+               });
           });
+
+          function changeLayout(){
+
+               if (window.innerWidth < 326) {
+                    $('#navbar-brand').css("font-size", "15px");
+               }
+               else {
+                    $("#navbar-brand").css("font-size", "18px");
+               }
+               if (window.innerWidth < 300) {
+                    $('.calendar-heading').css("font-size", "12px");
+               }
+               else {
+                    $(".calendar-heading").css("font-size", "14px");
+               }
+          }
      </script>
 </head>
 

@@ -93,7 +93,7 @@ $day++;
 
 //               alert(window.innerWidth);
 
-               hideLabels();
+               changeLayout();
 
                $(".label-edit").hover(function () { //hover in
                     $(this).css("background-color", "#fcbbb3");
@@ -134,12 +134,12 @@ $day++;
                $("#next-week-row").hide();
 
                $(window).resize(function(){
-                    hideLabels();
+                    changeLayout();
                });
 
           });
 
-          function hideLabels(){
+          function changeLayout(){
 
                if (window.innerWidth < 768) {
                     $("#right-arrow-label").hide();
@@ -154,6 +154,12 @@ $day++;
                }
                else {
                     $("#navbar-brand").css("font-size", "18px");
+               }
+               if (window.innerWidth < 300) {
+                    $('.calendar-heading').css("font-size", "12px");
+               }
+               else {
+                    $(".calendar-heading").css("font-size", "14px");
                }
           }
      </script>
@@ -224,7 +230,7 @@ $day++;
                                    <div class="panel panel-default calendar-panel">
                                         <div class="panel-heading calendar-heading">
 
-<!--                                             <?php echo $dates[0]; ?>-->Placeholder
+<!--                                             <?php echo $dates[0]; ?>-->Wednesday, September 27th
                                         </div>
                                         <div class="panel-body calendar-body">
                                              <div class="row lrow">
