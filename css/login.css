@@ -156,6 +156,9 @@ th {
 .button-container {
      padding: 5px;
 }
+.btn-primary {
+    background-color: #ed9e95;
+}
 .btn-success:hover,
 .btn-success:focus {
      background-color: #ed9e95;
