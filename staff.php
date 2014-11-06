@@ -50,19 +50,23 @@ while($day < $day1+10) {
     $count=mysqli_num_rows($result);
         while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
             if($count == 2) {
+                //meal_type 0 = lunch
                 if($row['meal_type'] == 0) {
                     $meals[$k] = $row['description'];
                 }
-            if($row['meal_type'] == 1) {
-                $meals[$k+1] = $row['description'];
+                //meal_type 0 = dinner
+                if($row['meal_type'] == 1) {
+                    $meals[$k+1] = $row['description'];
+                }
             }
-        }
 
         if($count == 1) {
+            //meal_type 0 = lunch
             if($row['meal_type'] == 0) {
                 $meals[$k] = $row['description'];
                 $meals[$k+1] = "";
              }
+            //meal_type 0 = dinner
             if($row['meal_type'] == 1) {
                 $meals[$k+1] = $row['description'];
                 $meals[$k] = "";
@@ -75,7 +79,7 @@ while($day < $day1+10) {
         }
     }
 
-    $k = $k + 2;
+    $k += 2;
     $day++;
 }
 
@@ -350,7 +354,7 @@ while($day < $day1+10) {
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[4]; ?>-->
+                                                <?php echo $meals[4]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                             </div>
