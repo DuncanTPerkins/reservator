@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if(!session_is_registered(username)) {
@@ -79,6 +80,7 @@ while($day < $day1+10) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
