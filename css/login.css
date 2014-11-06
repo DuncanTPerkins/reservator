@@ -24,6 +24,36 @@ html {
      bottom: 0;
      background-attachment: fixed;
 }
+#list {
+/*
+    top: 0;
+    position: absolute;
+*/
+}
+th {
+    background-color: #f7b2aa;
+    color: white;
+    text-align: center;
+    border: solid 2px #ce7f76 !important;
+    border-bottom: solid 4px #ce7f76 !important;
+    text-shadow: 3px 3px 3px #de948c;
+}
+.table-bordered {
+/*    border: 2px solid #db8181;*/
+    box-shadow: 0px 3px 3px rgba(222, 148, 140, 0.26);
+/*    border-color: black;*/
+}
+.modal-header {
+    background-color: #f7b2aa;
+    color: white;
+    text-shadow: 3px 3px 3px #de948c;
+    border-bottom: solid 4px #ce7f76;
+/*    box-shadow: 0px 3px 5px #ce7f76;*/
+}
+.modal {
+    margin-top: 3%;
+}
+
 .noselect {
      -webkit-touch-callout: none;
      -webkit-user-select: none;

@@ -95,6 +95,7 @@ $day++;
 //               alert(window.innerWidth);
 
                changeLayout();
+//              $("#myModal").modal('show');
 
                $(".label-edit").hover(function () { //hover in
                     $(this).css("background-color", "#fcbbb3");
@@ -116,8 +117,8 @@ $day++;
                     //                    $(this).prev().prev().css("border-color", "#ed9e95");
                });
 
-               $(".meal, .label-primary").click(function () {
-                    //                    $("#myModal").modal('show');
+               $(".label-list").click(function () {
+                    $("#myModal").modal('show');
                });
 
                $("#right-arrow, #right-arrow-label").click(function () {
@@ -613,28 +614,56 @@ $day++;
 
 
                          </div>
-                    </div>
-               </div>
-               <!--- Calendar -->
-          </div>
+        </div>
+</div>
+<!--- Calendar -->
+</div>
 
-     </div>
+</div>
 
-     <!-- Modal -->
+<!-- Modal -->
      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
                <div class="modal-content">
                     <div class="modal-header">
                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                          </button>
-                         <h4 class="modal-title" id="myModalLabel">Confirm Reservation</h4>
+                         <h4 class="modal-title" id="myModalLabel">List of Reservations for Wednesday, September 3rd</h4>
                     </div>
                     <div class="modal-body">
-                         Are you sure you want to reserve this meal?
-                    </div>
-                    <div class="modal-footer">
-                         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                         <button type="button" class="btn btn-primary">Yes</button>
+                         <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>First Name</th>
+                    <th>First Name</th>
+                </tr>
+                <tr>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                </tr>
+                             <tr>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                </tr>
+                             <tr>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                </tr>
+                             <tr>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                    <td>Butts</td>
+                </tr>
+            </table>
+
                     </div>
                </div>
           </div>
