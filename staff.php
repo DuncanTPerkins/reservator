@@ -350,7 +350,7 @@ while($day < $day1+10) {
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[4]; ?>-->Placeholder
+                                                <?php echo $meals[4]; ?>-->
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
                                             </div>
@@ -447,7 +447,6 @@ while($day < $day1+10) {
                             echo $dates[5] . " - " . $dates[9] . ", " . $year; ?>
                         <span class="glyphicon glyphicon-arrow-left left" id="left-arrow"></span>
                         <div id="left-arrow-label">Current Week</div>
-                        Placeholder
                     </div>
                     <div class="panel-body main-panel calendar-panel-body">
                         <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs calendar-padding">
