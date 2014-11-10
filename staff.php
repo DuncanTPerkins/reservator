@@ -653,28 +653,28 @@ while($day < $day1+10) {
                             <th>Phone Number</th>
                         </tr>
                         <tr>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
                         </tr>
                         <tr>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
                         </tr>
                         <tr>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
                         </tr>
                         <tr>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
-                            <td>Butts</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
+                            <td>Placeholder</td>
                         </tr>
                     </table>
 
