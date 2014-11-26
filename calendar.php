@@ -67,6 +67,7 @@ $count=mysqli_num_rows($result);
         }
 
     }
+echo $count;
 $k = $k + 2;
 $day++;
 }
