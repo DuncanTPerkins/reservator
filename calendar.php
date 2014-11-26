@@ -37,26 +37,32 @@ $count=mysqli_num_rows($result);
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
+            $mealid[$k] = $row['pk_meal_id']
         }
         if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
+            $mealid[$k+1] = $row['pk_meal_id']
+
         }
         }
 
         if($count == 1) {
          if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
-            $meals[$k+1] = "";
+            $meals[$k+1] = "Nothing Yet!";
+            $mealid[$k] = $row['pk_meal_id']
          }
             if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
-            $meals[$k] = "";
+            $meals[$k] = "Nothing Yet!";
+            $mealid[$k+1] = $row['pk_meal_id']
+
          }
         }
 
         if($count == 0) {
-            $meals[$k] = "";
-            $meals[$k+1] = "";
+            $meals[$k] = "Nothing Yet!";
+            $meals[$k+1] = "Nothing Yet!";
         }
 
     }
