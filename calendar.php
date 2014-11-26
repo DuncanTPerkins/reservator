@@ -37,11 +37,11 @@ $count=mysqli_num_rows($result);
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
-            $mealid[$k] = $row['pk_meal_id']
+            $mealid[$k] = $row['pk_meal_id'];
         }
         if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
-            $mealid[$k+1] = $row['pk_meal_id']
+            $mealid[$k+1] = $row['pk_meal_id'];
 
         }
         }
@@ -50,12 +50,12 @@ $count=mysqli_num_rows($result);
          if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
-            $mealid[$k] = $row['pk_meal_id']
+            $mealid[$k] = $row['pk_meal_id'];
          }
             if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
             $meals[$k] = "Nothing Yet!";
-            $mealid[$k+1] = $row['pk_meal_id']
+            $mealid[$k+1] = $row['pk_meal_id'];
 
          }
         }
