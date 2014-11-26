@@ -61,6 +61,7 @@ $count=mysqli_num_rows($result);
         }
 
         if($count == 0) {
+            echo "<h1> FLURP </h1>";
             $meals[$k] = "Nothing Yet!";
             $meals[$k+1] = "Nothing Yet!";
         }
