@@ -46,7 +46,7 @@ $count=mysqli_num_rows($result);
         }
         }
 
-        if($count == 1) {
+        else if($count == 1) {
          if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
@@ -60,8 +60,7 @@ $count=mysqli_num_rows($result);
          }
         }
 
-        if($count === '0' || $count === 0) {
-            echo "<h3> hi </h3>";
+        else {
             $meals[$k] = "Nothing Yet!";
             $meals[$k+1] = "Nothing Yet!";
         }
