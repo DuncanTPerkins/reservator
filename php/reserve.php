@@ -13,7 +13,7 @@ $mealid = $_POST['mealid'];
 $datetime = $_POST['datetime'];
 
 if(mysqli_query($conn, "INSERT INTO RESERVATION(student, meal, date) VALUES('$studentid', '$mealid', '$datetime')")) {
-header( "location:../calendar.php")
+header( "location:../calendar.php");
 
 }
 
