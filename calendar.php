@@ -37,6 +37,7 @@ $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
+$day2 = $day;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
@@ -48,8 +49,8 @@ $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$s
     $day++;
 }
 $k = 0;
-while($day1 < $day1+5) {
-$dayfield = $year . "-" . $month . "-" . $day;
+while($day1 < $day2+5) {
+$dayfield = $year . "-" . $month . "-" . $day1;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
