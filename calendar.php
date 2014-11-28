@@ -397,7 +397,7 @@ $day++;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <form action="php/reserve.php">
+          <form action="php/reserve.php" method="POST">
             <input value="<?php echo $_SESSION['studentid']; ?>" name="studentid" style="display: none;">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo '"' . $year . "-" . $month . "-" . $day . '"'; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
