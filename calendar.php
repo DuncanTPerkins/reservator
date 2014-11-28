@@ -102,8 +102,8 @@ $day++;
 
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
-            var $datetime = <?php echo $year . "-" . $month . "-" . $day; ?>;
-            var $mealid
+            var $datetime = <?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>;
+            var $mealid;
                changeLayout();
 
                $(".meal").hover(function () { //hover in
