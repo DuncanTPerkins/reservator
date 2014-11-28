@@ -77,11 +77,8 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                                            type="password">
                                                     <div class="checkbox">
                                                     </div>
-                                                            <label>
                                                             <input type="radio" name="login" value="student" >Student
                                                             <input type="radio" name="login" value="staff">Staff
-                                                            
-                                                        </label>
                                                     <div class="col-md-6 col-s-6 button-container">
                                                     <input class="btn btn-lg btn-success btn-block" name="login" type="submit"
                                                            id="login" value="Log in »">
