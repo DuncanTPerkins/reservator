@@ -103,6 +103,7 @@ $day++;
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
             var $datetime = <?php echo $year . "-" . $month . "-" . $day; ?>;
+            var $mealid
                changeLayout();
 
                $(".meal").hover(function () { //hover in
@@ -127,12 +128,12 @@ $day++;
 
               $(".formsubmit").click(function() {
                   $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"});
-                  alert("sup");
+                  alert($studentid + " " + $mealid + " " $datetime);
               });
 
                $(".meal").click(function(event){
                     $("#myModal").modal('show');
-                    var $mealid = event.target.id;
+                    $mealid = event.target.id;
                });
 
                $(window).resize(function(){
