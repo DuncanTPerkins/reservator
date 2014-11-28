@@ -42,7 +42,8 @@ $k = 0;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
-$result2 = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+$result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+print_r($result2);
 $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
     $l=0;
