@@ -290,7 +290,7 @@ $day1++;
                                                        </div>
                                                   </div>
                                              </div>
-                                    </div>
+                                            </div>
                                         </div>
 
 
@@ -325,7 +325,7 @@ $day1++;
                                              </div>
                                         </div>
                                    </div>
-                              </div>
+                              
                               <!-- Tuesday -->
                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
