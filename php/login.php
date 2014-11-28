@@ -18,10 +18,14 @@ $password = $_POST['password'];
 $username = mysqli_real_escape_string($conn, $username);
 $password = mysqli_real_escape_string($conn, $password);
 
+
+if($_POST['login']=="student") {
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
+
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
+
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
@@ -42,6 +46,41 @@ $_SESSION['logfail'] = 1;
 header("location:../index.php");
 }
 ob_end_flush();
+
+}
+
+if($_POST['login']=="staff") {
+$staffsql = "SELECT * FROM STAFF WHERE username='$username' and password='$password'";
+$staffresult=mysqli_query($conn, $sql);
+
+// Mysql_num_row is counting table row
+$count=mysqli_num_rows($result);
+
+// If result matched $username and $password, table row must be 1 row
+if($count==1){
+    $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+    $staffid = $row[pk_staff_id];
+    // Register $myusername, $mypassword and redirect to file "login_success.php"
+    session_register("username");
+    session_register("password");
+    session_register("staffid");
+    $name = $row[fname] . " " . $row[lname];
+    session_register("name");
+    header("location:../staff.php");
+}
+
+else {
+session_destroy();
+session_register('logfail');
+$_SESSION['logfail'] = 1;
+header("location:../index.php");
+}
+ob_end_flush();
+
+}
+
+
+
 
 ?>
 <!-- Modal -->
