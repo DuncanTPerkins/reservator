@@ -56,24 +56,29 @@ $count2 = mysqli_num_rows($result2);
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
             //echo "row " . $row['pk_meal_id'] . " mealloop " . $mealloop[$k];
-            if($row['pk_meal_id'] == $mealloop[$k]) {
+            for($i = 0; $i<sizeof($mealloop); $i++) {
+            if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             else {
                 $class[$k] = "meal";
             }
+            }
+
 
         }
         if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
             $mealid[$k+1] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $mealloop[$k]) {
+            for($i = 0; $i<sizeof($mealloop); $i++) {
+            if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k+1] = "nomeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             else {
                 $class[$k+1] = "meal";
+            }
             }
 
 
@@ -85,12 +90,14 @@ $count2 = mysqli_num_rows($result2);
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
             $mealid[$k] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $mealloop[$k]) {
+            for($i = 0; $i<sizeof($mealloop); $i++) {
+            if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             else {
                 $class[$k] = "meal";
+            }
             }
 
          }
@@ -98,12 +105,14 @@ $count2 = mysqli_num_rows($result2);
             $meals[$k+1] = $row['description'];
             $meals[$k] = "Nothing Yet!";
             $mealid[$k+1] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $mealloop[$k]) {
+             for($i = 0; $i<sizeof($mealloop); $i++) {
+            if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k+1] = "nomeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             else {
                 $class[$k+1] = "meal";
+            }
             }
 
 
