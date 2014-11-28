@@ -18,7 +18,7 @@ $password = $_POST['password'];
 $username = mysqli_real_escape_string($conn, $username);
 $password = mysqli_real_escape_string($conn, $password);
 
-
+print_r($_POST);
 if($_POST['login']=="student") {
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
@@ -79,22 +79,5 @@ ob_end_flush();
 
 }
 
-
-
-
 ?>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Confirm Reservation</h4>
-            </div>
-            <div class="modal-body">
-                You have been logged out.
-            </div>
 
-        </div>
-    </div>
-</div>
