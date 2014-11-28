@@ -125,10 +125,13 @@ $day++;
                     $(this).prev().prev().css("border-color", "#ed9e95");
                });
 
-               $(".meal").click(function(){
+              $(".formsubmit").click(function() {
+                  $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"});
+              });
+
+               $(".meal").click(function(event){
                     $("#myModal").modal('show');
                     var $mealid = event.target.id;
-                    document.write("ahhhhh" + " " + $mealid + " " + "ahhhh");
                });
 
                $(window).resize(function(){
@@ -390,7 +393,7 @@ $day++;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary formsubmit">Yes</button>
       </div>
     </div>
   </div>
