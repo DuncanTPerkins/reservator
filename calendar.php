@@ -22,6 +22,10 @@ for($w = 0; $w<9; $w++) {
  $meals[$w] = "Nothing Yet!";
 }
 
+for($w = 0; $w<9; $w++) {
+ $class[$w] = "nonmeal";
+}
+
 //connect
 $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
@@ -94,7 +98,7 @@ $day++;
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
      <script>
-          $calendaritem = $(".meal,.label-primary");
+          $calendaritem = $(".meal,.nonmeal,.label-primary");
 
           $(document).ready(function () {
 

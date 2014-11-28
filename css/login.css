@@ -318,7 +318,7 @@ textarea {
 #current-week-row {
      /*     display: inline;*/
 }
-#next-week-row {} .meal {
+#next-week-row {} .meal, .nonmeal {
      margin-left: px;
      margin-right: 3px;
      padding: 5px;
@@ -330,6 +330,7 @@ textarea {
      background-color: white;
      position: relative;
 }
+
 .friday-lunch {
      min-height: 245px;
 }
