@@ -128,7 +128,7 @@ $day++;
 
               $(".formsubmit").click(function() {
                   $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"});
-                  alert($studentid + " " + $mealid + " " $datetime);
+                  alert($student_id + " " + $mealid + " " + $datetime);
               });
 
                $(".meal").click(function(event){
