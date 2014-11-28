@@ -45,14 +45,15 @@ $result2 = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE student = '$stud
 $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        print_r($row2);
+        $mealloop[$k] = $row2['meal'];
+    }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         if($count == 2) {
         if($row['meal_type'] == 0) {
             echo "<h1> hi </h1>";
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $row2['meal']) {
+            if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
@@ -64,7 +65,7 @@ $count2 = mysqli_num_rows($result2);
         if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
             $mealid[$k+1] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $row2['meal']) {
+            if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k+1] = "nomeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
@@ -81,7 +82,7 @@ $count2 = mysqli_num_rows($result2);
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
             $mealid[$k] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $row2['meal']) {
+            if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
@@ -94,7 +95,7 @@ $count2 = mysqli_num_rows($result2);
             $meals[$k+1] = $row['description'];
             $meals[$k] = "Nothing Yet!";
             $mealid[$k+1] = $row['pk_meal_id'];
-            if($row['pk_meal_id'] == $row2['meal']) {
+            if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k+1] = "nomeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
@@ -107,7 +108,7 @@ $count2 = mysqli_num_rows($result2);
         }
 
 
-    }
+
     }
 $k = $k + 2;
 $day++;
