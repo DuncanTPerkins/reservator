@@ -325,7 +325,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[6] . " id='$mealid[6]'"?>">
+                                                       <div class="<?php echo $class[6] . '"' . "id='$mealid[6]'>"?>
                                                            <?php echo $meals[6]; ?>
 
                                                            <span class="glyphicon glyphicon-ok"></span>
