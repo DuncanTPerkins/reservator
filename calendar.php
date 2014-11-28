@@ -47,6 +47,7 @@ $count2 = mysqli_num_rows($result2);
     $l=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         echo "<h1> hi </h1>";
+        print_r($row2);
         $mealloop[$l] = $row2['meal'];
         $l++;
     }
