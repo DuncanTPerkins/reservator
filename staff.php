@@ -54,7 +54,7 @@ while($day < $day1+10) {
                 if($row['meal_type'] == 0) {
                     $meals[$k] = $row['description'];
                 }
-                //meal_type 0 = dinner
+                //meal_type 1 = dinner
                 if($row['meal_type'] == 1) {
                     $meals[$k+1] = $row['description'];
                 }
