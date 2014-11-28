@@ -69,7 +69,8 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                                     <label class="panel-login">
                                                         <div class="login_result"></div>
                                                     </label>
-
+                                                            <input type="radio" name="login" value="student" >Student
+                                                            <input type="radio" name="login" value="staff">Staff
                                                         <input name="username" class="form-control" placeholder="E-mail" id="username"
                                                            type="text">
 
@@ -77,8 +78,6 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                                            type="password">
                                                     <div class="checkbox">
                                                     </div>
-                                                            <input type="radio" name="login" value="student" >Student
-                                                            <input type="radio" name="login" value="staff">Staff
                                                     <div class="col-md-6 col-s-6 button-container">
                                                     <input class="btn btn-lg btn-success btn-block" name="login" type="submit"
                                                            id="login" value="Log in »">
