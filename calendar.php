@@ -48,7 +48,6 @@ $count2 = mysqli_num_rows($result2);
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$l] = $row2['meal'];
         $l++;
-        echo $l;
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         print_r($mealloop);
@@ -56,6 +55,7 @@ $count2 = mysqli_num_rows($result2);
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
+            echo "row " . $row['pk_meal_id'] . " mealloop " . $mealloop[$k];
             if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
