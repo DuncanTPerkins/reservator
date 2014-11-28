@@ -65,7 +65,7 @@ $count=mysqli_num_rows($result);
             $meals[$k+1] = "Nothing Yet!";
             echo "<h1> hi </h1>";
         }
-        print_r($count);
+        echo gettype($count);
     }
 $k = $k + 2;
 $day++;
