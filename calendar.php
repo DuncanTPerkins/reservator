@@ -67,7 +67,6 @@ $count=mysqli_num_rows($result);
 $k = $k + 2;
 $day++;
 }
-print_r($meals);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -210,7 +209,7 @@ print_r($meals);
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="meal">
+                                                       <div class="">
                                                             <?php echo $meals[0]; ?>
                                                             <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
