@@ -26,7 +26,11 @@ $result=mysqli_query($conn, $sql);
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
-
+if(isset($_POST['login'])) {
+    $radiovalue = $_POST['login'];
+}
+    echo $radiovalue;
+    
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
