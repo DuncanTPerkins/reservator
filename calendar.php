@@ -103,7 +103,7 @@ $day++;
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
             var $datetime = <?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo '"' . $year . "-" . $month . "-" . $day . '"'; ?>;
-            var $mealid = 0;
+            var $newmealid = 0;
                changeLayout();
 
                $(".meal").hover(function () { //hover in
@@ -125,15 +125,17 @@ $day++;
                     $(this).css("background-color", "#ed9e95");
                     $(this).prev().prev().css("border-color", "#ed9e95");
                });
-
+/*
               $(".formsubmit").click(function() {
                   $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"})
                   .done(function(data) { alert(data); })
               });
-
+*/
                $(".meal").click(function(event){
+                    $newmealid = event.target.id;
+                   $("input[id='mealid']").val($newmealid);
                     $("#myModal").modal('show');
-                    $mealid = event.target.id;
+
                });
 
                $(window).resize(function(){
@@ -395,7 +397,12 @@ $day++;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary formsubmit">Yes</button>
+          <form action="php/reserve.php">
+            <input value="<?php echo $_SESSION['studentid']; ?>" name="studentid" style="display: none;">
+            <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo '"' . $year . "-" . $month . "-" . $day . '"'; ?>" name="datetime" style="display: none;">
+            <input value="0" id="mealid" name="mealid" style="display: none;">
+        <button type="submit" class="btn btn-primary formsubmit">Yes</button>
+          </form>
       </div>
     </div>
   </div>
