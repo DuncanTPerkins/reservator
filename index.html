@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Matrix Multiplier</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+</head>
+
+<body>
+         <script>
+          $(document).ready(function() {
+              alert("sup");
+        $("#myModal").modal('show');
+          });
+</script>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" >Matrix Math</a>
+            </div>
+        </div>
+    </nav>
+<div class="big" data-ng-app="">
+
+    <div class="inputboxes">
+    <div class="box1">
+    <h2>Matrix 1</h2>
+<table>
+
+<tr>
+    <td><input type="number" ng-model="b111"></td>
+    <td><input type="number"   ng-model="b112"></td>
+    <td><input type="number"   ng-model="b113"></td>
+</tr>
+
+<tr>
+    <td><input type="number"   ng-model="b121"></td>
+    <td><input type="number"   ng-model="b122"></td>
+    <td><input type="number"   ng-model="b123"></td>
+</tr>
+<tr>
+<td><input type="number"   ng-model="b131"></td>
+        <td><input type="number"   ng-model="b132"></td>
+        <td><input type="number"   ng-model="b133"></td>
+</tr>
+        </table>
+    </div>
+
+            <div class="box2">
+    <h2>Matrix 2</h2>
+<table>
+
+<tr>
+    <td><input type="number"   ng-model="b211"></td>
+    <td><input type="number"  ng-model="b212"></td>
+    <td><input type="number"   ng-model="b213"></td>
+</tr>
+
+<tr>
+    <td><input type="number"   ng-model="b221"></td>
+    <td><input type="number"   ng-model="b222"></td>
+    <td><input type="number"   ng-model="b223"></td>
+</tr>
+<tr>
+<td><input type="number"  value="0" ng-model="b231"></td>
+        <td><input type="number" value="0"  ng-model="b232"></td>
+        <td><input type="number"  value="0" ng-model="b233"></td>
+</tr>
+        </table>
+    </div>
+
+    </div>
+<hr>
+    <div class="outputboxes">
+            <div class="box3">
+    <h2>Added</h2>
+<table
+<tr>
+    <td><input type="number" value="{{ b111 + b211 }}"></td>
+    <td><input type="number" value="{{ b112 + b212 }}"></td>
+    <td><input type="number" value="{{ b113 + b213 }}"></td>
+</tr>
+
+<tr>
+    <td><input type="number" value="{{ b121 + b221 }}"></td>
+    <td><input type="number" value="{{ b122 + b222 }}"></td>
+    <td><input type="number" value="{{ b123 + b223 }}"></td>
+</tr>
+<tr>
+        <td><input type="number" value="{{ b131 + b231 }}"></td>
+        <td><input type="number" value="{{ b132 + b232 }}"></td>
+        <td><input type="number" value="{{ b133 + b233 }}"></td>
+</tr>
+        </table>
+    </div>
+
+<div class="box4">
+<h2>Multiplied</h2>
+<table>
+<tr>
+    <td><input value="{{ (b111 * b211) + (b112 * b221) + (b113 * b231) }}"></td>
+    <td><input value="{{ (b111 * b212) + (b112 * b222) + (b113 * b232) }}"></td>
+    <td><input value="{{ (b111 * b213) + (b112 * b223) + (b113 * b233) }}"></td>
+</tr>
+
+<tr>
+    <td><input value="{{ (b121 * b211) + (b122 * b221) + (b123 * b231)}}"></td>
+    <td><input value="{{ (b121 * b212) + (b122 * b222) + (b123 * b232)}}"></td>
+    <td><input value="{{ (b121 * b213) + (b122 * b223) + (b123 * b233)}}"></td>
+</tr>
+
+<tr>
+    <td><input value="{{ (b131 * b211) + (b132 * b221) + (b133 * b231)}}"></td>
+    <td><input value="{{ (b131 * b212) + (b132 * b222) + (b133 * b232)}}"></td>
+    <td><input value="{{ (b131 * b213) + (b132 * b223) + (b133 * b233)}}"></td>
+</tr>
+</table>
+
+
+    </div>
+    </div>
+    </div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirm Reservation</h4>
+      </div>
+      <div class="modal-body">
+        Hi there! This is my project for Math for Computer Science. It's a matrix multiplier that I wrote (I promise) using Angular JS, HTML, and two lines of JQuery! To operate it, put numbers into the two matrixes above the horizontal line, and the matrixes on the bottom will fill up with numbers. The Addition matrix will start filling up right away, but the Multiplication matrix will take a few fields of input, since each field is dependent on more than 2. Enjoy!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
+
