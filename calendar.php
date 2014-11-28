@@ -102,7 +102,7 @@ $day++;
 
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
-            var $datetime = <?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>;
+            var $datetime = <?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo '"' . $year . "-" . $month . "-" . $day . '"'; ?>;
             var $mealid = 0;
                changeLayout();
 
@@ -238,7 +238,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[1] . " id='$mealid[1]'"?>">
+                                                       <div class="<?php echo $class[1] . '"' . "id='$mealid[1]'>"?>
                                                             <?php echo $meals[1]; ?>
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
@@ -260,7 +260,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[2] . " id='$mealid[2]'"?>">
+                                                       <div class="<?php echo $class[2] . '"' . "id='$mealid[2]'>"?>
                                                             <?php echo $meals[2]; ?>
                                                            <span class="glyphicon glyphicon-ok"></span>
                                                        </div>
@@ -270,7 +270,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                    <div class="<?php echo $class[3] . " id='$mealid[3]'"?>">
+                                                       <div class="<?php echo $class[3] . '"' . "id='$mealid[3]'>"?>
                                                          <?php echo $meals[3]; ?>
 
                                                             <span class="glyphicon glyphicon-ok"></span>
@@ -292,7 +292,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                    <div class="<?php echo $class[4] . " id='$mealid[4]'"?>">
+                                                       <div class="<?php echo $class[4] . '"' . "id='$mealid[4]'>"?>
                                                            <?php echo $meals[4]; ?>
 
                                                             <span class="glyphicon glyphicon-ok"></span>
@@ -303,7 +303,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                        <div class="<?php echo $class[5] . " id='$mealid[5]'"?>">
+                                                       <div class="<?php echo $class[5] . '"' . "id='$mealid[5]'>"?>
                                                           <?php echo $meals[5]; ?>
 
                                                            <span class="glyphicon glyphicon-ok"></span>
@@ -336,7 +336,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[7] . " id='$mealid[7]'"?>">
+                                                       <div class="<?php echo $class[7] . '"' . "id='$mealid[7]'>"?>
                                                            <?php echo $meals[7]; ?>
 
                                                             <span class="glyphicon glyphicon-ok"></span>
@@ -358,7 +358,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                        <div class="<?php echo $class[8] . " id='$mealid[8]'"?> friday-lunch">
+                                                       <div class="<?php echo $class[8] . '"' . "id='$mealid[8]'>"?>
                                                            <?php echo $meals[8]; ?>
 
                                                            <span class="glyphicon glyphicon-ok glyph-friday"></span>
