@@ -127,7 +127,8 @@ $day++;
                });
 
               $(".formsubmit").click(function() {
-                  $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"});
+                  $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"})
+                  .done(function(data) { alert(data); })
               });
 
                $(".meal").click(function(event){
