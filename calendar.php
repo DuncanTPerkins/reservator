@@ -62,7 +62,7 @@ $count=mysqli_num_rows($result);
             $class[$k] = "meal";
             for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
-            $class[$k] = "nomeal";
+            $class[$k] = "nonmeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             }
@@ -75,7 +75,7 @@ $count=mysqli_num_rows($result);
             $class[$k+1] = "meal";
             for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
-            $class[$k+1] = "nomeal";
+            $class[$k+1] = "nonmeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             }
@@ -92,7 +92,7 @@ $count=mysqli_num_rows($result);
              $class[$k] = "meal";
             for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
-            $class[$k] = "nomeal";
+            $class[$k] = "nonmeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             }
@@ -105,7 +105,7 @@ $count=mysqli_num_rows($result);
                 $class[$k+1] = "meal";
              for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
-            $class[$k+1] = "nomeal";
+            $class[$k+1] = "nonmeal";
             $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             }
@@ -279,7 +279,7 @@ $day1++;
 
                                                        </div>
                                                   </div>
-                                             
+
                                              <div class="row drow">
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
