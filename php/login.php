@@ -21,7 +21,7 @@ $password = mysqli_real_escape_string($conn, $password);
 if(isset($_POST['radiolog'])) {
     $radiovalue = $_POST['radiolog'];
 }
-}if($radiovalue=="student") {
+if($radiovalue=="student") {
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
 
