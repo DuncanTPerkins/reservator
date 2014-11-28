@@ -278,16 +278,10 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[0] . '"' . " id='$mealid[0]'"?>>
+                                                       <div class="<?php echo $class[0] . '"' . " id='$mealid[0]'>"?>
                                                             <?php echo $meals[0]; ?>
                                                             <?php echo $checks[0]; ?>
                                                             </div>
-
-                                                 </div>
-                                                 </div>
-                                            </div>
-                                                 </div>
-                                                 </div>
 
                                                        </div>
                                                   </div>
