@@ -20,16 +20,16 @@ $password = mysqli_real_escape_string($conn, $password);
 
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
-print_r($result);
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
-
+    $studentid = $result->pk_student_id;
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
     session_register("password");
+    session_register("studentid");
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
     $name = $row[fname] . " " . $row[lname];
     session_register("name");
