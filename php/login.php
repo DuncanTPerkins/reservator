@@ -26,7 +26,7 @@ $count=mysqli_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
-    $studentid = $row[0];
+    $studentid = $row[pk_student_id];
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
     session_register("password");
