@@ -111,7 +111,6 @@ $count2 = mysqli_num_rows($result2);
 $k = $k + 2;
 $day++;
 }
-print_r($checks);
 ?>
 <!DOCTYPE html>
 <html lang="en">
