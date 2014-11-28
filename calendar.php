@@ -18,7 +18,9 @@ $dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
 }
 
-
+for($w = 0; $w<9; $w++) {
+ $meals[$w] = "Nothing Yet!";
+}
 
 //connect
 $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
@@ -61,11 +63,6 @@ $count=mysqli_num_rows($result);
          }
         }
 
-         if(strval($count) === '0'){
-            $meals[$k] = "Nothing Yet!";
-            $meals[$k+1] = "Nothing Yet!";
-            echo "<h1> hi </h1>";
-        }
 
     }
 $k = $k + 2;
