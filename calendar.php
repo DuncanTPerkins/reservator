@@ -48,11 +48,10 @@ $count2 = mysqli_num_rows($result2);
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$i] = $row2['meal'];
-        echo $mealloop[$i];
+        echo "mealloop " . $mealloop[$i] . " ";
         $i++;
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-        print_r($mealloop);
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
