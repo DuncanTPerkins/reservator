@@ -18,19 +18,18 @@ $password = $_POST['password'];
 $username = mysqli_real_escape_string($conn, $username);
 $password = mysqli_real_escape_string($conn, $password);
 
-print_r($_POST);
-if($_POST['login']=="student") {
+if(isset($_POST['radiolog'])) {
+    $radiovalue = $_POST['radiolog'];
+}
+}if($radiovalue=="student") {
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
 
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
-if(isset($_POST['login'])) {
-    $radiovalue = $_POST['login'];
-}
-    echo $radiovalue;
-    
+
+
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
     $row = mysqli_fetch_array($result, MYSQL_ASSOC);
@@ -53,7 +52,7 @@ ob_end_flush();
 
 }
 
-if($_POST['login']=="staff") {
+if($radiovalue=="staff") {
 $staffsql = "SELECT * FROM STAFF WHERE username='$username' and password='$password'";
 $staffresult=mysqli_query($conn, $sql);
 
