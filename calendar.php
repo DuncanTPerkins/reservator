@@ -44,9 +44,11 @@ $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."
 $result2 = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
 $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
+    $l=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        $mealloop[$k] = $row2['meal'];
-        echo $k;
+        $mealloop[$l] = $row2['meal'];
+        $l++;
+        echo $l;
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         print_r($mealloop);
