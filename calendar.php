@@ -46,7 +46,7 @@ $count=mysqli_num_rows($result);
         }
         }
 
-        else if($count == 1) {
+        if($count == 1) {
          if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
@@ -60,12 +60,12 @@ $count=mysqli_num_rows($result);
          }
         }
 
-        else {
+         if(!$count){
             $meals[$k] = "Nothing Yet!";
             $meals[$k+1] = "Nothing Yet!";
             echo "<h1> hi </h1>";
         }
-        echo gettype($count);
+
     }
 $k = $k + 2;
 $day++;
