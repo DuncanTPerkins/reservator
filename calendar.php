@@ -45,11 +45,10 @@ $result2 = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE student = '$stud
 $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        print_r($row2);
         $mealloop[$k] = $row2['meal'];
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-        echo($mealloop[$k]);
+        print_r($mealloop);
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
