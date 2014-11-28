@@ -45,9 +45,10 @@ $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$s
         $mealloop[$i] = $row2['meal'];
         $i++;
     }
+    $day++;
 }
 $k = 0;
-while($day < $day1+5) {
+while($day1 < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
@@ -125,7 +126,7 @@ $count=mysqli_num_rows($result);
 
     }
 $k = $k + 2;
-$day++;
+$day1++;
 }
 ?>
 <!DOCTYPE html>
