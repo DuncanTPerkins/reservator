@@ -2,7 +2,7 @@
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 //connect
 $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
-
+print_r($_POST);
 // Check connection
 if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
