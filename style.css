@@ -1,0 +1,57 @@
+input {
+ width: 75px;
+height: 50px;
+margin: 1px;
+
+}
+
+table {
+ width: 10%;
+margin: auto;
+
+}
+
+hr {
+ border: 0;
+ border-bottom: 1px dashed #ccc;
+ background: #999;
+}
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.navbar-brand {
+ float: none;
+}
+
+
+.box1, .box2, .box3, .box4 {
+    font-size: 18pt;
+    text-align: center;
+ width: 50%;
+    height: 100%;
+    display: float;
+    float: left;
+min-width: 250px;
+}
+
+.inputboxes, .outputboxes {
+height: 100
+width: 100%;
+    padding: 10px;
+ width: 80%;
+margin: 0 auto;
+overflow: auto;
+
+}
+
+.big {
+height: 100%;
+width: 100%;
+overflow: auto;
+}
