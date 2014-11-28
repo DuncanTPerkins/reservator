@@ -34,7 +34,7 @@ $dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-        echo "<h1> hi </h1>";
+        echo "<h1> $dayfield </h1>";
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
