@@ -16,6 +16,8 @@ if(mysqli_query($conn, "INSERT INTO RESERVATION(student_id, meal, date) VALUES('
 
  echo "success";
 }
+
+else {echo "Error: " . mysqli_error($conn);}
 mysqli_close($conn);
 
 ?>
