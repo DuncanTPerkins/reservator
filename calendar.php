@@ -102,6 +102,7 @@ $day++;
 
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
+            var $datetime = <?php echo $year . "-" . $month . "-" . $day; ?>;
                changeLayout();
 
                $(".meal").hover(function () { //hover in
@@ -126,6 +127,8 @@ $day++;
 
                $(".meal").click(function(){
                     $("#myModal").modal('show');
+                    var $mealid = event.target.id;
+                    document.write("ahhhhh" + " " + $mealid + " " + "ahhhh");
                });
 
                $(window).resize(function(){
