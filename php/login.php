@@ -20,7 +20,7 @@ $password = mysqli_real_escape_string($conn, $password);
 
 $sql="SELECT * FROM STUDENTS WHERE email='$username' and password='$password'";
 $result=mysqli_query($conn, $sql);
-
+print_r($result);
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
