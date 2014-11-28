@@ -279,7 +279,7 @@ $day1++;
 
                                                        </div>
                                                   </div>
-                                             </div>
+                                             
                                              <div class="row drow">
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
@@ -292,6 +292,7 @@ $day1++;
                                              </div>
                                             </div>
                                         </div>
+                        </div>
 
 
                               <!-- Monday -->
@@ -325,7 +326,8 @@ $day1++;
                                              </div>
                                         </div>
                                    </div>
-                              
+                             </div>
+
                               <!-- Tuesday -->
                              <div class="col-md-4 col-sm-4 col-lg-4 calendar-padding">
 
