@@ -54,14 +54,14 @@ ob_end_flush();
 
 if($radiovalue=="staff") {
 $staffsql = "SELECT * FROM STAFF WHERE username='$username' and password='$password'";
-$staffresult=mysqli_query($conn, $sql);
+$staffresult=mysqli_query($conn, $staffsql);
 
 // Mysql_num_row is counting table row
-$count=mysqli_num_rows($result);
+$count=mysqli_num_rows($staffresult);
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
-    $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+    $row = mysqli_fetch_array($staffresult, MYSQL_ASSOC);
     $staffid = $row[pk_staff_id];
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
