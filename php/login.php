@@ -25,13 +25,12 @@ $count=mysqli_num_rows($result);
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
-    $studentarray = mysqli_fetch_row($result);
-    $studentid = $studentarray[0];
+    $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+    $studentid = $row[0];
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     session_register("username");
     session_register("password");
     session_register("studentid");
-    $row = mysqli_fetch_array($result, MYSQL_ASSOC);
     $name = $row[fname] . " " . $row[lname];
     session_register("name");
     header("location:../calendar.php");
