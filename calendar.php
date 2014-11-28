@@ -50,7 +50,6 @@ $count2 = mysqli_num_rows($result2);
         $mealloop[$i] = $row2['meal'];
         $i++;
     }
-            print_r($mealloop);
 
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         if($count == 2) {
@@ -291,7 +290,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[1] . '"' . "id='$mealid[1]'>"?>
+                                                       <div class="<?php echo $class[1] . '"' . " id='$mealid[1]'>"?>
                                                             <?php echo $meals[1]; ?>
                                                             <?php echo $checks[1]; ?>
                                                        </div>
@@ -313,7 +312,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[2] . '"' . "id='$mealid[2]'>"?>
+                                                       <div class="<?php echo $class[2] . '"' . " id='$mealid[2]'>"?>
                                                             <?php echo $meals[2]; ?>
                                                             <?php echo $checks[2]; ?>
                                                        </div>
@@ -323,7 +322,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[3] . '"' . "id='$mealid[3]'>"?>
+                                                       <div class="<?php echo $class[3] . '"' . " id='$mealid[3]'>"?>
                                                          <?php echo $meals[3]; ?>
 
                                                             <?php echo $checks[3]; ?>
@@ -345,7 +344,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[4] . '"' . "id='$mealid[4]'>"?>
+                                                       <div class="<?php echo $class[4] . '"' . " id='$mealid[4]'>"?>
                                                            <?php echo $meals[4]; ?>
 
                                                             <?php echo $checks[4]; ?>
@@ -356,7 +355,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[5] . '"' . "id='$mealid[5]'>"?>
+                                                       <div class="<?php echo $class[5] . '"' . " id='$mealid[5]'>"?>
                                                           <?php echo $meals[5]; ?>
 
                                                             <?php echo $checks[5]; ?>
@@ -378,7 +377,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[6] . '"' . "id='$mealid[6]'>"?>
+                                                       <div class="<?php echo $class[6] . '"' . " id='$mealid[6]'>"?>
                                                            <?php echo $meals[6]; ?>
 
                                                             <?php echo $checks[6]; ?>
@@ -389,7 +388,7 @@ $day++;
                                                   <div class="col-md-12 dinner">
                                                        <span class="label label-primary">DINNER:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[7] . '"' . "id='$mealid[7]'>"?>
+                                                       <div class="<?php echo $class[7] . '"' . " id='$mealid[7]'>"?>
                                                            <?php echo $meals[7]; ?>
 
                                                             <?php echo $checks[7]; ?>
@@ -411,7 +410,7 @@ $day++;
                                                   <div class="col-md-12 lunch">
                                                        <span class="label label-primary">LUNCH:</span>
                                                        <br>
-                                                       <div class="<?php echo $class[8] . '"' . "id='$mealid[8]' friday-lunch>"?>
+                                                       <div class="friday-lunch <?php echo $class[8] . '"' . " id='$mealid[8]' >"?>
                                                            <?php echo $meals[8]; ?>
 
                                                             <?php echo $checks[8]; ?>
