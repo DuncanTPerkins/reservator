@@ -63,6 +63,7 @@ $count=mysqli_num_rows($result);
         else {
             $meals[$k] = "Nothing Yet!";
             $meals[$k+1] = "Nothing Yet!";
+            echo "<h1> hi </h1>";
         }
 
     }
