@@ -47,9 +47,7 @@ $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        print_r($row2);
-        echo gettype($mealloop[$i]);
-        echo gettype($row2['meal']);
+        echo $row2['meal'];
         $i++;
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
