@@ -12,19 +12,22 @@ $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay;
 $dates = array();
-
+$studentid = $_SESSION['studentid'];
 for($j=0; $j<5; $j++) {
 $dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
 }
 
 for($w = 0; $w<9; $w++) {
- $meals[$w] = "Nothing Yet!";
 }
 
 for($w = 0; $w<9; $w++) {
  $class[$w] = "nonmeal";
+ $meals[$w] = "Nothing Yet!";
+$checks[$w] = "";
 }
+
+
 
 //connect
 $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
@@ -38,18 +41,34 @@ $k = 0;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
+$result2 = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
 $count=mysqli_num_rows($result);
+$count2 = mysqli_num_rows($result2);
+    while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         if($count == 2) {
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
-            $class[$k] = "meal";
+            if($row['pk_meal_id'] == $row2['meal']) {
+            $class[$k] = "nomeal";
+            $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
+            }
+            else {
+                $class[$k] = "meal";
+            }
+
         }
         if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
             $mealid[$k+1] = $row['pk_meal_id'];
-            $class[$k+1] = "meal";
+            if($row['pk_meal_id'] == $row2['meal']) {
+            $class[$k+1] = "nomeal";
+            $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
+            }
+            else {
+                $class[$k+1] = "meal";
+            }
 
 
         }
@@ -60,20 +79,33 @@ $count=mysqli_num_rows($result);
             $meals[$k] = $row['description'];
             $meals[$k+1] = "Nothing Yet!";
             $mealid[$k] = $row['pk_meal_id'];
-            $class[$k] = "meal";
+            if($row['pk_meal_id'] == $row2['meal']) {
+            $class[$k] = "nomeal";
+            $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
+            }
+            else {
+                $class[$k] = "meal";
+            }
 
          }
             if($row['meal_type'] == 1) {
             $meals[$k+1] = $row['description'];
             $meals[$k] = "Nothing Yet!";
             $mealid[$k+1] = $row['pk_meal_id'];
-            $class[$k+1] = "meal";
+            if($row['pk_meal_id'] == $row2['meal']) {
+            $class[$k+1] = "nomeal";
+            $checks[$k+1] = '<span class="glyphicon glyphicon-ok"></span>';
+            }
+            else {
+                $class[$k+1] = "meal";
+            }
 
 
          }
         }
 
 
+    }
     }
 $k = $k + 2;
 $day++;
@@ -232,7 +264,9 @@ $day++;
                                                        <br>
                                                        <div class="<?php echo $class[0] . '"' . "id='$mealid[0]'>"?>
                                                             <?php echo $meals[0]; ?>
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[0]; ?>
+                                                            </div>
+
                                                        </div>
                                                   </div>
                                              </div>
@@ -242,7 +276,7 @@ $day++;
                                                        <br>
                                                        <div class="<?php echo $class[1] . '"' . "id='$mealid[1]'>"?>
                                                             <?php echo $meals[1]; ?>
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[1]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -264,7 +298,7 @@ $day++;
                                                        <br>
                                                        <div class="<?php echo $class[2] . '"' . "id='$mealid[2]'>"?>
                                                             <?php echo $meals[2]; ?>
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[2]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -275,7 +309,7 @@ $day++;
                                                        <div class="<?php echo $class[3] . '"' . "id='$mealid[3]'>"?>
                                                          <?php echo $meals[3]; ?>
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[3]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -297,7 +331,7 @@ $day++;
                                                        <div class="<?php echo $class[4] . '"' . "id='$mealid[4]'>"?>
                                                            <?php echo $meals[4]; ?>
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[4]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -308,7 +342,7 @@ $day++;
                                                        <div class="<?php echo $class[5] . '"' . "id='$mealid[5]'>"?>
                                                           <?php echo $meals[5]; ?>
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[5]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -330,7 +364,7 @@ $day++;
                                                        <div class="<?php echo $class[6] . '"' . "id='$mealid[6]'>"?>
                                                            <?php echo $meals[6]; ?>
 
-                                                           <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[6]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -341,7 +375,7 @@ $day++;
                                                        <div class="<?php echo $class[7] . '"' . "id='$mealid[7]'>"?>
                                                            <?php echo $meals[7]; ?>
 
-                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                            <?php echo $checks[7]; ?>
                                                        </div>
                                                   </div>
                                              </div>
@@ -363,7 +397,7 @@ $day++;
                                                        <div class="<?php echo $class[8] . '"' . "id='$mealid[8]' friday-lunch>"?>
                                                            <?php echo $meals[8]; ?>
 
-                                                           <span class="glyphicon glyphicon-ok glyph-friday"></span>
+                                                            <?php echo $checks[8]; ?>
                                                        </div>
                                                   </div>
                                              </div>
