@@ -56,7 +56,7 @@ $count2 = mysqli_num_rows($result2);
         if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
-            echo "row " . $row['pk_meal_id'] . " mealloop " . $mealloop[$k];
+            //echo "row " . $row['pk_meal_id'] . " mealloop " . $mealloop[$k];
             if($row['pk_meal_id'] == $mealloop[$k]) {
             $class[$k] = "nomeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
