@@ -49,6 +49,7 @@ $count2 = mysqli_num_rows($result2);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         if($count == 2) {
         if($row['meal_type'] == 0) {
+            echo "<h1> hi </h1>";
             $meals[$k] = $row['description'];
             $mealid[$k] = $row['pk_meal_id'];
             if($row['pk_meal_id'] == $row2['meal']) {
