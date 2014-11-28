@@ -12,6 +12,7 @@ $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $loopDay = $startingDay;
 $dates = array();
+$mealloop = array();
 $studentid = $_SESSION['studentid'];
 for($j=0; $j<5; $j++) {
 $dates[$j] = $loopDay->format('l, F d');
@@ -46,7 +47,7 @@ $count=mysqli_num_rows($result);
 $count2 = mysqli_num_rows($result2);
     $l=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        echo $row2['meal'];
+        $mealloop[$l] = $row2['meal'];
         $l++;
     }
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
