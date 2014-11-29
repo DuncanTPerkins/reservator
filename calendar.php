@@ -46,7 +46,7 @@ $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
 $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
-$loopDay = $startingDay;
+$loopDay = $beginDay;
 $dates = array();
 $mealloop = array("");
 $studentid = $_SESSION['studentid'];
