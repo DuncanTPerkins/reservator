@@ -21,7 +21,7 @@ else {
     }
 }
 
-$dayBegin->modify('+4 days');
+$dayBegin->modify('+5 days');
 $dayEnd = $dayBegin;
 
 if($today[wday] < 6) {
