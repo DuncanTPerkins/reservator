@@ -65,10 +65,8 @@
     //to be used as day headers
     for($j=0; $j<10; $j++) {
         if($loopDay->format('U') == $dayEnd->format('U')) {
-            $dates[$j] = $loopDay->format('l, F d');
             $loopDay->modify('+3 days');
-
-
+            $dates[$j] = $loopDay->format('l, F d');
         }
         else {
             $dates[$j] = $loopDay->format('l, F d');
