@@ -68,10 +68,13 @@
             $loopDay->modify('+2 days');
             $dates[$j] = $loopDay->format('l, F d');
         }
+
         else {
             $dates[$j] = $loopDay->format('l, F d');
-            $loopDay->modify('+1 day');
         }
+
+        $loopDay->modify('+1 day');
+
     }
 
     //set this back to Monday so that we can use it
