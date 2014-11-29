@@ -244,7 +244,6 @@
         //Increment the current looped date
         $dayBegin->modify('+1 day');
     }
-print_r($checks);
 ?>
 <!DOCTYPE html>
 <html lang="en">
