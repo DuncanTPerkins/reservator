@@ -12,6 +12,7 @@ $mealid = $_POST['mealid'];
 
 $result = mysqli_query($conn, "SELECT date FROM MEAL WHERE pk_meal_id = '$mealid'");
 $row = mysqli_fetch_array($result, MYSQL_ASSOC);
+print_r($row);
 $datetime = $row['date'];
 
 
