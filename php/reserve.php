@@ -10,10 +10,10 @@ if (mysqli_connect_errno()) {
 $studentid = $_POST['studentid'];
 $mealid = $_POST['mealid'];
 
-if(mysqli_query($conn, "SELECT date FROM MEAL WHERE pk_meal_id = '$mealid'")) {
+$result = mysqli_query($conn, "SELECT date FROM MEAL WHERE pk_meal_id = '$mealid'");
 $row = mysqli_fetch_array($result, MYSQL_ASSOC);
 $datetime = $row['date'];
-}
+
 
 if(mysqli_query($conn, "INSERT INTO RESERVATION(student, meal, date) VALUES('$studentid', '$mealid', '$datetime')")) {
 header( "location:../calendar.php");
