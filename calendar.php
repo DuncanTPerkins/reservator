@@ -74,6 +74,7 @@ if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
 $day2 = $day;
+echo "daybegin" . $dayBegin->format('Y-m-d') . " dayend " . $dayEnd->format('Y-m-d');
 while($dayBegin->format('U') < $dayEnd->format('U')) {
 $dayfield = $dayBegin->format('Y-m-d');
 echo "hi";
