@@ -4,19 +4,43 @@ $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
 $month = $today[mon];
+$day = $today[mday];
 if($today[wday] < 6) {
 $day = ($today[mday] - $today[wday]) + 1;
+$dayBegin = new DateTime($year. "-" . $month . "-" . $day);
 }
 else {
     if($today[wday] == 6) {
         //it's Saturday
-        $day = ($today[mday] + 2);
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+2 days')
     }
     if($today[wday] == 7) {
-        //it's Sunday
-        $day = ($today[mday] + 1);
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+1 day')
     }
 }
+
+$dayBegin->modify('+4 days');
+$dayEnd = $dayBegin;
+
+if($today[wday] < 6) {
+$day = ($today[mday] - $today[wday]) + 1;
+$dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+}
+else {
+    if($today[wday] == 6) {
+        //it's Saturday
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+2 days')
+    }
+    if($today[wday] == 7) {
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+1 day')
+    }
+}
+
+
 $day1 = $day;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
@@ -26,6 +50,9 @@ $loopDay = $startingDay;
 $dates = array();
 $mealloop = array("");
 $studentid = $_SESSION['studentid'];
+
+
+
 for($j=0; $j<5; $j++) {
 $dates[$j] = $loopDay->format('l, F d');
 $loopDay->modify('+1 day');
@@ -47,19 +74,37 @@ if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
 $day2 = $day;
-while($day < $day1+5) {
-$dayfield = $year . "-" . $month . "-" . $day;
+while($dayBegin->format('U') < $dayEnd->format('U')) {
+$dayfield = $dayBegin->format('Y-m-d');
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$i] = $row2['meal'];
         $i++;
     }
-    $day++;
+    $dayBegin->modify('+1 day');
 }
+
+if($today[wday] < 6) {
+$day = ($today[mday] - $today[wday]) + 1;
+$dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+}
+else {
+    if($today[wday] == 6) {
+        //it's Saturday
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+2 days')
+    }
+    if($today[wday] == 7) {
+        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
+        $dayBegin->modify('+1 day')
+    }
+}
+
+
 $k = 0;
-while($day1 < $day2+5) {
-$dayfield = $year . "-" . $month . "-" . $day1;
+while($dayBegin->format('U') < $dayEnd->format('U')) {
+$dayfield = $dayBegin->format('Y-m-d');
 echo $dayfield . " ";
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
@@ -128,7 +173,7 @@ $count=mysqli_num_rows($result);
 
     }
 $k = $k + 2;
-$day1++;
+$dayBegin->modify('+1 day');
 }
 ?>
 <!DOCTYPE html>
