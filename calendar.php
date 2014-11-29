@@ -59,7 +59,6 @@ if (mysqli_connect_errno()) {
 $day2 = $day;
 while($dayBegin->format('U') < $dayEnd->format('U')) {
 $dayfield = $dayBegin->format('Y-m-d');
-echo "hi";
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
@@ -68,7 +67,6 @@ $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$s
     }
     $dayBegin->modify('+1 day');
 }
-print_r($mealloop);
 
 if($today[wday] < 6) {
 $day = ($today[mday] - $today[wday]) + 1;
