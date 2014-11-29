@@ -1,115 +1,178 @@
-<?php session_start(); if(!session_is_registered(username)){ header( "location:index.php");
+<?php session_start();
+
+//send the user to the login page if they aren't logged in
+if(!session_is_registered(username)){ header( "location:index.php");
 }
-$today = getdate();
+
+//connect to the database
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
-$year = $today[year];
-$month = $today[mon];
-$day = $today[mday];
-if($today[wday] < 6) {
-$day = ($today[mday] - $today[wday]) + 1;
-$dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-}
-else {
-    if($today[wday] == 6) {
-        //it's Saturday
-        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+2 days');
-    }
-    if($today[wday] == 7) {
-        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+1 day');
-    }
-}
-$dayEnd = clone $dayBegin;
-$dayEnd->modify('+5 days');
-
-
-$day1 = $day;
-$startingDay = new DateTime($year . "-" . $month . "-" . $day);
-$startingDay->modify('+4 days');
-$endingDay = $startingDay;
-$startingDay = new DateTime($year . "-" . $month . "-" . $day);
-$loopDay = clone $dayBegin;
-$dates = array();
-$mealloop = array("");
-$studentid = $_SESSION['studentid'];
-
-
-
-for($j=0; $j<5; $j++) {
-$dates[$j] = $loopDay->format('l, F d');
-$loopDay->modify('+1 day');
-}
-
-for($w = 0; $w<9; $w++) {
- $class[$w] = "nonmeal";
- $meals[$w] = "Nothing Yet!";
-$checks[$w] = "";
-}
-
-
-
-//connect
 $conn= new mysqli($DBServer, $DBUser, $DBPass, $DBName);
 
 // Check connection
 if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
-$day2 = $day;
-while($dayBegin->format('U') < $dayEnd->format('U')) {
-$dayfield = $dayBegin->format('Y-m-d');
-$result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
-    $i=0;
-    while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
-        $mealloop[$i] = $row2['meal'];
-        $i++;
-    }
-    $dayBegin->modify('+1 day');
-}
 
+//Get the student ID from the session variables passed to us from either login.php or register.php
+$studentid = $_SESSION['studentid'];
+
+//return array of month, day, month year, week year, etc
+$today = getdate();
+
+//break the array up for ease of use
+$year = $today[year];
+$month = $today[mon];
+$day = $today[mday];
+
+//if today is a weekday
 if($today[wday] < 6) {
+
+//day equals the first day of the week (Monday)
 $day = ($today[mday] - $today[wday]) + 1;
+
+//create a new datetime object for the Monday of this week
 $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
 }
+
+//if it's the weekend
 else {
+
     if($today[wday] == 6) {
         //it's Saturday
+        //create a Datetime object for next Monday
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
         $dayBegin->modify('+2 days');
     }
+
     if($today[wday] == 7) {
+        //It's Sunday
+        //create a Datetime object for next Monday
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
         $dayBegin->modify('+1 day');
     }
 }
 
+//create a Datetime object for this Friday
+$dayEnd = clone $dayBegin;
+$dayEnd->modify('+5 days');
 
-$k = 0;
+//create a clone of the Datetime object for Monday,
+//to be used for day headers
+$loopDay = clone $dayBegin;
+
+
+//Fill an array with Datetime objects for each day of the week,
+//to be used as day headers
+for($j=0; $j<5; $j++) {
+$dates[$j] = $loopDay->format('l, F d');
+$loopDay->modify('+1 day');
+}
+
+//set this back to Monday so that we can use it
+//to reset dayBegin
+$loopDay = clone $dayBegin;
+
+//initialize the arrays
+for($w = 0; $w<9; $w++) {
+ //Whether or not a meal is already reserved
+ $class[$w] = "nonmeal";
+
+ //Meal descriptions
+ $meals[$w] = "Nothing Yet!";
+
+//Whether or not a meal needs a checkmark
+$checks[$w] = "";
+}
+
+
+//check which meals have already been reserved by the student
+
+//while the current day is less than Friday
 while($dayBegin->format('U') < $dayEnd->format('U')) {
+
+//parse a string out of the Datetime object
 $dayfield = $dayBegin->format('Y-m-d');
+
+//Get all mealIDs' for Meal Reservations placed by the current student for the date we are currently looping through
+$result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+    $i=0;
+
+    //while we aren't on the last row returned from the database query
+    while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
+
+        //take the found mealID and put it into the array
+        $mealloop[$i] = $row2['meal'];
+
+        //index variable
+        $i++;
+    }
+
+    //Move the day we are checking against ahead by one
+    $dayBegin->modify('+1 day');
+}
+
+//reset dayBegin to Monday for looping through
+$dayBegin = clone $loopDay;
+
+//index for looping through the meals
+$k = 0;
+
+//while we're not at Friday yet
+while($dayBegin->format('U') < $dayEnd->format('U')) {
+
+//parse string out of the day we're currently looping through
+$dayfield = $dayBegin->format('Y-m-d');
+
+//Select rows from the Meal table that are on the current looped day, order them by whether they're lunch or dinner
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
+
+//integer of the number of rows that were returned from the above query
 $count=mysqli_num_rows($result);
+
+    //while there are still rows remaining that we haven't gone through
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+
+        //if 2 meals for the current day were found
         if($count == 2) {
+
+        //if the current meal we're looping through is a lunch
         if($row['meal_type'] == 0) {
+
+            //Set the current array index to the current meal's description from the database
             $meals[$k] = $row['description'];
+
+            //Set the current array index to the current meal's mealID from the database
             $mealid[$k] = $row['pk_meal_id'];
-            //echo "row " . $row['pk_meal_id'] . " mealloop " . $mealloop[$k];
+
+            //Make the current meal clickable by default
             $class[$k] = "meal";
+
+            //if the current mealID is found in the array of already reserved meals,
+            //make this meal unclickable to avoid database errors, and add a checkmark
+            //to the current meal so the user knows they've already reserved it
             for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k] = "nonmeal";
             $checks[$k] = '<span class="glyphicon glyphicon-ok"></span>';
             }
             }
-
-
         }
+
+        //if the current meal we're looping through is a dinner
         if($row['meal_type'] == 1) {
+
+            //Set the next array index to the current meal's description from the database
             $meals[$k+1] = $row['description'];
+
+            //Set the next array index to the current meal's mealID from the database
             $mealid[$k+1] = $row['pk_meal_id'];
+
+            //Make the current meal clickable by default
             $class[$k+1] = "meal";
+
+            //if the current mealID is found in the array of already reserved meals,
+            //make this meal unclickable to avoid database errors, and add a checkmark
+            //to the current meal so the user knows they've already reserved it
             for($i = 0; $i<sizeof($mealloop); $i++) {
             if($row['pk_meal_id'] == $mealloop[$i]) {
             $class[$k+1] = "nonmeal";
@@ -121,6 +184,7 @@ $count=mysqli_num_rows($result);
         }
         }
 
+        //if 1 meal for the current day was found
         if($count == 1) {
          if($row['meal_type'] == 0) {
             $meals[$k] = $row['description'];
@@ -181,7 +245,6 @@ $dayBegin->modify('+1 day');
 
           $(document).ready(function () {
             var $student_id = <?php echo $_SESSION['studentid']; ?>;
-            var $datetime = <?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo '"' . $year . "-" . $month . "-" . $day . '"'; ?>;
             var $newmealid = 0;
                changeLayout();
 
