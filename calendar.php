@@ -84,6 +84,7 @@ $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$s
     }
     $dayBegin->modify('+1 day');
 }
+print_r($mealloop);
 
 if($today[wday] < 6) {
 $day = ($today[mday] - $today[wday]) + 1;
