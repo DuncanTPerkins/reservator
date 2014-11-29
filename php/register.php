@@ -28,6 +28,7 @@ VALUES (NULL, '$email', '$password', '$email', '$phone', '$fname', '$lname')";
 if(!$sql1||$rows==0) {
 $sql3 = mysqli_query($conn, "SELECT * FROM STUDENTS WHERE '$email' = email");
 $result = mysqli_fetch_array($sql3, MYSQLI_ASSOC);
+print_r($result);
 if (mysqli_query($conn, $sql2)) {
     $_SESSION['username'] = $email;
     $_SESSION['name'] = $fname . " " . $lname;
