@@ -88,7 +88,7 @@
     //check which meals have already been reserved by the student
     //while the current day is less than Friday
     while($dayBegin->format('U') < $dayEnd->format('U')) {
-
+        echo $dayfield;
         //parse a string out of the Datetime object
         $dayfield = $dayBegin->format('Y-m-d');
 
