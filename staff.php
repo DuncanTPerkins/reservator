@@ -64,12 +64,15 @@
     //Fill an array with Datetime objects for each day of the week,
     //to be used as day headers
     for($j=0; $j<10; $j++) {
-        $dates[$j] = $loopDay->format('l, F d');
         if($loopDay->format('U') == $dayEnd->format('U')) {
             $loopDay->modify('+3 days');
+            $dates[$j] = $loopDay->format('l, F d');
+
         }
         else {
             $loopDay->modify('+1 day');
+            $dates[$j] = $loopDay->format('l, F d');
+
         }
     }
 
