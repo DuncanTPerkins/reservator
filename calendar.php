@@ -5,6 +5,8 @@ $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tj
 $year = $today[year];
 $month = $today[mon];
 $day = ($today[mday] - $today[wday]) + 1;
+echo "DAY: " . $today[wday];
+
 $day1 = $day;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
