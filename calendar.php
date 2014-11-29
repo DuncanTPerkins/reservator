@@ -4,9 +4,19 @@ $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
 $month = $today[mon];
+if($today[wday] < 6) {
 $day = ($today[mday] - $today[wday]) + 1;
-echo "DAY: " . $today[wday];
-
+}
+else {
+    if($today[wday] == 6) {
+        //it's Saturday
+        $day = ($today[mday] + 2);
+    }
+    if($today[wday] == 7) {
+        //it's Sunday
+        $day = ($today[mday] + 1);
+    }
+}
 $day1 = $day;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
