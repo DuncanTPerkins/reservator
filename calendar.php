@@ -101,7 +101,7 @@
 
             //take the found mealID and put it into the array
             $mealloop[$i] = $row2['meal'];
-            echo $row2['meal'];
+            echo "meal " . $row2['meal'] . " index " . $i;
             //index variable
             $i++;
         }
