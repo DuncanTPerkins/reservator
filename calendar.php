@@ -77,6 +77,7 @@ $day2 = $day;
 while($dayBegin->format('U') < $dayEnd->format('U')) {
 $dayfield = $dayBegin->format('Y-m-d');
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+print_r($result2);
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$i] = $row2['meal'];
