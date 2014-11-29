@@ -110,6 +110,8 @@
     $dayBegin->modify('+1 day');
     }
 
+print_r($mealloop);
+
     //reset dayBegin to Monday for looping through
     $dayBegin = clone $loopDay;
 
