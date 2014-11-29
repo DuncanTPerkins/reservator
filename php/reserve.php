@@ -10,7 +10,7 @@ if (mysqli_connect_errno()) {
 $studentid = $_POST['studentid'];
 $mealid = $_POST['mealid'];
 
-if(mysqli_query($conn, "SELECT date FROM MEAL WHERE pk_meal_id = '$mealid'") {
+if(mysqli_query($conn, "SELECT date FROM MEAL WHERE pk_meal_id = '$mealid'")) {
 $row = mysqli_fetch_array($result, MYSQL_ASSOC))
 $datetime = $row['date'];
 }
