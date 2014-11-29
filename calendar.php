@@ -21,9 +21,6 @@ $loopDay->modify('+1 day');
 }
 
 for($w = 0; $w<9; $w++) {
-}
-
-for($w = 0; $w<9; $w++) {
  $class[$w] = "nonmeal";
  $meals[$w] = "Nothing Yet!";
 $checks[$w] = "";
@@ -42,6 +39,7 @@ $day2 = $day;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+print_r($result2);
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$i] = $row2['meal'];
