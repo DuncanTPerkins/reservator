@@ -94,6 +94,7 @@
 
         //Get all mealIDs' for Meal Reservations placed by the current student for the date we are currently looping through
         $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
+        print_r($result2);
         $i=0;
 
         //while we aren't on the last row returned from the database query
