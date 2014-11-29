@@ -71,6 +71,7 @@
         else {
             $loopDay->modify('+1 day');
         }
+    }
 
     //set this back to Monday so that we can use it
     //to reset dayBegin
