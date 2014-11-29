@@ -20,25 +20,8 @@ else {
         $dayBegin->modify('+1 day');
     }
 }
-
-$dayBegin->modify('+5 days');
-$dayEnd = $dayBegin;
-
-if($today[wday] < 6) {
-$day = ($today[mday] - $today[wday]) + 1;
-$dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-}
-else {
-    if($today[wday] == 6) {
-        //it's Saturday
-        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+2 days');
-    }
-    if($today[wday] == 7) {
-        $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+1 day');
-    }
-}
+$dayEnd = clone $dayBegin;
+$dayEnd->modify('+5 days');
 
 
 $day1 = $day;
@@ -46,7 +29,7 @@ $startingDay = new DateTime($year . "-" . $month . "-" . $day);
 $startingDay->modify('+4 days');
 $endingDay = $startingDay;
 $startingDay = new DateTime($year . "-" . $month . "-" . $day);
-$loopDay = $dayBegin;
+$loopDay = clone $dayBegin;
 $dates = array();
 $mealloop = array("");
 $studentid = $_SESSION['studentid'];
@@ -74,7 +57,6 @@ if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
 }
 $day2 = $day;
-echo "daybegin" . $dayBegin->format('Y-m-d') . " dayend " . $dayEnd->format('Y-m-d');
 while($dayBegin->format('U') < $dayEnd->format('U')) {
 $dayfield = $dayBegin->format('Y-m-d');
 echo "hi";
