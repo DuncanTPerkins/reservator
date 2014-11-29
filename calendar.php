@@ -13,11 +13,11 @@ else {
     if($today[wday] == 6) {
         //it's Saturday
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+2 days')
+        $dayBegin->modify('+2 days');
     }
     if($today[wday] == 7) {
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+1 day')
+        $dayBegin->modify('+1 day');
     }
 }
 
@@ -32,11 +32,11 @@ else {
     if($today[wday] == 6) {
         //it's Saturday
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+2 days')
+        $dayBegin->modify('+2 days');
     }
     if($today[wday] == 7) {
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+1 day')
+        $dayBegin->modify('+1 day');
     }
 }
 
@@ -93,11 +93,11 @@ else {
     if($today[wday] == 6) {
         //it's Saturday
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+2 days')
+        $dayBegin->modify('+2 days');
     }
     if($today[wday] == 7) {
         $dayBegin = new DateTime($year. "-" . $month . "-" . $day);
-        $dayBegin->modify('+1 day')
+        $dayBegin->modify('+1 day');
     }
 }
 
