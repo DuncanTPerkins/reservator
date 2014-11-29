@@ -39,7 +39,6 @@ $day2 = $day;
 while($day < $day1+5) {
 $dayfield = $year . "-" . $month . "-" . $day;
 $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
-print_r($result2);
     $i=0;
     while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
         $mealloop[$i] = $row2['meal'];
@@ -52,7 +51,6 @@ while($day1 < $day2+5) {
 $dayfield = $year . "-" . $month . "-" . $day1;
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
-print_r($dayfield);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
         if($count == 2) {
         if($row['meal_type'] == 0) {
