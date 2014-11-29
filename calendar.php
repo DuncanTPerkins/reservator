@@ -105,7 +105,6 @@ else {
 $k = 0;
 while($dayBegin->format('U') < $dayEnd->format('U')) {
 $dayfield = $dayBegin->format('Y-m-d');
-echo $dayfield . " ";
 $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 $count=mysqli_num_rows($result);
     while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
