@@ -87,6 +87,7 @@
 
     //check which meals have already been reserved by the student
     //while the current day is less than Friday
+    $i=0;
     while($dayBegin->format('U') <= $dayEnd->format('U')) {
 
         //parse a string out of the Datetime object
@@ -94,14 +95,13 @@
 
         //Get all mealIDs' for Meal Reservations placed by the current student for the date we are currently looping through
         $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
-        $i=0;
+
 
         //while we aren't on the last row returned from the database query
         while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
 
             //take the found mealID and put it into the array
             $mealloop[$i] = $row2['meal'];
-            echo "meal " . $row2['meal'] . " index " . $i;
             //index variable
             $i++;
         }
