@@ -1,5 +1,6 @@
 <?php session_start(); if(!session_is_registered(username)){ header( "location:index.php");
 }
+print_r($_POST);
 $today = getdate();
 $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
 $year = $today[year];
