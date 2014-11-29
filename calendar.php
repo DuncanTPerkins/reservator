@@ -101,7 +101,7 @@
 
             //take the found mealID and put it into the array
             $mealloop[$i] = $row2['meal'];
-
+            echo $row2['meal'];
             //index variable
             $i++;
         }
@@ -110,9 +110,6 @@
     $dayBegin->modify('+1 day');
     }
 
-for($i=0;$i<5;$i++) {
- echo $mealloop[$i];
-}
     //reset dayBegin to Monday for looping through
     $dayBegin = clone $loopDay;
 
