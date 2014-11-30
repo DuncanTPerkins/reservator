@@ -63,7 +63,7 @@
 
     //Fill an array with Datetime objects for each day of the week,
     //to be used as day headers
-    for($j=0; $j<11; $j++) {
+    for($j=0; $j<=11; $j++) {
         $dates[$j] = $loopDay->format('l, F d');
         $loopDay->modify('+1 day');
     }
