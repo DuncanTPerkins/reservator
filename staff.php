@@ -245,7 +245,7 @@
         $dayBegin->modify('+1 day');
     }
 
-    for($i=0;$i<22;$i++) {
+    for($i=0;$i<=22;$i++) {
         $result = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE MEAL = '" . $mealid[$i] ."'");
 
         //integer of the number of rows that were returned from the above query
