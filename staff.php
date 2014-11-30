@@ -301,8 +301,8 @@
                 var badstring = '<span class="label label-primary label-edit">';
                 var badindex = description.indexOf(badstring);
                 var newstring = description.substr(0, badindex-1);
-
-                alert(newstring);
+                newstring = newstring.trim();
+                $("fieldentry").val(newstring);
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
@@ -881,7 +881,7 @@
                 <form action="php/insert.php" method="POST">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
-                    <textarea rows="4" cols="50"></textarea>
+                    <textarea id="fieldentry" rows="4" cols="50"></textarea>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
 
