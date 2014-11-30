@@ -130,11 +130,7 @@
     //while we're not at second Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
 
-        if($k==8) {
-        //
-        $dayBegin->modify('+3 days');
-        $k+=1;
-        }
+
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
         echo " Dayfield: " . $dayfield . " ";
@@ -253,6 +249,11 @@
                     }
                 }
             }
+        }
+                if($k==8) {
+        //
+        $dayBegin->modify('+2 days');
+        $k+=1;
         }
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
         $k = $k + 2;
