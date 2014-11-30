@@ -569,7 +569,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[6]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[6]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -580,7 +580,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[7]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[7]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -603,7 +603,7 @@
                                                 <?php echo $meals[8]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>
-                                                <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-list"><?php echo $reservenum[8]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -665,7 +665,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[9]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[9]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -675,7 +675,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[10]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[10]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -697,7 +697,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[11]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[11]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -707,7 +707,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[12]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[12]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -729,7 +729,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[13]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[13]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -740,7 +740,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[14]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -762,7 +762,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[15]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -773,7 +773,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[16]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -795,7 +795,7 @@
                                             <div class="meal friday-lunch">
                                                 <?php echo $meals[17]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
-                                                <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
                                             </div>
                                         </div>
                                     </div>
