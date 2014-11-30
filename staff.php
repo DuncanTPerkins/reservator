@@ -295,7 +295,7 @@
                 //                    $(this).prev().prev().css("border-color", "#ed9e95");
             });
 
-            $("#meal").click(function(event) {
+            $(".meal").click(function(event) {
                 alert(event.target.id);
             });
 
