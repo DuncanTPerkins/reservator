@@ -264,7 +264,7 @@
         //integer of the number of rows that were returned from the above query
         $count=mysqli_num_rows($result);
 
-        $reservenum[$i] = $count;
+        $reservenum[$i] = $i;
     }
 
 ?>
