@@ -249,7 +249,7 @@
                 }
             }
         }
-                if($k==8) {
+                if($dayBegin==$weekEnd) {
         //
         $dayBegin->modify('+1 day');
         }
