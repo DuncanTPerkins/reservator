@@ -54,7 +54,7 @@
 
     //create a Datetime object for this Friday
     $dayEnd = clone $dayBegin;
-    $dayEnd->modify('+10 days');
+    $dayEnd->modify('+12 days');
 
     //create a clone of the Datetime object for Monday,
     //to be used for day headers
