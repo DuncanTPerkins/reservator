@@ -645,7 +645,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[11]; ?>
+                                                <?php echo $meals[14]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[9]; ?></span>
                                             </div>
                                         </div>
@@ -655,7 +655,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[12]; ?>
+                                                <?php echo $meals[15]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[10]; ?></span>
                                             </div>
                                         </div>
@@ -677,7 +677,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[13]; ?>
+                                                <?php echo $meals[16]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[11]; ?></span>
                                             </div>
                                         </div>
@@ -687,7 +687,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[14]; ?>
+                                                <?php echo $meals[17]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[12]; ?></span>
                                             </div>
                                         </div>
@@ -708,7 +708,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[15]; ?>
+                                                <?php echo $meals[18]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[13]; ?></span>
                                             </div>
@@ -719,7 +719,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[16]; ?>
+                                                <?php echo $meals[19]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
@@ -741,7 +741,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[15]; ?>
+                                                <?php echo $meals[20]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
                                             </div>
@@ -752,7 +752,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[16]; ?>
+                                                <?php echo $meals[21]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
                                             </div>
@@ -774,7 +774,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal friday-lunch">
-                                                <?php echo $meals[17]; ?>
+                                                <?php echo $meals[22]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
                                             </div>
