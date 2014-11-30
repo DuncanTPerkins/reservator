@@ -252,7 +252,9 @@
         $k = $k + 2;
 
         //Increment the current looped date
-
+        if($k==8) {
+        $dayBegin->modify('+3 days');
+        }
         $dayBegin->modify('+1 day');
     }
 
