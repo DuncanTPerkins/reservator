@@ -132,7 +132,7 @@
 
         if($dayBegin->format('U') > $weekEnd->format('U')) {
         $dayBegin->modify('+2 days');
-        $k+=4;
+        $k+=2;
         }
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
