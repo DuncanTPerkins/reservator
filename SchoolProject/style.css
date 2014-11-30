@@ -11,9 +11,10 @@ margin:auto;
 
 .navbar {
 width: 900px;
-    overflow: auto;
+overflow: auto;
 margin-left: auto;
 margin-right: auto;
+padding: 20px;
 }
 ul {
 width: 100%;
@@ -25,6 +26,11 @@ li {
     float: left;
 }
 
+.ranking {
+ margin-left: auto;
+margin-right: auto;
+
+}
 .topstyle {
 font-size: 1.3em;
 
