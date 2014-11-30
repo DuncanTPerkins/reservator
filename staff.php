@@ -609,7 +609,7 @@
                     <div class="panel-heading week-of-heading">
 
                               Week of <?php
-                            echo $dates[5] . " - " . $dates[9] . ", " . $year; ?>
+                            echo $dates[7] . " - " . $dates[11] . ", " . $year; ?>
                         <span class="glyphicon glyphicon-arrow-left left" id="left-arrow"></span>
                         <div id="left-arrow-label">Current Week</div>
                     </div>
@@ -637,7 +637,7 @@
                             <div class="panel panel-default calendar-panel">
                                 <div class="panel-heading calendar-heading">
 
-                                    <?php echo $dates[5]; ?>
+                                    <?php echo $dates[7]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
                                     <div class="row lrow">
@@ -645,7 +645,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[9]; ?>
+                                                <?php echo $meals[11]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[9]; ?></span>
                                             </div>
                                         </div>
@@ -655,7 +655,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[10]; ?>
+                                                <?php echo $meals[12]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[10]; ?></span>
                                             </div>
                                         </div>
