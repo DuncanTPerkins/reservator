@@ -297,7 +297,7 @@
 
             $(".meal").click(function(event) {
                 $("#mealid").val(event.target.id);
-                var description = $(this).text();
+                var description = $(this).html();
                 alert(description);
                 //take the value from the meal description for this meal, and put it into the modal
             });
