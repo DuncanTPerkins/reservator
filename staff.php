@@ -295,7 +295,7 @@
                 //                    $(this).prev().prev().css("border-color", "#ed9e95");
             });
 
-            $("row").click(function(event) {
+            $("meal").click(function(event) {
                 alert(event.target.id);
             });
 
@@ -459,11 +459,11 @@
                                     <?php echo $dates[0]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[0]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[0]; ?>">
                                                 <?php echo $meals[0]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[0]; ?></span>
@@ -471,11 +471,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[1]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[1]; ?>">
                                                 <?php echo $meals[1]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[1]; ?></span>
@@ -495,21 +495,21 @@
                                     <?php echo $dates[1]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[2]; ?>">
+                                    <div class="row lrow">
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[2]; ?>">
                                                 <?php echo $meals[2]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[2]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[3]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[3]; ?>">
                                                 <?php echo $meals[3]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[3]; ?></span>
@@ -527,22 +527,22 @@
                                     <?php echo $dates[2]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[4]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[4]; ?>">
                                                 <?php echo $meals[4]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[4]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[5]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[5]; ?>">
                                                 <?php echo $meals[5]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[5]; ?></span>
@@ -560,22 +560,22 @@
                                     <?php echo $dates[3]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[6]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[6]; ?>">
                                                 <?php echo $meals[6]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[6]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[7]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[7]; ?>">
                                                 <?php echo $meals[7]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[7]; ?></span>
@@ -593,11 +593,11 @@
                                     <?php echo $dates[4]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[8]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal friday-lunch">
+                                            <div class="meal friday-lunch" id="<?php echo $mealid[8]; ?>">
                                                 <?php echo $meals[8]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>
@@ -657,21 +657,21 @@
                                     <?php echo $dates[7]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[14]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[14]; ?>">
                                                 <?php echo $meals[14]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[15]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[15]; ?>">
                                                 <?php echo $meals[15]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
                                             </div>
@@ -689,21 +689,21 @@
                                     <?php echo $dates[8]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[16]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[16]; ?>">
                                                 <?php echo $meals[16]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[17]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[17]; ?>">
                                                 <?php echo $meals[17]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
                                             </div>
@@ -720,22 +720,22 @@
                                     <?php echo $dates[9]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[18]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[18]; ?>">
                                                 <?php echo $meals[18]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[18]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[19]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[19]; ?>">
                                                 <?php echo $meals[19]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[19]; ?></span>
@@ -753,22 +753,22 @@
                                     <?php echo $dates[10]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[20]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[20]; ?>">
                                                 <?php echo $meals[20]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[20]; ?></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drow" id="<?php echo $mealid[21]; ?>">
+                                    <div class="row drow" >
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal">
+                                            <div class="meal" id="<?php echo $mealid[21]; ?>">
                                                 <?php echo $meals[21]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[21]; ?></span>
@@ -786,11 +786,11 @@
                                     <?php echo $dates[11]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
-                                    <div class="row lrow" id="<?php echo $mealid[22]; ?>">
+                                    <div class="row lrow" >
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal friday-lunch">
+                                            <div class="meal friday-lunch" id="<?php echo $mealid[22]; ?>">
                                                 <?php echo $meals[22]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[22]; ?></span>
