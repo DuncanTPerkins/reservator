@@ -669,7 +669,7 @@
 
                             <div class="panel panel-default calendar-panel">
                                 <div class="panel-heading calendar-heading">
-                                    <?php echo $dates[6]; ?>
+                                    <?php echo $dates[8]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
                                     <div class="row lrow">
@@ -677,7 +677,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[11]; ?>
+                                                <?php echo $meals[13]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[11]; ?></span>
                                             </div>
                                         </div>
@@ -687,7 +687,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[12]; ?>
+                                                <?php echo $meals[14]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[12]; ?></span>
                                             </div>
                                         </div>
@@ -700,7 +700,7 @@
 
                             <div class="panel panel-default calendar-panel">
                                 <div class="panel-heading calendar-heading">
-                                    <?php echo $dates[7]; ?>
+                                    <?php echo $dates[9]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
                                     <div class="row lrow">
@@ -708,7 +708,7 @@
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[13]; ?>
+                                                <?php echo $meals[15]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[13]; ?></span>
                                             </div>
@@ -719,7 +719,7 @@
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
                                             <div class="meal">
-                                                <?php echo $meals[14]; ?>
+                                                <?php echo $meals[16]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
@@ -733,7 +733,7 @@
 
                             <div class="panel panel-default calendar-panel">
                                 <div class="panel-heading calendar-heading">
-                                    <?php echo $dates[8]; ?>
+                                    <?php echo $dates[10]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
                                     <div class="row lrow">
@@ -766,7 +766,7 @@
 
                             <div class="panel panel-default calendar-panel">
                                 <div class="panel-heading calendar-heading">
-                                    <?php echo $dates[9]; ?>
+                                    <?php echo $dates[11]; ?>
                                 </div>
                                 <div class="panel-body calendar-body">
                                     <div class="row lrow">
