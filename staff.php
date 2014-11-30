@@ -878,11 +878,11 @@
                     <h4 class="modal-title" id="myModalLabel">Edit Meal Description</h4>
                 </div>
                 <div class="modal-body">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <form action="php/insert.php" method="POST">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
                     <textarea id="fieldentry" rows="4" cols="50"></textarea>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
 
