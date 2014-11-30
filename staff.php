@@ -63,7 +63,7 @@
 
     //Fill an array with Datetime objects for each day of the week,
     //to be used as day headers
-    for($j=0; $j<5; $j++) {
+    for($j=0; $j<11; $j++) {
         $dates[$j] = $loopDay->format('l, F d');
         $loopDay->modify('+1 day');
     }
@@ -73,7 +73,7 @@
     $loopDay = clone $dayBegin;
 
     //initialize the arrays
-    for($w = 0; $w<9; $w++) {
+    for($w = 0; $w<19; $w++) {
         //Whether or not a meal is already reserved
         $class[$w] = "nonmeal";
 
