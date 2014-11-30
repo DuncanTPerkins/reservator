@@ -93,7 +93,7 @@
         $checks[$w] = "";
     }
 
-
+    $i=0;
     //check which meals have already been reserved by the student
     //while the current day is less than Friday
     while($dayBegin->format('U') < $dayEnd->format('U')) {
@@ -103,7 +103,7 @@
 
         //Get all mealIDs' for Meal Reservations placed by the current student for the date we are currently looping through
         $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
-        $i=0;
+
 
         //while we aren't on the last row returned from the database query
         while($row2 = mysqli_fetch_array($result2, MYSQL_ASSOC)) {
@@ -246,12 +246,21 @@
                 }
             }
         }
-
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
         $k = $k + 2;
 
         //Increment the current looped date
         $dayBegin->modify('+1 day');
+    }
+
+    for($i=0;$i<sizeof($mealid);$i++) {
+        //Select rows from the Meal table that are on the current looped day, order them by whether they're lunch or dinner
+        $result = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE MEAL = '" . $mealid[$i] ."'");
+
+        //integer of the number of rows that were returned from the above query
+        $count=mysqli_num_rows($result);
+
+        $reservenum[$i] = $count;
     }
 
 ?>
@@ -459,7 +468,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[0]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
-                                                <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-list"><?php echo $reservenum[0]; ?></span>
                                                 <!--                                                            <span class="glyphicon glyphicon-ok"></span>-->
                                             </div>
                                         </div>
@@ -471,7 +480,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[1]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
-                                                <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-list"><?php echo $reservenum[1]; ?></span>
                                                 <!--                                                           <span class="glyphicon glyphicon-ok"></span>-->
                                             </div>
                                         </div>
@@ -494,7 +503,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[2]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[2]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -505,7 +514,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[3]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[3]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -527,7 +536,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[4]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[4]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -538,7 +547,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[5]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list">LIST</span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[5]; ?></span>
                                             </div>
                                         </div>
                                     </div>
