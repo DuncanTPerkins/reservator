@@ -10,16 +10,15 @@ margin:auto;
 }
 
 .navbar {
-width: 64%;
-margin: 0 auto;
-margin-bottom: 20px;
+width: 900px;
+    overflow: auto;
+margin-left: auto;
+margin-right: auto;
 }
 ul {
-    list-style-type: none;
-    width: 100%;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
+width: 100%;
+    margin: 0 auto;
+    list-style: none;
 }
 
 li {
@@ -51,9 +50,10 @@ padding: 10px;
 }
 
 a:link, a:visited {
+    display: block;
     border: 2px solid black;
     display: block;
-    width: 190px;
+    width: 200px;
     font-weight: bold;
     color: #f00;
     background-color: #fff;
