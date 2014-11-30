@@ -73,7 +73,7 @@
     $loopDay = clone $dayBegin;
 
     //initialize the arrays
-    for($w = 0; $w<19; $w++) {
+    for($w = 0; $w<=22; $w++) {
         //Whether or not a meal is already reserved
         $class[$w] = "nonmeal";
 
