@@ -259,7 +259,7 @@
         //Increment the current looped date
         $dayBegin->modify('+1 day');
     }
-
+echo "size of mealid " . sizeof($mealid);
     for($i=0;$i<sizeof($mealid);$i++) {
         $result = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE MEAL = '" . $mealid[$i] ."'");
 
