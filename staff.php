@@ -655,7 +655,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[14]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[9]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -665,7 +665,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[15]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[10]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -687,7 +687,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[16]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[11]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -697,7 +697,7 @@
                                             <br>
                                             <div class="meal">
                                                 <?php echo $meals[17]; ?>
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[12]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -719,7 +719,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[18]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[13]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[18]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -730,7 +730,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[19]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[19]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -752,7 +752,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[20]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[20]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -763,7 +763,7 @@
                                             <div class="meal">
                                                 <?php echo $meals[21]; ?>
 
-                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
+                                                <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[21]; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -785,7 +785,7 @@
                                             <div class="meal friday-lunch">
                                                 <?php echo $meals[22]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
-                                                <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
+                                                <span class="label label-primary label-list"><?php echo $reservenum[22]; ?></span>
                                             </div>
                                         </div>
                                     </div>
