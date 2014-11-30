@@ -301,7 +301,7 @@
                 var badstring = '<span class="label label-primary label-edit">';
                 var badindex = description.indexOf(badstring);
                 var newstring = description.substr(0, badindex-1);
-                //newstring = newstring.trim();
+                newstring = newstring.trim();
                 $("#fieldentry").val(newstring);
                 $("#changeDesc").modal('show');
                 //take the value from the meal description for this meal, and put it into the modal
