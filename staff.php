@@ -129,7 +129,10 @@
 
     //while we're not at Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
-
+                if($k==8) {
+        $dayBegin->modify('+3 days');
+        $k+=1;
+        }
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
 
@@ -252,9 +255,6 @@
         $k = $k + 2;
 
         //Increment the current looped date
-        if($k==8) {
-        $dayBegin->modify('+3 days');
-        }
         $dayBegin->modify('+1 day');
     }
 
