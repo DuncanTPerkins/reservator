@@ -55,7 +55,7 @@
     //create a Datetime object for this Friday
     $dayEnd = clone $dayBegin;
     $weekEnd = clone $dayBegin;
-    $weekEnd->modify('+5 days');
+    $weekEnd->modify('+4 days');
     $dayEnd->modify('+12 days');
     $friday = clone $weekEnd;
 
@@ -255,7 +255,7 @@
         }
 
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
-        echo "NEW ONE: " . $dayBegin->format('U') . " " . $friday->format('U') . " " . $dayBegin->format('Y-m-d') . " " . $friday->format('Y-m-d'); 
+        echo "NEW ONE: " . $dayBegin->format('U') . " " . $friday->format('U') . " " . $dayBegin->format('Y-m-d') . " " . $friday->format('Y-m-d');
         if($dayBegin->format('U') == $friday->format('U')) {
             //$k++;
             echo "hithere";
