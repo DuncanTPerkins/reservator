@@ -296,7 +296,10 @@
             });
 
             $(".meal").click(function(event) {
-                alert(event.target.id);
+                $("#mealid").val(event.target.id);
+                var description = $(this).html();
+                alert(description);
+                //take the value from the meal description for this meal, and put it into the modal
             });
 
             $(".label-list").hover(function () { //hover in
@@ -467,7 +470,6 @@
                                                 <?php echo $meals[0]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[0]; ?></span>
-                                                <!--                                                            <span class="glyphicon glyphicon-ok"></span>-->
                                             </div>
                                         </div>
                                     </div>
@@ -875,6 +877,7 @@
                 <form action="php/insert.php" method="POST">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
+                    <textarea rows="4" cols="50"></textarea>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
 
