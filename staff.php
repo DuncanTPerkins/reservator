@@ -89,7 +89,7 @@
         $class[$w] = "nonmeal";
 
         //Meal descriptions
-        $meals[$w] = "Nothing Yet!";
+        $meals[$w] = "$w";
 
         //Whether or not a meal needs a checkmark
         $checks[$w] = "";
