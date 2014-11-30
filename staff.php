@@ -92,6 +92,7 @@
 
         //parse a string out of the Datetime object
         $dayfield = $dayBegin->format('Y-m-d');
+        echo $dayfield . " ";
 
         //Get all mealIDs' for Meal Reservations placed by the current student for the date we are currently looping through
         $result2 = mysqli_query($conn, "SELECT meal FROM RESERVATION WHERE student = '$studentid' and date = '$dayfield'");
