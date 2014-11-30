@@ -302,7 +302,7 @@
                 var badindex = description.indexOf(badstring);
                 var newstring = description.substr(0, badindex-1);
                 newstring = newstring.trim();
-                $("fieldentry").val(newstring);
+                $("#fieldentry").val(newstring);
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
