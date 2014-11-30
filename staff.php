@@ -309,6 +309,10 @@
                 $("#myModal").modal('show');
             });
 
+            $(".label-edit").click(function () {
+                $("#changeDesc").modal('show');
+            });
+
             $("#right-arrow, #right-arrow-label").click(function () {
                 //                    $("#current-week-row").toggle('slide', 'left', 500);
                 $("#current-week-row").hide();
@@ -852,6 +856,29 @@
             </div>
         </div>
     </div>
+
+
+        <div class="modal fade" id="changeDesc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Edit Meal Description</h4>
+                </div>
+                <div class="modal-body">
+                              <form action="php/reserve.php" method="POST">
+            <input value="<?php echo $_SESSION['studentid']; ?>" name="studentid" style="display: none;">
+            <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
+            <input value="0" id="mealid" name="mealid" style="display: none;">
+        <button type="submit" class="btn btn-primary formsubmit">Yes</button>
+          </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
