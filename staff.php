@@ -295,6 +295,10 @@
                 //                    $(this).prev().prev().css("border-color", "#ed9e95");
             });
 
+            $("row").click(function(event) {
+                alert(event.target.id);
+            });
+
             $(".label-list").hover(function () { //hover in
                 $(this).css("background-color", "#fcbbb3");
                 //                    $(this).next().next().css("border-color", "#fcbbb3");
@@ -867,11 +871,11 @@
                     <h4 class="modal-title" id="myModalLabel">Edit Meal Description</h4>
                 </div>
                 <div class="modal-body">
-                              <form action="php/reserve.php" method="POST">
-            <input value="<?php echo $_SESSION['studentid']; ?>" name="studentid" style="display: none;">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <form action="php/insert.php" method="POST">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
-        <button type="submit" class="btn btn-primary formsubmit">Yes</button>
+        <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
 
                 </div>
