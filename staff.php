@@ -127,6 +127,8 @@
     //index for looping through the meals
     $k = 0;
 
+    $friday = clone $weekEnd;
+
     //while we're not at second Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
 
@@ -253,7 +255,12 @@
         }
 
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
+        if($dayBegin->format('U') == $friday->format('U') {
+            $k++;
+        }
+           else {
         $k = $k + 2;
+           }
 
         //Increment the current looped date
         $dayBegin->modify('+1 day');
@@ -264,7 +271,7 @@
         //integer of the number of rows that were returned from the above query
         $count=mysqli_num_rows($result);
 
-        $reservenum[$i] = $i;
+        $reservenum[$i] = $count;
     }
 
 ?>
