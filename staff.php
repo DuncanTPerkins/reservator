@@ -251,7 +251,7 @@
         }
                 if($k==8) {
         //
-        $dayBegin->modify('+2 days');
+        $dayBegin->modify('+1 day');
         }
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
         $k = $k + 2;
