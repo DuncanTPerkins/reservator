@@ -57,6 +57,7 @@
     $weekEnd = clone $dayBegin;
     $weekEnd->modify('+5 days');
     $dayEnd->modify('+12 days');
+    $friday = clone $weekEnd;
 
     //create a clone of the Datetime object for Monday,
     //to be used for day headers
@@ -127,7 +128,6 @@
     //index for looping through the meals
     $k = 0;
 
-    $friday = clone $weekEnd;
 
     //while we're not at second Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
@@ -255,6 +255,7 @@
         }
 
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
+        echo $dayBegin->format('U') . " " . $friday->format('U') . " " . $dayBegin->format('Y-m-d') . " " . $friday->format('Y-m-d'); 
         if($dayBegin->format('U') == $friday->format('U')) {
             //$k++;
             echo "hithere";
