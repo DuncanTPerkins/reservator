@@ -8,7 +8,10 @@ color: white;
 margin:auto;
     text-align:center;
 }
+img {
+ padding-top: 20px;   
 
+}
 .navbar {
 width: 900px;
 margin-left: auto;
