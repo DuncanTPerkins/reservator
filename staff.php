@@ -132,7 +132,6 @@
 
         if($dayBegin->format('U') >= $weekEnd->format('U')) {
         $dayBegin->modify('+2 days');
-        $k+=4;
         $weekEnd = clone $dayEnd;
         }
         //parse string out of the day we're currently looping through
