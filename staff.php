@@ -130,8 +130,9 @@
     //while we're not at second Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
 
-                if($dayBegin->format('U') > $weekEnd->format('U')) {
+        if($dayBegin->format('U') > $weekEnd->format('U')) {
         $dayBegin->modify('+2 days');
+        $k+=4;
         }
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
