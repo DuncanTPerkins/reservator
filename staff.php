@@ -298,7 +298,11 @@
             $(".meal").click(function(event) {
                 $("#mealid").val(event.target.id);
                 var description = $(this).html();
-                alert(description);
+                var badstring = '<span class="label label-primary label-edit">';
+                var badindex = description.indexOf(badstring);
+                var newstring = description.substr(0, badindex-1);
+
+                alert(newstring);
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
