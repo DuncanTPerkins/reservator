@@ -54,6 +54,8 @@
 
     //create a Datetime object for this Friday
     $dayEnd = clone $dayBegin;
+    $weekEnd = clone $dayBegin;
+    $weekEnd->modify('+5 days');
     $dayEnd->modify('+12 days');
 
     //create a clone of the Datetime object for Monday,
@@ -64,7 +66,7 @@
     //Fill an array with Datetime objects for each day of the week,
     //to be used as day headers
     for($j=0; $j<10; $j++) {
-        if($loopDay->format('U') == $dayEnd->format('U')) {
+        if($loopDay->format('U') == $weekEnd->format('U')) {
             $loopDay->modify('+2 days');
             $dates[$j] = $loopDay->format('l, F d');
         }
