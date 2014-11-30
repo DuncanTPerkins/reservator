@@ -255,7 +255,7 @@
         }
 
         //increment the index by 2 (2 meals per day, we want to loop through 1 day at a time)
-        if($dayBegin->format('U') == $friday->format('U') {
+        if($dayBegin->format('U') == $friday->format('U')) {
             $k++;
         }
            else {
