@@ -127,9 +127,11 @@
     //index for looping through the meals
     $k = 0;
 
-    //while we're not at Friday yet
+    //while we're not at second Friday yet
     while($dayBegin->format('U') < $dayEnd->format('U')) {
-                if($k==8) {
+
+        if($k==8) {
+        //
         $dayBegin->modify('+3 days');
         $k+=1;
         }
@@ -259,7 +261,6 @@
     }
 
     for($i=0;$i<sizeof($mealid);$i++) {
-        //Select rows from the Meal table that are on the current looped day, order them by whether they're lunch or dinner
         $result = mysqli_query($conn, "SELECT * FROM RESERVATION WHERE MEAL = '" . $mealid[$i] ."'");
 
         //integer of the number of rows that were returned from the above query
@@ -267,6 +268,7 @@
 
         $reservenum[$i] = $count;
     }
+print_r($reservenum);
 
 ?>
 
