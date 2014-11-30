@@ -136,7 +136,7 @@
         }
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
-
+        echo $dayfield . " ";
         //Select rows from the Meal table that are on the current looped day, order them by whether they're lunch or dinner
         $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 
