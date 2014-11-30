@@ -303,6 +303,7 @@
                 var newstring = description.substr(0, badindex-1);
                 //newstring = newstring.trim();
                 $("#fieldentry").val(newstring);
+                $("#changeDesc").modal('show');
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
@@ -321,7 +322,6 @@
             });
 
             $(".label-edit").click(function () {
-                $("#changeDesc").modal('show');
             });
 
             $("#right-arrow, #right-arrow-label").click(function () {
