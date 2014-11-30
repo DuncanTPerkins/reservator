@@ -255,9 +255,7 @@
         if($k==8) {
         $dayBegin->modify('+2 days');
         }
-        else {
         $dayBegin->modify('+1 day');
-        }
     }
 
     for($i=0;$i<sizeof($mealid);$i++) {
