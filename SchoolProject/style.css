@@ -12,6 +12,15 @@ img {
  padding-top: 20px;
 
 }
+
+h2 {
+background-color: white;
+color: red;
+padding: 20px;
+width: 80%;
+margin: 0 auto;
+
+}
 .navbar {
 width: 1100px;
     text-align: center;
