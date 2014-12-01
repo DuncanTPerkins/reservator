@@ -87,7 +87,10 @@ a:link.nav, a:visited.nav {
 }
 
 
-
+.resumesquare {
+ background-color: white;
+overflow: auto;
+}
 a:hover.nav {
  background-color: #f00;
 color: #fff;
