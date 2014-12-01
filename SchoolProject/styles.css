@@ -21,7 +21,14 @@ li {
         display: inline;
 }
 
+h2 {
+background-color: white;
+color: red;
+padding: 20px;
+width: 80%; 
+margin: 0 auto;
 
+}
 
 img.top {
 width: 400px;
