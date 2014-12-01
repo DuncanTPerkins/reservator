@@ -1,0 +1,124 @@
+body {
+ background-color: #aa1d1d;
+color: white;
+
+}
+
+.bandi {
+ font-weight: bold;
+font-style: italic;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+
+        display: inline;
+}
+
+
+
+img.top {
+width: 400px;
+}
+
+table.toptable {
+ margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+td.year {
+ text-align: right;
+
+
+}
+
+table.bottable {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%
+
+
+
+}
+
+.navbar {
+width: 1100px;
+    text-align: center;
+margin-left: auto;
+margin-right: auto;
+padding: 20px;
+}
+ul {
+    display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+}
+
+li {
+    float: left;
+}
+a:link a:visited {
+ color: white;
+    text-decoration: none;
+
+
+}
+a:link.nav, a:visited.nav {
+    display: block;
+    border: 2px solid black;
+    display: block;
+    width: 200px;
+    font-weight: bold;
+    color: #f00;
+    background-color: #fff;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+a:hover.nav {
+ background-color: #f00;
+color: #fff;
+
+}
+
+
+
+h1.myname {
+    color: #fff;
+}
+
+b.myaddress {
+font-size: 20px;
+
+}
+
+hr.topline{
+    border-width: 2px;
+ width: 50%;
+color: #000000;
+
+}
+
+.twenty {
+ padding-left: 20px;
+
+}
+
+.fifty {
+ padding-left: 50px;
+
+}

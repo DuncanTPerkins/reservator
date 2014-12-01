@@ -73,5 +73,12 @@ a:link, a:visited {
     text-transform: uppercase;
 }
 
+a:hover{
+ background-color: #f00;
+color: #fff;
+
+}
+
+
 }
 
