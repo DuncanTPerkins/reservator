@@ -68,7 +68,7 @@ padding: 10px;
 
 }
 
-a:link, a:visited {
+a:link.nav, a:visited.nav {
     display: block;
     border: 2px solid black;
     display: block;
@@ -82,7 +82,7 @@ a:link, a:visited {
     text-transform: uppercase;
 }
 
-a:hover{
+a:hover.nav{
  background-color: #f00;
 color: #fff;
 
