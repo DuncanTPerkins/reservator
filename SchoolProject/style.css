@@ -68,6 +68,10 @@ padding: 10px;
 
 }
 
+a:link, a:visited {
+ text-align: center;   
+}
+
 a:link.nav, a:visited.nav {
     display: block;
     border: 2px solid black;
