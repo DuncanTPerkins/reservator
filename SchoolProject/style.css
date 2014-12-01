@@ -24,6 +24,9 @@ margin: 0 auto;
 
 .sponsor {
  background-color: #fff;
+width: 45%;
+float: left;
+margin: 10px;
 
 }
 .navbar {
