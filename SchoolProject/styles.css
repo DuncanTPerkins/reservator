@@ -21,14 +21,6 @@ li {
         display: inline;
 }
 
-h2 {
-background-color: white;
-color: red;
-padding: 20px;
-width: 80%; 
-margin: 0 auto;
-
-}
 
 img.top {
 width: 400px;
@@ -74,7 +66,7 @@ ul {
 li {
     float: left;
 }
-a:link a:visited {
+a:link.myaddress, a:visited.myaddress {
  color: white;
     text-decoration: none;
 
