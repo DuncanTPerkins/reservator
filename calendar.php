@@ -309,7 +309,7 @@
      </script>
 </head>
 
-<body heightfull>
+<body>
 
      <div class="container-fluid heightfull">
                     <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
@@ -566,5 +566,4 @@
   </div>
 </div>
 </body>
-
 </html>
