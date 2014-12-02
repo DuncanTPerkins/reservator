@@ -63,7 +63,7 @@
             <!-- /.container-fluid -->
         </nav>
         <!-- Navbar -->
-            <div class="container" style="margin: 30px;">
+            <div class="container" style="margin-top: 30px;">
                 <div class="row vertical-offset-50">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="panel panel-default" id="main-login-panel">
