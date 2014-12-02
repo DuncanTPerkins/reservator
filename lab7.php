@@ -187,7 +187,7 @@
 <p>
 	<a href="http://validator.w3.org/check?uri=http%3A%2F%2Ftjdpproj.com%2Flab7.php">
 		<img style="border:0;width:88px;height:31px"
-			src="//jigsaw.w3.org/css-validator/images/vcss"
+			src="//jigsaw.w3.org/css-validator/images/vhtml"
 			alt="Valid CSS!" />
 	</a>
 </p>
