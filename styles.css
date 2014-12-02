@@ -22,6 +22,11 @@ input {
 
 }
 
+button {
+ float: right;   
+
+}
+
 .bandi {
  font-weight: bold;
 font-style: italic;
