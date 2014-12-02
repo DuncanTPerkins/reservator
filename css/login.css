@@ -13,9 +13,6 @@ html {
      background: -ms-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
      /* IE10+ */
      background: linear-gradient(135deg, #f7b2aa 1%, #ed9e95 100%);
-     /* W3C */
-     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f7b2aa', endColorstr='#ed9e95', GradientType=1);
-     /* IE6-9 fallback on horizontal gradient */
      width: 100%;
      margin: 0;
      padding: 0;
@@ -291,12 +288,6 @@ input[type="color"]:focus,
 /*     margin-left: 50px;*/
 }
 
-textarea {
-     border-style: none;
-     border-color: Transparent;
-     overflow: auto;
-     outline: none;
-}
 #right-arrow-label {
      position: absolute;
      right: 75px;
