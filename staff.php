@@ -845,7 +845,7 @@
             <input value="0" id="mealid" name="mealid" style="display: none;">
             <input value="" id="datetime" name="datetime" style="display: none;">
             <input value="2" id="meal_type" name="meal_type" style="display: none;">
-            <input id="descr" name="description">
+            <input type = "text" id="descr" name="description">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
