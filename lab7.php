@@ -74,7 +74,7 @@
         </h2>
             </td>
 
-            <td colspan="2" class="year bandi"> 2014-2015 </td>
+            <tdclass="year bandi"> 2014-2015 </td>
 
         </tr>
 
@@ -94,7 +94,7 @@
         </h2>
             </td>
 
-                    <td colspan="2" class="year"> <b><i>2012-2014</i></b> </td>
+                    <td class="year"> <b><i>2012-2014</i></b> </td>
 
         </tr>
 
@@ -106,7 +106,7 @@
         </tr>
 
 
-        <td colspan="3">
+        <td>
          <h1>Experience</h1>
 
 
@@ -123,7 +123,7 @@
         </h2>
             </td>
 
-            <td colspan="2" class="year bandi"> N/A </td>
+            <td class="year bandi"> N/A </td>
 
         </tr>
 
@@ -135,7 +135,7 @@
         </tr>
 
 
-            <td colspan="3">
+            <td>
          <h1>Activities</h1>
 
 
@@ -152,7 +152,7 @@
         </h2>
             </td>
 
-            <td colspan="2" class="year bandi"> 2010-2014 </td>
+            <td class="year bandi"> 2010-2014 </td>
 
         </tr>
 
@@ -171,7 +171,7 @@
         </h2>
             </td>
 
-            <td colspan="2" class="year bandi"> 1994-2014 </td>
+            <td class="year bandi"> 1994-2014 </td>
 
         </tr>
 
