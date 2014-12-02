@@ -1,4 +1,7 @@
 
+<?php session_start();
+/*
+
     <!--
             Name:       Duncan Perkins
             Course:     CSCI 1710-003
@@ -6,8 +9,7 @@
             Due Date: 12/2/2014
             Purpose:    The purpose of this web page is to serve as a reservation system for the kitchen of a sorority
         -->
-<?php
-session_start();
+        */
 $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
 //connect

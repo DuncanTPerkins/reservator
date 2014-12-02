@@ -1,3 +1,6 @@
+<?php
+ob_start();
+/*
 
     <!--
             Name:       Duncan Perkins
@@ -6,8 +9,7 @@
             Due Date: 12/2/2014
             Purpose:    The purpose of this web page is to serve as a reservation system for the kitchen of a sorority
         -->
-<?php
-ob_start();
+        */
 $DBServer="localhost" ; $DBUser="tjdpproj_user" ; $DBPass="Bookerer1" ; $DBName="tjdpproj_db" ;
 
 //connect
