@@ -1,8 +1,11 @@
 <?php session_start();
 
     //send the user to the login page if they aren't logged in
+    //disable for w3c validation
+    /*
     if(!session_is_registered(username)){ header( "location:index.php");
     }
+    */
 
     //connect to the database
     $DBServer="localhost"; $DBUser="tjdpproj_user"; $DBPass="Bookerer1"; $DBName="tjdpproj_db";
