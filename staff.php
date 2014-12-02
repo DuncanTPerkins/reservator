@@ -893,7 +893,7 @@
             <input value="0" id="mealid" name="mealid" style="display: none;">
             <input value="" id="datetime" name="datetime" style="display: none;">
             <input value="2" id="meal_type" name="meal_type" style="display: none;">
-            <textarea id="fieldentry" name="description" rows="4" cols="80" form="mainform">hi</textarea>
+            <input id="fieldentry" name="description" rows="4" cols="80" value="">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
