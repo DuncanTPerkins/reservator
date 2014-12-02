@@ -8,6 +8,7 @@ session_start();
     if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
     }
+print_r($_POST);
 $descripion = $_POST['description'];
 $mealid = $_POST['mealid'];
 $datetime = $_POST['datetime'];
