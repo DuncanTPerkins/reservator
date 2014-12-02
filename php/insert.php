@@ -8,13 +8,11 @@ session_start();
     if (mysqli_connect_errno()) {
     echo "Database connection failed: " . mysqli_connect_error();
     }
-print_r($_POST);
 $description = $_POST['description'];
 $mealid = $_POST['mealid'];
 $datetime = $_POST['datetime'];
 $mealtype = $_POST ['meal_type'];
 
-echo $mealtype . " " . $datetime . " " . $mealid . " " . $description;
 if($mealid=="") {
 $sql="INSERT INTO MEAL(pk_meal_id, description, meal_type, date)
 VALUES (NULL, '$description', '$mealtype', '$datetime')";
