@@ -30,6 +30,11 @@ html {
     position: absolute;
 */
 }
+
+textarea {
+ background-color: #fff;
+
+}
 th {
     background-color: #f7b2aa;
     color: white;
