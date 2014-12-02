@@ -58,7 +58,7 @@
     <table class="bottable">
     <tr>
 
-     <td colspan="3">
+     <td>
          <h1>Education</h1>
 
 
@@ -106,14 +106,14 @@
 
         </tr>
 
-
+        <tr>
         <td>
          <h1>Experience</h1>
 
 
         </td>
 
-
+            <tr>
 
     </tr>
         <tr> <td>
@@ -135,14 +135,14 @@
 
         </tr>
 
-
+<tr>
             <td>
          <h1>Activities</h1>
 
 
         </td>
 
-
+</tr>
 
     </tr>
         <tr> <td>
