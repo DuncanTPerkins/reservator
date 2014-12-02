@@ -57,13 +57,12 @@ if($_SESSION['nouse'] == "go") {
                                     <form name="login" method="post" action="php/register.php" accept-charset="UTF-8" role="form" class="form-signin">
                                         <fieldset>
                                             <label class="panel-login">
-                                                <div class="login_result"></div>
                                             </label>
                                             <div class="col-md-6">
-                                                <input name="fname" class="form-control" placeholder="First Name" id="fname" name="fname" type="text">
+                                                <input class="form-control" placeholder="First Name" id="fname" name="fname" type="text">
                                             </div>
                                             <div class="col-md-6">
-                                                <input name="lname" class="form-control" placeholder="Last Name" id="lname" name="lname" type="text">
+                                                <input class="form-control" placeholder="Last Name" id="lname" name="lname" type="text">
                                             </div>
                                             <div class="col-md-12">
                                             <input name="phone" class="form-control" placeholder="Phone Number" id="username" type="text">
