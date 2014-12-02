@@ -27,7 +27,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" id="navbar-brand" href="#">
+                    <a class="navbar-brand" id="navbar-brand" href="php/gohome.php">
                         <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
                 </div>
 
@@ -49,7 +49,7 @@
             <!-- /.container-fluid -->
         </nav>
         <!-- Navbar -->
-            <div class="container" style="margin: 10px;">
+            <div class="container" style="margin: 30px;">
                 <div class="row vertical-offset-50">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="panel panel-default" id="main-login-panel">
@@ -72,40 +72,6 @@
                     </div>
                 </div>
             </div>
-     <!-- Modal -->
-<div class="modal fade" id="loggedout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Goodbye!</h4>
-      </div>
-      <div class="modal-body">
-        You Have Been Logged Out.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="logfail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Invalid!</h4>
-      </div>
-      <div class="modal-body">
-        Invalid Username or Password. Please try again.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
