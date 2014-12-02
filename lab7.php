@@ -184,20 +184,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
-<p>
-	<a href="http://validator.w3.org/check?uri=http%3A%2F%2Ftjdpproj.com%2Flab7.php">
-		<img style="border:0;width:88px;height:31px"
-			src="//jigsaw.w3.org/css-validator/images/vhtml"
-			alt="Valid CSS!" />
-	</a>
-</p>
+Here is the code for buttons (image links):
 
-<p>
-	<a href="http://jigsaw.w3.org/css-validator/check/referer">
-		<img style="border:0;width:88px;height:31px"
-			src="//jigsaw.w3.org/css-validator/images/vcss-blue"
-			alt="Valid CSS!" />
-	</a>
-</p>
+<div>
+<a href="http://validator.w3.org/check?uri=referer"
+style="background-color: transparent">
+<img style="border-style:none" width="88" height="31"
+src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01"></a>
+&nbsp;&nbsp;
+<a href="http://jigsaw.w3.org/css-validator/check/referer"
+style="background-color: transparent">
+<img style="border-style:none" width="88" height="31"
+src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+</div>
 </body>
 </html>
