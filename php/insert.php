@@ -9,7 +9,7 @@ session_start();
     echo "Database connection failed: " . mysqli_connect_error();
     }
 print_r($_POST);
-$descripion = $_POST['description'];
+$description = $_POST['description'];
 $mealid = $_POST['mealid'];
 $datetime = $_POST['datetime'];
 $mealtype = $_POST ['meal_type'];
