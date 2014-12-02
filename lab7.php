@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+<meta content="utf-8" http-equiv="encoding">
 <link rel="stylesheet" href="styles.css">
     <title> Duncan Perkins' Resume</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -74,7 +75,7 @@
         </h2>
             </td>
 
-            <tdclass="year bandi"> 2014-2015 </td>
+            <td class="year bandi"> 2014-2015 </td>
 
         </tr>
 
