@@ -82,6 +82,9 @@
 
         //Whether or not a meal needs a checkmark
         $checks[$w] = "";
+
+        //date of each meal
+        $datetime ="";
     }
 
 
@@ -121,7 +124,8 @@
 
         //parse string out of the day we're currently looping through
         $dayfield = $dayBegin->format('Y-m-d');
-
+        $datetime[$k] = $dayfield;
+        $datetime[$k+1] = $dayfield;
         //Select rows from the Meal table that are on the current looped day, order them by whether they're lunch or dinner
         $result = mysqli_query($conn, "SELECT * FROM MEAL WHERE date = '" . $dayfield ."' ORDER BY meal_type");
 
@@ -470,7 +474,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[0]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[0]; ?>" date="<?php echo $datetime[0]; ?>">
                                                 <?php echo $meals[0]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[0]; ?></span>
@@ -481,7 +485,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[1]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[1]; ?>"  date="<?php echo $datetime[1]; ?>">
                                                 <?php echo $meals[1]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[1]; ?></span>
@@ -505,7 +509,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[2]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[2]; ?>" date="<?php echo $datetime[2]; ?>">
                                                 <?php echo $meals[2]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[2]; ?></span>
                                             </div>
@@ -880,6 +884,7 @@
                 <form action="php/insert.php" method="POST">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
+            <input value="" id="date" name="date" style="display: none;">
                     <textarea id="fieldentry" name="description" rows="4" cols="80"></textarea>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
