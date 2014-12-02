@@ -1,0 +1,99 @@
+body,
+html {
+     background: #f7b2aa;
+     /* Old browsers */
+     background: -moz-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
+     /* FF3.6+ */
+     background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #f7b2aa), color-stop(100%, #ed9e95));
+     /* Chrome,Safari4+ */
+     background: -webkit-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
+     /* Chrome10+,Safari5.1+ */
+     background: -o-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
+     /* Opera 11.10+ */
+     background: -ms-linear-gradient(-45deg, #f7b2aa 1%, #ed9e95 100%);
+     /* IE10+ */
+     background: linear-gradient(135deg, #f7b2aa 1%, #ed9e95 100%);
+     /* W3C */
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f7b2aa', endColorstr='#ed9e95', GradientType=1);
+     /* IE6-9 fallback on horizontal gradient */
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     top: 0;
+     bottom: 0;
+     background-attachment: fixed;
+}
+
+.bandi {
+ font-weight: bold;
+font-style: italic;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+
+        display: inline;
+}
+
+
+
+img.top {
+width: 400px;
+}
+
+table.toptable {
+ margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+td.year {
+ text-align: right;
+
+
+}
+
+table.bottable {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%
+
+
+
+}
+
+h1.myname {
+    color: #2727b7;
+}
+
+b.myaddress {
+font-size: 20px;
+
+}
+
+hr.topline{
+    border-width: 2px;
+ width: 50%;
+color: #000000;
+
+}
+
+.twenty {
+ padding-left: 20px;
+
+}
+
+.fifty {
+ padding-left: 50px;
+
+}
