@@ -49,7 +49,7 @@
             <!-- /.container-fluid -->
         </nav>
         <!-- Navbar -->
-            <div class="container">
+            <div class="container" style="margin: 10px;">
                 <div class="row vertical-offset-50">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="panel panel-default" id="main-login-panel">
