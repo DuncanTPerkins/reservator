@@ -84,7 +84,10 @@
         $checks[$w] = "";
 
         //date of each meal
-        $datetime ="";
+        $datetime[$w] ="";
+
+        //lunch or dinner
+        $mealtype[$w] = 2;
     }
 
 
@@ -146,6 +149,9 @@
 
                     //Set the current array index to the current meal's mealID from the database
                     $mealid[$k] = $row['pk_meal_id'];
+
+                    //save meal type value for db insertion
+                    $mealtype[$k]=$row['meal_type'];
 
                     //Make the current meal clickable by default
                     $class[$k] = "meal";
@@ -301,6 +307,8 @@
 
             $(".meal").click(function(event) {
                 $("#mealid").val(event.target.id);
+                $("#datetime").val($(this).attr("date"));
+                $("#meal_type").val($(this).attr("mealtype"));
                 var description = $(this).html();
                 var badstring = '<span class="label label-primary label-edit">';
                 var badindex = description.indexOf(badstring);
@@ -308,7 +316,6 @@
                 newstring = newstring.trim();
                 $("#fieldentry").val(newstring);
                 $("#changeDesc").modal('show');
-                alert($(this).attr("date"));
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
@@ -475,7 +482,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[0]; ?>" date="<?php echo $datetime[0]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[0]; ?>" date="<?php echo $datetime[0]; ?>" mealtype="0">
                                                 <?php echo $meals[0]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[0]; ?></span>
@@ -486,7 +493,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[1]; ?>"  date="<?php echo $datetime[1]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[1]; ?>"  date="<?php echo $datetime[1]; ?>" mealtype="1">
                                                 <?php echo $meals[1]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[1]; ?></span>
@@ -510,7 +517,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[2]; ?>" date="<?php echo $datetime[2]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[2]; ?>" date="<?php echo $datetime[2]; ?>" mealtype="0">
                                                 <?php echo $meals[2]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[2]; ?></span>
                                             </div>
@@ -520,7 +527,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[3]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[3]; ?>" date="<?php echo $datetime[3]; ?>" mealtype="1">
                                                 <?php echo $meals[3]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[3]; ?></span>
@@ -542,7 +549,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[4]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[4]; ?>" date="<?php echo $datetime[4]; ?>" mealtype="0">
                                                 <?php echo $meals[4]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[4]; ?></span>
@@ -553,7 +560,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[5]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[5]; ?>" date="<?php echo $datetime[5]; ?>" mealtype="1">
                                                 <?php echo $meals[5]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[5]; ?></span>
@@ -575,7 +582,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[6]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[6]; ?>" date="<?php echo $datetime[6]; ?>" mealtype="0">
                                                 <?php echo $meals[6]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[6]; ?></span>
@@ -586,7 +593,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[7]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[7]; ?>" date="<?php echo $datetime[7]; ?>" mealtype="1">
                                                 <?php echo $meals[7]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[7]; ?></span>
@@ -608,7 +615,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal friday-lunch" id="<?php echo $mealid[8]; ?>">
+                                            <div class="meal friday-lunch" id="<?php echo $mealid[8]; ?>" date="<?php echo $datetime[8]; ?>" mealtype="0">
                                                 <?php echo $meals[8]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>
@@ -672,7 +679,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[14]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[14]; ?>" date="<?php echo $datetime[14]; ?>" mealtype="0">
                                                 <?php echo $meals[14]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[14]; ?></span>
                                             </div>
@@ -682,7 +689,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[15]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[15]; ?>" date="<?php echo $datetime[15]; ?>" mealtype="1">
                                                 <?php echo $meals[15]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[15]; ?></span>
                                             </div>
@@ -704,7 +711,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[16]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[16]; ?>" date="<?php echo $datetime[16]; ?>" mealtype="0">
                                                 <?php echo $meals[16]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[16]; ?></span>
                                             </div>
@@ -714,7 +721,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[17]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[17]; ?>" date="<?php echo $datetime[17]; ?>" mealtype="1">
                                                 <?php echo $meals[17]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[17]; ?></span>
                                             </div>
@@ -735,7 +742,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[18]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[18]; ?>" date="<?php echo $datetime[18]; ?>" mealtype="0">
                                                 <?php echo $meals[18]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[18]; ?></span>
@@ -746,7 +753,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[19]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[19]; ?>" date="<?php echo $datetime[19]; ?>" mealtype="1">
                                                 <?php echo $meals[19]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[19]; ?></span>
@@ -768,7 +775,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[20]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[20]; ?>" date="<?php echo $datetime[20]; ?>" mealtype="0">
                                                 <?php echo $meals[20]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[20]; ?></span>
@@ -779,7 +786,7 @@
                                         <div class="col-md-12 dinner">
                                             <span class="label label-primary">DINNER:</span>
                                             <br>
-                                            <div class="meal" id="<?php echo $mealid[21]; ?>">
+                                            <div class="meal" id="<?php echo $mealid[21]; ?>" date="<?php echo $datetime[21]; ?>" mealtype="1">
                                                 <?php echo $meals[21]; ?>
 
                                                 <span class="label label-primary label-edit">EDIT</span>  <span class="label label-primary label-list"><?php echo $reservenum[21]; ?></span>
@@ -801,7 +808,7 @@
                                         <div class="col-md-12 lunch">
                                             <span class="label label-primary">LUNCH:</span>
                                             <br>
-                                            <div class="meal friday-lunch" id="<?php echo $mealid[22]; ?>">
+                                            <div class="meal friday-lunch" id="<?php echo $mealid[22]; ?>" date="<?php echo $datetime[22]; ?>" mealtype="0">
                                                 <?php echo $meals[22]; ?>
                                                 <span class="label label-primary label-edit">EDIT</span>
                                                 <span class="label label-primary label-list"><?php echo $reservenum[22]; ?></span>
@@ -883,10 +890,10 @@
                 </div>
                 <div class="modal-body">
                 <form action="php/insert.php" method="POST">
-            <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
-            <input value="" id="date" name="date" style="display: none;">
-                    <textarea id="fieldentry" name="description" rows="4" cols="80"></textarea>
+            <input value="" id="datetime" name="datetime" style="display: none;">
+            <input value="2" id="meal_type" name="meal_type" style="display: none;">
+            <textarea id="fieldentry" name="description" rows="4" cols="80"></textarea>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
