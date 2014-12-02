@@ -193,7 +193,7 @@ input[type="color"]:focus,
 .uneditable-input:focus {
      border-color: #ed9e95;
      outline: 0;
-     outline: thin dotted \9;
+     outline: thin dotted;
      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95;
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95, 0.6;
      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed9e95;
