@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<meta content="utf-8">
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
     <title> Duncan Perkins' Resume</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
