@@ -306,6 +306,7 @@
                else {
                     $("#navbar-brand").css("font-size", "18px");
                }
+          }
      </script>
 </head>
 
