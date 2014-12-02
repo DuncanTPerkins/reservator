@@ -67,7 +67,7 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                             <form name="login" method="post" action="php/login.php" accept-charset="UTF-8" role="form" class="form-signin">
                                                 <fieldset>
                                                     <label class="panel-login">
-                                                        <div class="login_result"></div>
+                                                       <!-- <div class="login_result"></div> -->
                                                     </label>
                                                             <input type="radio" name="radiolog" value="student" >Student
                                                             <input type="radio" name="radiolog" value="staff">Staff
