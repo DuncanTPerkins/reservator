@@ -144,6 +144,22 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
 </div>
 
 
+<p>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border:0;width:88px;height:31px"
+			src="//jigsaw.w3.org/css-validator/images/vcss"
+			alt="Valid CSS!" />
+	</a>
+</p>
+
+<p>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border:0;width:88px;height:31px"
+			src="//jigsaw.w3.org/css-validator/images/vcss-blue"
+			alt="Valid CSS!" />
+	</a>
+</p>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 
