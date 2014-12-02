@@ -69,7 +69,7 @@ if($_SESSION['nouse'] == "go") {
                                             <input name="email" class="form-control" placeholder="E-mail" id="email" type="text">
 
                                             <input class="form-control" name="password" placeholder="Password" id="password" type="password">
-                                            <input class="form-control" placeholder="Confirm Password" id="password" type="password">
+                                            <input class="form-control" placeholder="Confirm Password" id="password2" type="password">
 
                                             <div class="col-md-12 col-s-6 button-container">
                                                 <input class="btn btn-lg btn-success btn-block" type="submit" id="register" value="Register »">
