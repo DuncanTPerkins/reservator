@@ -283,12 +283,6 @@
                     $(this).css("background-color", "#ed9e95");
                     $(this).prev().prev().css("border-color", "#ed9e95");
                });
-/*
-              $(".formsubmit").click(function() {
-                  $.post("php/reserve.php",{studentid: "$studentid", mealid: "$mealid", datetime: "$datetime"})
-                  .done(function(data) { alert(data); })
-              });
-*/
                $(".meal").click(function(event){
                     $newmealid = event.target.id;
                    $("input[id='mealid']").val($newmealid);
@@ -309,45 +303,43 @@
                else {
                     $("#navbar-brand").css("font-size", "18px");
                }
-//               if (window.innerWidth < 300) {
-//                    $('.calendar-heading').css("font-size", "12px");
-//               }
-//               else {
-//                    $(".calendar-heading").css("font-size", "14px");
-//               }
-          }
      </script>
 </head>
 
 <body heightfull>
 
      <div class="container-fluid heightfull">
-          <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
-               <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                    <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
 
-                         <a class="navbar-brand" id="navbar-brand" href="#">
-                              <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
-                    </div>
+                    <a class="navbar-brand" id="navbar-brand" href="php/gohome.php">
+                        <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
+                </div>
+                <ul class="nav navbar-nav">
+                                    <li><a href="mission.php">Mission Statement</a></li>
+                                    <li class=><a href="lab7.php">Resume</a></li>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-                         <ul class="nav navbar-nav navbar-right">
-                              <li>
-                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
-                              </li>
-                              <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
-                              </li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <?php
+                            echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
+                        </li>
+                        <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
+                        </li>
 
-                         </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-               </div>
-               <!-- /.container-fluid -->
-          </nav>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
           <!-- Navbar -->
           <div class="row vertical-offset-100"> <!-- row container with 100px vertical offset -->
               <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
@@ -559,11 +551,11 @@
         Are you sure you want to reserve this meal?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
           <form action="php/reserve.php" method="POST">
             <input value="<?php echo $_SESSION['studentid']; ?>" name="studentid" style="display: none;">
             <input value="<?php $today = getdate(); $year = $today[year]; $month = $today[mon]; $day = $today[mday]; echo $year . "-" . $month . "-" . $day; ?>" name="datetime" style="display: none;">
             <input value="0" id="mealid" name="mealid" style="display: none;">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
         <button type="submit" class="btn btn-primary formsubmit">Yes</button>
           </form>
       </div>

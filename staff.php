@@ -413,22 +413,27 @@
 <body heightfull>
 
     <div class="container-fluid heightfull">
-        <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+                    <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" id="navbar-brand" href="#">
+                    <a class="navbar-brand" id="navbar-brand" href="php/gohome.php">
                         <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
                 </div>
+                <ul class="nav navbar-nav">
+                                    <li><a href="mission.php">Mission Statement</a></li>
+                                    <li class=><a href="lab7.php">Resume</a></li>
 
+                </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
+                            <?php
+                            echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
                         </li>
                         <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
                         </li>
@@ -845,7 +850,7 @@
             <input value="0" id="mealid" name="mealid" style="display: none;">
             <input value="" id="datetime" name="datetime" style="display: none;">
             <input value="2" id="meal_type" name="meal_type" style="display: none;">
-            <input type = "text" id="descr" name="description">
+            <input type="text" id="descr" name="description">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
