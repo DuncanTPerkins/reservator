@@ -51,7 +51,6 @@ th {
      -khtml-user-select: none;
      -moz-user-select: none;
      -ms-user-select: none;
-     user-select: none;
 }
 .calendar-panel {
      min-height: 200px;
@@ -309,7 +308,7 @@ textarea {
      /*     display: inline;*/
 }
 #next-week-row {} .meal, .nonmeal {
-     margin-left: px;
+     margin-left: 3px;
      margin-right: 3px;
      padding: 5px;
      border: solid #ed9e95 2px;
