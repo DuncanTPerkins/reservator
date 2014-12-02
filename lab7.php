@@ -113,9 +113,8 @@
 
         </td>
 
-            <tr>
+            </tr>
 
-    </tr>
         <tr> <td>
             <h2 class="twenty bandi"> My Github
 
