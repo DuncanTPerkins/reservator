@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -21,7 +22,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                                     <li><a href="#">Mission Statement</a></li>
-                                    <li class="active"><a href="#">Resume</a></li>
+                                    <li class="active"><a href="#"></a></li>
 
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +31,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <?php session_start();
+                            <?php
                             echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
                         </li>
                         <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
