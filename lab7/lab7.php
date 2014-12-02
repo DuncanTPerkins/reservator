@@ -22,7 +22,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                                     <li><a href="#">Mission Statement</a></li>
-                                    <li class="active"><a href="#"></a></li>
+                                    <li class="active"><a href="#">Resume</a></li>
 
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->

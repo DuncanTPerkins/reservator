@@ -23,11 +23,19 @@ html {
      top: 0;
      bottom: 0;
      background-attachment: fixed;
+
+    color: #fff;
 }
 
 .bandi {
  font-weight: bold;
 font-style: italic;
+
+}
+
+a:link, a:visited {
+ text-decoration:underline;
+color: #fff;
 
 }
 
