@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<meta content="utf-8" http-equiv="encoding">
+<meta content="utf-8">
 <link rel="stylesheet" href="styles.css">
     <title> Duncan Perkins' Resume</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
