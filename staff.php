@@ -308,6 +308,7 @@
                 newstring = newstring.trim();
                 $("#fieldentry").val(newstring);
                 $("#changeDesc").modal('show');
+                alert($(meal).attr("date"));
                 //take the value from the meal description for this meal, and put it into the modal
             });
 
