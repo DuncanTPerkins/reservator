@@ -37,6 +37,11 @@ color: #000;
 
 }
 
+a:hover {
+ color: #fff;   
+
+}
+
 ul {
     list-style-type: none;
     margin: 0;
