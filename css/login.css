@@ -31,10 +31,6 @@ html {
 */
 }
 
-textarea {
- background-color: #fff;
-
-}
 th {
     background-color: #f7b2aa;
     color: white;
@@ -291,6 +287,12 @@ input[type="color"]:focus,
 /*     margin-left: 50px;*/
 }
 
+textarea {
+     border-style: none;
+     border-color: Transparent;
+     overflow: auto;
+     outline: none;
+}
 #right-arrow-label {
      position: absolute;
      right: 75px;

@@ -309,37 +309,32 @@
 <body heightfull>
 
      <div class="container-fluid heightfull">
-                    <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+          <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+               <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
 
-                    <a class="navbar-brand" id="navbar-brand" href="php/gohome.php">
-                        <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
-                </div>
-                <ul class="nav navbar-nav">
-                                    <li><a href="mission.php">Mission Statement</a></li>
-                                    <li><a href="lab7.php">Resume</a></li>
+                         <a class="navbar-brand" id="navbar-brand" href="#">
+                              <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
+                    </div>
 
-                </ul>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <?php
-                            echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
-                        </li>
-                        <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
-                        </li>
+                         <ul class="nav navbar-nav navbar-right">
+                              <li>
+                                  <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
+                              </li>
+                              <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
+                              </li>
 
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
+                         </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+               </div>
+               <!-- /.container-fluid -->
+          </nav>
           <!-- Navbar -->
           <div class="row vertical-offset-100"> <!-- row container with 100px vertical offset -->
               <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 vertical-offset-50 heightfull">
