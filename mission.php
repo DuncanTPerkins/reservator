@@ -31,8 +31,8 @@
                         <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
                 </div>
                 <ul class="nav navbar-nav">
-                                    <li><a href="mission.php">Mission Statement</a></li>
-                                    <li class=><a href="lab7.php">Resume</a></li>
+                                    <li class="active"><a href="mission.php">Mission Statement</a></li>
+                                    <li class><a href="lab7.php">Resume</a></li>
 
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->

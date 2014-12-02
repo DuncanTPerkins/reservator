@@ -319,7 +319,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                                     <li><a href="mission.php">Mission Statement</a></li>
-                                    <li class=><a href="lab7.php">Resume</a></li>
+                                    <li><a href="lab7.php">Resume</a></li>
 
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->
