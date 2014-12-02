@@ -314,7 +314,7 @@
                 var badindex = description.indexOf(badstring);
                 var newstring = description.substr(0, badindex-1);
                 newstring = newstring.trim();
-                $("#description").val(newstring);
+                $("#descr").val(newstring);
                 $("#changeDesc").modal('show');
                 //take the value from the meal description for this meal, and put it into the modal
             });
@@ -845,7 +845,7 @@
             <input value="0" id="mealid" name="mealid" style="display: none;">
             <input value="" id="datetime" name="datetime" style="display: none;">
             <input value="2" id="meal_type" name="meal_type" style="display: none;">
-            <input id="description" name="description">
+            <input id="descr" name="description">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="submit" class="btn btn-primary formsubmit">Ok</button>
           </form>
