@@ -94,7 +94,7 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                                 <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-body custom-panel">
-                                            <img src="/images/girls.png" class="img-responsive img-rounded">
+                                            <img src="/images/girls.png" alt="" class="img-responsive img-rounded">
                                             <div class="panel-body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the
                                                 meal reservation site for the UTK chapter of Delta Zeta. Login to
                                                 the form to begin making reservations!
@@ -109,7 +109,7 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
                 </div>
             </div>
      <!-- Modal -->
-<div class="modal fade" id="loggedout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="loggedout" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -126,7 +126,7 @@ if(session_is_registered(username)){ header( "location:calendar.php");}?>
   </div>
 </div>
 
-<div class="modal fade" id="logfail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="logfail" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
