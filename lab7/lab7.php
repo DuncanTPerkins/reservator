@@ -20,7 +20,9 @@
                         <div class="hidden-sm hidden-xs" id="navbar-brand-padding">&nbsp;</div>UTK Delta Zeta Meal Reservation</a>
                 </div>
                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="#">Mission Statement</a></li>
+                                    <li><a href="#">Mission Statement</a></li>
+                                    <li class="active"><a href="#">Resume</a></li>
+
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,7 +30,8 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <?php echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
+                            <?php session_start();
+                            echo"<a href='#'>Welcome, " . $_SESSION['name'] . "</a>"; ?>
                         </li>
                         <li><a id="logout" href="php/logout.php">Log Out<div class="hidden-sm hidden-xs" id="navbar-right-padding">&nbsp;</div></a>
                         </li>
