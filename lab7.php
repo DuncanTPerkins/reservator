@@ -183,9 +183,6 @@
     </table>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-
-Here is the code for buttons (image links):
-
 <div>
 <a href="http://validator.w3.org/check?uri=referer"
 style="background-color: transparent">
