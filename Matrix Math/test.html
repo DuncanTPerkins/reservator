@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<div data-ng-app="" data-ng-init="quantity=1;price=5;bone=10;btwo=20;">
+
+<h2>Cost Calculator</h2>
+
+Quantity: <input type="number" ng-model="quantity">
+Price: <input type="number" ng-model="price">
+
+<p><b>Total in dollar:</b> {{quantity * price}}</p>
+    <div class="box1">
+    <h2>Matrix 1</h2>
+<input type="number" ngmodel="bone">
+<input name="box112" ngmodel="b112">
+<input name="box113" ngmodel="b113">
+<br>
+<input name="box121" ngmodel="b121">
+<input name="box122" ngmodel="b122">
+<input name="box123" ngmodel="b123">
+<br>
+<input name="box131" ngmodel="b131">
+<input name="box132" ngmodel="b132">
+<input name="box133" ngmodel="b133">
+    </div>
+
+        <div class="box2">
+    <h2>Matrix 2</h2>
+<input type="number" ngmodel="btwo">
+<input name="box212" ngmodel="b212">
+<input name="box213" ngmodel="b213">
+<br>
+<input name="box221" ngmodel="b221">
+<input name="box222" ngmodel="b222">
+<input name="box223" ngmodel="b223">
+<br>
+<input name="box231" ngmodel="b231">
+<input name="box232" ngmodel="b232">
+<input name="box233" ngmodel="b233">
+    </div>
+
+            <div class="box3">
+    <h2>Added</h2>
+<input value="{{ bone + btwo }}">
+<input ngmodel="b312">
+<input ngmodel="b313">
+<br>
+<input ngmodel="b321">
+<input ngmodel="b322">
+<input ngmodel="b323">
+<br>
+<input ngmodel="b331">
+<input ngmodel="b332">
+<input ngmodel="b333">
+    </div>
+<p>{{ b111 + b211 }}</p>
+            <div class="box4">
+    <h2>Multiplied</h2>
+<input name="box411" value="">
+<input name="box412">
+<input name="box413">
+<br>
+<input name="box421">
+<input name="box422">
+<input name="box423">
+<br>
+<input name="box431">
+<input name="box432">
+<input name="box433">
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>
