@@ -7,23 +7,25 @@
             Input: Two 3x3 Matrices
             Output: The Addition and Multiplication of the two 3x3 matrices
         -->
-input
-{
- width: 10px;
-height: 50px;
-margin: 1px;
-}
-
-table
-{
- width: 10%;
-margin: auto;
-}
-
 body
 {
 padding-top:50px;
 }
+
+input
+{
+width: 120px;
+height: 50px;
+margin: 1px;
+max-width: 120;
+}
+
+table
+{
+margin: auto;
+}
+
+
 
 
 hr
@@ -31,6 +33,11 @@ hr
  border: 0;
  border-bottom: 1px dashed #ccc;
  background: #999;
+}
+
+.navbar{
+ margin-bottom: 20px;
+
 }
 
 .navbar-header
@@ -63,7 +70,7 @@ min-width: 250px;
 {
 height: 100
 width: 100%;
-    padding: 10px;
+padding: 10px;
  width: 80%;
 margin: 0 auto;
 overflow: auto;
@@ -72,6 +79,7 @@ overflow: auto;
 
 .big
 {
+margin-top: 50px;
 height: 100%;
 width: 100%;
 overflow: auto;
